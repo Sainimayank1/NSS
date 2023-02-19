@@ -4,7 +4,10 @@
   "description": "This project, i submit to our collage",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server":"cd server && npm start",
+    "client":"cd client && npm start",
+    "start": "concurrently \"npm run client\" \"npm run server\""
   },
   "author": "",
   "license": "ISC",
