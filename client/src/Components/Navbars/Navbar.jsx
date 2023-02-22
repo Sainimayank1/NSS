@@ -12,10 +12,12 @@ function Navbar() {
           <ul>
             <li><a href='./'>Posts</a></li>
             <li><a href='./'>Create Post</a></li>
-            <li><a href='./'>Logout</a></li>
+            <li><a href='./'>Login</a></li>
           </ul>
       </div>
     </div>
+
+
   )
 }
 
