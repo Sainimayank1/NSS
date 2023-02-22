@@ -84,7 +84,7 @@
 @media screen and (max-width: 762px)
 {
     .Navbar{
-       /* visibility: hidden; */
+       visibility: hidden;
 
     }
 }
