@@ -2,7 +2,7 @@
   "name": "nss-project",
   "version": "1.0.0",
   "description": "This project, i submit to our collage",
-  "main": "index.js",
+  "main": "index.cjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server":"cd server && npm start",
