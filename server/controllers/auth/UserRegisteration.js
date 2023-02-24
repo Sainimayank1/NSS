@@ -1,10 +1,11 @@
 import { body, validationResult } from "express-validator";
 import bcrypt from "bcrypt";
-import { createToken } from "./createToken.js";
-import User from "../models/User.js";
+import { createToken } from "../createToken.js";
+import User from "../../models/User.js";
 import crypto from "crypto";
-import sendMail from "../utils/sendEmail.js";
-import Token from "../models/Token.js";
+import sendMail from "../../utils/sendEmail.js";
+import Token from "../../models/Token.js";
+import nodemailer from "nodemailer";
 
 //              MIDDLE FOR VALIDATION
 export const registerValidation = [
@@ -22,24 +23,24 @@ export const registerValidation = [
     .withMessage("Phone number must container 10 Digits and Numeric"),
 ];
 
-//              POST REGISTRATION ROUTE CONTROLLER
+                                      //              POST REGISTRATION ROUTE CONTROLLER
 export const registeration = async (req, res) => {
   const { name, email, password, cpassword, phone } = req.body;
 
-  //          CHECK HERE IS , IT CRENDTIOL IS PROPER VALIDATE OR NOT ?
+                                      //          CHECK HERE IS , IT CRENDTIOL IS PROPER VALIDATE OR NOT ?
   const errors = validationResult(req);
   if (!errors.isEmpty())
     return res.status(400).json({ errors: errors.array() });
 
   try {
-    //      FIND USER IS IT EXIST
+                                      //      FIND USER IS IT EXIST
     const checkUser = await User.findOne({ email });
     if (checkUser)
       return res.status(400).json({ errors: [{ msg: "Email already exist" }] });
     try {
-      const saltRounds = 10; // GIVE ROUNDS OF SALT
+      const saltRounds = 10;          // GIVE ROUNDS OF SALT
       bcrypt.genSalt(saltRounds, function (err, salt) {
-        // GENERATE SALT
+                                    // GENERATE SALT
         bcrypt.hash(password, salt, async (err, hash) => {
           bcrypt.hash(cpassword, salt, async (err, hashed) => {
             const user = await User.create({
@@ -48,34 +49,27 @@ export const registeration = async (req, res) => {
               password: hash,
               cpassword: hashed,
               phone,
-            }); // CREATE USER AND STORE INTO DATABASE
-
+            });                             // CREATE USER AND STORE INTO DATABASE
+            let TokenRes;
             try {
-              const tokens = await Token.create({
+               TokenRes = await Token.create({   // CREATE TOKEN FOR VERIFY EMAIL USING NODEMAILLER
                 userId: user._id,
                 token: crypto.randomBytes(32).toString("hex"),
               });
             } catch (error) {
               res.status(200).json({ error });
             }
-            const url =
-              "http://localhost:3000/users/" +
-              user._id +
-              "/verify/tokens.token";
-            sendMail( email, url );
+            const url =`${process.env.BASE_URL}users/${user.id}/verify/${TokenRes.token}`;
+            sendMail(email, url);                 // INVOKE SENDMAIL FUNC
+            res
+              .status(201)
+              .json({ message: "An Email sent to your account please verify" });
 
             //   const token = createToken(user)// CREATE TOKEN USING USER DATA AND SECRET KEY.
             //   res.status(200).json({ msg: "created succesfull", token  })
           });
         });
       });
-      console.log("hello1");
-      //   if(emailsend == 1)
-      res
-        .status(201)
-        .json({ message: "An Email sent to your account please verify" });
-      //   else
-      //   res.status(500).json({errors:"Internal server error , Please retry"})
     } catch (error) {
       res.status(500).json({ errors: error });
     }
