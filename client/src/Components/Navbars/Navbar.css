@@ -42,6 +42,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .Navbar-right ul{
@@ -68,9 +69,10 @@
 }
 .Navbar-right a{
     outline: none;
-    padding: 0 2rem 0 1rem;
+    /* padding: 0 2rem 0 1rem; */
     color: white;
     text-decoration: none;
+    padding-top: 15px;
 }
 
 @media screen and (max-width: 930px)
@@ -83,12 +85,12 @@
 
 @media screen and (max-width: 762px)
 {
-    .Navbar{
-       visibility: hidden;
+    .Navbar{ 
+       visibility: hidden; 
 
     }
-}
 
+}
                                                         /* Main Navbar */
 
 .Main_navbar
