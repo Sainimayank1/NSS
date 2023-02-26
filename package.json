@@ -2,16 +2,18 @@
   "name": "nss-project",
   "version": "1.0.0",
   "description": "This project, i submit to our collage",
-  "main": "index.js",
+  "main": "index.cjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server":"cd server && npm start",
-    "client":"cd client && npm start",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start",
     "start": "concurrently \"npm run client\" \"npm run server\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^7.6.0"
+    "bootstrap": "^5.2.3",
+    "concurrently": "^7.6.0",
+    "react-bootstrap": "^2.7.2"
   }
 }
