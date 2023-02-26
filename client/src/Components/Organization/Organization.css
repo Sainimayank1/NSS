@@ -1,0 +1,18 @@
+.org-head{
+    text-align: center;
+    color: rgb(65, 65, 240);
+    border-bottom:2px soid rgb(46, 46, 101) ;
+
+}
+img{
+   
+}
+
+.org-img
+{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    margin-top: 3%;
+}
