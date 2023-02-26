@@ -4,7 +4,7 @@ import './Organization.css';
 function Organization(){
     return(
         <div>
-            <h3 className="org-head">
+            <h3 className="blue-bg">
                 Similiar Organization
             </h3>
             <div className="org-img">
