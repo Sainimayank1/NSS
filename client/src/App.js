@@ -4,6 +4,8 @@ import MyCarousel from "./Components/Carousel/MyCarousel";
 import Main1 from "./Components/Main/Main1";
 import React from "react";
 import Organization from "./Components/Organization/Organization";
+import Footer from "./Components/Footer/Footer";
+
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <MyCarousel />
       <Main1 />
       <Organization />
+      <Footer />
+
     </>
   );
 }
