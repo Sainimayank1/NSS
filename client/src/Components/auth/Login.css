@@ -1,99 +1,110 @@
-.loginForm {
-    padding-top: 6em;
+.login-container {
+  /* // border: 2px solid black; */
+  width: 100vw;
+  height: 80rem;
+  margin-top: 8rem;
+  height: 62.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 50%;
+  height: 50rem;
+  /* // border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1px;
+  box-shadow: 0px 10px 4rem 0.1px rgba(165, 148, 148, 0.251);
+}
+
+.login-span {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+#login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* // border: 2px solid green; */
+  flex-direction: column;
+  width: 80%;
+}
+
+#login-form input {
+  margin: 2rem;
+  width: 80%;
+  height: 5rem;
+  display: block;
+  padding-left: 2rem;
+  outline: none;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  font-size: 1.5rem;
+}
+
+#login-form input :hover {
+   /* background-color: rgb(240, 244, 249); */
+  border-bottom: 1px solid black;
+  scale: 1.07;
+}
+
+
+#login-form button {
+  margin: 2rem;
+  width: 80%;
+  height: 5rem;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 2px;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+#login-form:hover {
+  border: 1px solid black;
+  scale: 1.1;
+}
+
+
+
+
+/* @media  (max-width:780px) {
+    .login-span{
+        font-size: 2.7rem !important;
+    }
+
+    input{
+        font-size: 1.3rem !important;
+        font-weight: bold;
+    }
+
+    .login-form
+    {   
+        width: 70% !important;
+    }
+
+    button{
+        font-size: 1.3rem !important;
+    }
   }
-  
-  .heading {
-    font-size: 180%;
-    color: green;
-    padding-bottom: 5px;
-  }
-  
-  .field {
-    margin: 1.3em auto;
-  }
-  
-  .inputfield {
-    padding: 10px;
-    font-size: 100%;
-    background: #dedede;
-    outline: none;
-    width: 230px;
-    border: none;
-  }
-  
-  .inputfield:-webkit-autofill,
-  .inputfield:-webkit-autofill:hover,
-  .inputfield:-webkit-autofill:focus {
-    -webkit-text-fill-color: green;
-    transition: background-color 5000s ease-in-out 0s;
-  }
-  
-  .customInput {
-    background: #dedede;
-    width: 280px;
-    margin: 0 auto;
-  }
-  
-  .inputicon {
-    color: gray;
-  }
-  
-  .linkfield {
-    text-decoration: underline;
-    font-size: 90%;
-    cursor: pointer;
-  }
-  
-  .submit {
-    font-size: 100%;
-    width: 150px;
-    background: rgb(10, 255, 100);
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-  }
-  
-  .submit:focus {
-    outline: none;
-  }
-  
-  .submitfield {
-    margin-bottom: 0px;
-  }
-  
-  .signupfield {
-    margin-top: 5px;
-  }
-  
-  .emailfield {
-    /* background-image: u; */
-    background-repeat: no-repeat;
-    background-size: 6%;
-    background-position-y: center;
-    background-position-x: 3%;
-  }
-  
-  .passwordfield {
-    /* background-image: url(./images/pass.png); */
-    background-repeat: no-repeat;
-    background-size: 6%;
-    background-position-y: center;
-    background-position-x: 3%;
-  }
-  
-  .socialLogins {
-    margin-bottom: 10px;
-  }
-  
-  .socialLogin {
-    padding: 0px 5px;
-    width: 40px;
-    height: 40px;
-    margin: 8px;
-    border-radius: 50%;
-  }
-  
-  .standardText {
-    font-size: 90%;
-  }
-  
+
+  @media  (max-width:430px) {
+
+    .login-container
+    {
+        height: 60rem !important;
+    }
+
+    .login-form
+    {
+        height: 40rem !important;
+    }
+
+  } */

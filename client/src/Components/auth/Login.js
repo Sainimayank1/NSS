@@ -1,108 +1,53 @@
-import React, { PureComponent } from "react";
-import "./Login.css";
-import { Link } from "react-router-dom";
-// import { connect } from "react-redux";
-// import { startLogin } from "./actions";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet'
+import { useDispatch, useSelector } from 'react-redux';
+import './Login.css'
+// import { postLogin } from '../../store/asyncMethods/AuthMethods';
+import toast, { Toaster } from "react-hot-toast"
 
-class Login extends PureComponent {
-  constructor() {
-    super();
+function Login() {
+  const [state, setState] = useState({email:"",password:""}) ;
+  // const {loading , LoginError} = useSelector((state) =>state.authReducer);
+  // const dispatch = useDispatch();
 
-    this.state = {
-      email: "",
-      password: ""
-    };
-  }
-
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
-
-  login = e => {
+  const handleSubmit = e =>
+  {
     e.preventDefault();
-    this.setState({ email: "", password: "" });
-    this.props.login(this.state);
-    this.props.history.push("/dashboard");
-  };
-
-  render() {
-    return (
-      <form className="loginForm">
-        {this.props.loggedIn ? "Logged in" : ""}
-        {this.props.loginProcessing && !this.props.loggedIn ? "Logging.." : ""}
-        <Link to="/dashboard">Dashboard</Link>
-        <h1 className="heading">Sign in NSS</h1>
-        <div className="socialLogins">
-          <button className="socialLogin">
-            <FontAwesomeIcon icon={["fab", "facebook-f"]} />
-          </button>
-          <button className="socialLogin">
-            <FontAwesomeIcon icon={["fab", "google"]} />
-          </button>
-          <button className="socialLogin">
-            <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
-          </button>
-        </div>
-        <span className="standardText">Or use your email instead</span>
-        <div className="field">
-          <div className="customInput">
-            <FontAwesomeIcon icon="envelope" className="inputicon" />
-            <input
-              className="inputfield"
-              type="email"
-              placeholder="Email.."
-              autoComplete="username"
-              name="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-          </div>
-        </div>
-        <div className="field">
-          <div className="customInput">
-            <FontAwesomeIcon icon="key" className="inputicon" />
-            <input
-              className="inputfield"
-              type="password"
-              placeholder="Password.."
-              autoComplete="current-password"
-              name="password"
-              value={this.state.password}
-              onChange={this.handleChange}
-            />
-          </div>
-        </div>
-        <div className="field">
-          <span className="linkfield">Forgot Password?</span>
-        </div>
-        <div className="field submitfield">
-          <input
-            className="submit"
-            type="submit"
-            value="SIGN IN"
-            onClick={this.login}
-          />
-        </div>
-        <div className="field signupfield">
-          <span className="linkfield">
-            <Link to="/register">New User? Register here</Link>
-          </span>
-        </div>
-      </form>
-    );
+    // dispatch(postLogin(state))
   }
+
+  const handleChange = props =>
+  {
+    setState({...state,[props.target.name] : props.target.value});
+  }
+
+  // useEffect(() =>{
+  //   // console.log("Hey")
+  //   // if(LoginError.lenght >0)
+  //   // {
+  //     LoginError.map((error) =>toast.error(error));
+  //   // }
+
+  // },[LoginError])
+  return (
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Login</title>
+      </Helmet>
+      <div className='login-container bg-grey'>
+        <div className='login-form bg-white'>
+          <span className="login-span">Login</span>
+        <Toaster position="top-right" reverseOrder={false} toastOptions={{ style: { fontSize: '14px' } }} />
+          <form id='login-form' onSubmit={handleSubmit}>
+            <input type="text" onChange={handleChange} name="email" placeholder='Enter Email' value={state.email}required></input>
+            <input type="password" onChange={handleChange} name="password" placeholder='Enter Password' value={state.password} required></input>
+            {/* <button>{loading ? "..." : "Submit"}</button> */}
+          </form>
+        </div>
+      </div>
+    </>
+  )
 }
 
-const mapStateToProps = state => {
-  return {
-    loggedIn: state.loggedIn,
-    loginProcessing: state.loginProcessing
-  };
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-    login: data => dispatch()   //startLogin(data)
-  };
-};
-export default Login;
-
+export default Login
