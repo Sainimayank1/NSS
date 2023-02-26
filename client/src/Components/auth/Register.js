@@ -124,7 +124,7 @@ class Register extends PureComponent {
     );
   }
 }
-
+// register page
 const mapStateToProps = state => {
   return {
     registered: state.registered,
