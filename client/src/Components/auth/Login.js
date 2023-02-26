@@ -1,8 +1,8 @@
 import React, { PureComponent } from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import { startLogin } from "./actions";
+// import { connect } from "react-redux";
+// import { startLogin } from "./actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Login extends PureComponent {
@@ -101,11 +101,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    login: data => dispatch(startLogin(data))
+    login: data => dispatch()   //startLogin(data)
   };
 };
+export default Login;
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Login);
