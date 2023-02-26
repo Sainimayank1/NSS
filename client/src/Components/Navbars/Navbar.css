@@ -42,27 +42,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
-.Navbar-right ul{
+.Navbar-right div{
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
     /* border: 2px solid black; */
-    height: 3rem !important;
-}
-.Navbar-right li{
-    padding: 0 2rem 0 1rem;
-    width: fit-content;
-    /* border: 2px solid black; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3rem !important;
+   height: 100%;
 }
 
-.Navbar-right ul :hover{
+
+.Navbar-right div:hover{
     background: #e53624;
     transition: all 0.2s ease-in-out;
 }
@@ -83,12 +76,12 @@
 
 @media screen and (max-width: 762px)
 {
-    .Navbar{
-       visibility: hidden;
+    .Navbar{ 
+       visibility: hidden; 
 
     }
-}
 
+}
                                                         /* Main Navbar */
 
 .Main_navbar
