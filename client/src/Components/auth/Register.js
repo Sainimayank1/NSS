@@ -1,144 +1,80 @@
-import React, { PureComponent } from "react";
-import "./Login.css";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import { startRegister } from "./actions.js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react'
+import "./Register.css"
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
+import { registerMethod } from '../../Store/AsyncMethods/registerMethod'
+import toast, { Toaster } from "react-hot-toast"
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
+import Loading from '../Loader/Loading'
 
-class Register extends PureComponent {
-  constructor() {
-    super();
 
-    this.state = {
-      name:"",
+function Register(prop) {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [state, setState] = useState(
+    {
+      name: "",
       email: "",
-      phone_no:"",
+      phone:"",
       password: "",
-      confirmPassword: ""
-    };
+      cpassword: ""
+    }
+  )
+  const { loading, user ,RegisterError , RegisterMessage} = useSelector((state) => state.authReducer);
+
+  useEffect(() => {
+    if (RegisterError.length > 0)
+      RegisterError.map(error => toast.error(error.msg))
+
+  }, [RegisterError])
+
+
+  useEffect(() => {
+    if (RegisterMessage.length > 0)
+        toast.success(RegisterMessage);
+  }, [RegisterMessage])
+  
+  const handleState = (e) => {
+    const { name, value } = e.target
+    setState({ ...state, [name]: value })
   }
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
-
-  register = e => {
+  const handleClick = async (e) => {
     e.preventDefault();
-    const { email, password, confirmPassword } = this.state;
-    this.setState({ email: "", password: "", confirmPassword: "" });
-    console.log(email, password, confirmPassword);
-    this.props.register(this.state);
-  };
+    if (state.password !== state.cpassword)
+      toast.error("Password does't Match, Please check");
+    else
+      dispatch(registerMethod(state));
 
-  render() {
-    const { name, email, phone_no, password, confirmPassword } = this.state;
-    return (
-      <form className="loginForm">
-        {this.props.registered ? "Registered" : ""}
-        {this.props.registering && !this.props.registered ? "Registering" : ""}
-        <h1 className="heading">Create Account</h1>
-        <div className="socialLogins">
-          <button className="socialLogin">
-            <FontAwesomeIcon icon={["fab", "facebook-f"]} />
-          </button>
-          <button className="socialLogin">
-            <FontAwesomeIcon icon={["fab", "google"]} />
-          </button>
-          <button className="socialLogin">
-            <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
-          </button>
-        </div>
-        <span className="standardText">Or use your email instead</span>
-        <div className="field">
-          <div className="customInput">
-            <FontAwesomeIcon className="inputicon" icon="envelope" />
-            <input
-              className="inputfield"
-              type="text"
-              placeholder="Name"
-              autoComplete="username"
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-            />
-            <input
-              className="inputfield"
-              type="email"
-              placeholder="Email.."
-              autoComplete="username"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
-            <input
-              className="inputfield"
-              type="number"
-              placeholder="Phone-no"
-              autoComplete="phone_no"
-              name="Phone_no"
-              value={phone_no}
-              onChange={this.handleChange}
-            />
-          </div>
-        </div>
-        <div className="field">
-          <div className="customInput">
-            <FontAwesomeIcon className="inputicon" icon="key" />
-            <input
-              className="inputfield"
-              type="password"
-              placeholder="Password.."
-              autoComplete="new-password"
-              name="password"
-              value={password}
-              onChange={this.handleChange}
-            />
-          </div>
-        </div>
-        <div className="field">
-          <div className="customInput">
-            <FontAwesomeIcon className="inputicon" icon="key" />
-            <input
-              className="inputfield"
-              type="password"
-              placeholder="Confirm Password.."
-              autoComplete="new-password"
-              name="confirmPassword"
-              value={confirmPassword}
-              onChange={this.handleChange}
-            />
-          </div>
-        </div>
-        <div className="field submitfield">
-          <input
-            className="submit"
-            type="submit"
-            value="SIGN UP"
-            onClick={this.register}
-          />
-        </div>
-        <div className="field signupfield">
-          <span className="linkfield">
-            <Link to="/">Already signed up ? Login here</Link>
-          </span>
-        </div>
-      </form>
-    );
   }
+
+
+  return (
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Register</title>
+      </Helmet>
+      <div className='register-container bg-grey'>
+        <div className='form bg-white'>
+          <Toaster position="top-right" reverseOrder={false} toastOptions={{ style: { fontSize: '14px' } }} />
+          <span className='span'>Registration</span>
+          <form id='register-form' onSubmit={handleClick} method="POST">
+            <input type="text" name="name" value={state.name} placeholder='Enter Name' onChange={handleState} ></input>
+            <input type="text" name="email" value={state.email} placeholder='Enter Email' onChange={handleState}></input>
+            <input type="text" name="phone" value={state.phone} placeholder='Enter mobile no' onChange={handleState}></input>
+            <input type="password" name="password" value={state.password} placeholder='Enter Password' onChange={handleState}></input>
+            <input type="password" name="cpassword" value={state.cpassword} placeholder='Re-Enter Password' onChange={handleState}></input>
+            <input type="submit" className="button" value={loading ? <Loading/>: 'Register'}>
+            </input>
+          </form>
+        </div>
+      </div>
+    </>
+  )
 }
-// register page
-const mapStateToProps = state => {
-  return {
-    registered: state.registered,
-    registering: state.registering
-  };
-};
 
-const mapDispatchToProps = dispatch => {
-  return {
-    register: content => dispatch(startRegister(content))
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Register);
+export default Register

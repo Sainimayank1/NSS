@@ -10,7 +10,7 @@ function Navbar() {
       </div>
       <div className='Navbar-right'>
             <div className='Navbar-posts'><Link to='/'>Posts</Link></div>
-            <div className='Navbar-create'><Link to='/'>Create Post</Link></div>
+            <div className='Navbar-create'><Link to='/register'>Create Post</Link></div>
             <div className='Navbar-login'><Link to='/login'>Login</Link></div>
             {/* add more navabar content */}
             <div className='Navbar-suggestion'><Link to='/Suggestion'>Suggestion</Link></div>
