@@ -9,8 +9,10 @@ import Login from "./Components/auth/Login"
 import Register from "./Components/auth/Register";
 import Loading from "./Components/Loader/Loading";
 import NotFound from "./Components/auth/NotFound";
+import { useSelector } from "react-redux";
 
 function App() {
+  const {user} = useSelector((state) => state.authReducer)
   return (
     <>
       <Main_navbar/>

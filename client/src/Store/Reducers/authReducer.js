@@ -15,13 +15,12 @@ const verifyToken = (token) => {
     const decodedToken = jwt_decode(token);
     const expireIn = new Date(decodedToken.exp * 1000);
     if (new Date() > expireIn) {
-        localStorage.removeItem("MeduimToken");
+        localStorage.removeItem("NSSTOKEN");
         return null;
     } else return decodedToken;
-    // console.log(decodedToken)
 };
 // Fetch token from localstorage and Decode with halp of jwt-decode
-const token = localStorage.getItem("MeduimToken");
+const token = localStorage.getItem("NSSTOKEN");
 if (token) {
     const decoded = verifyToken(token);
     if (decoded) {
@@ -58,6 +57,8 @@ const authReducer = (state = initail, action) => {
             const { user } = decoded;
             return { ...state, token: action.payload, user: user };
     }
+    else if(action.type === "REMOVE-USER")
+        return{...state , user:""};
     else if (action.type === "LOGOUT") 
         return { ...state, token: "", user: "" };
     else return state;
