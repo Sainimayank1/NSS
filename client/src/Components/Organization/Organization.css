@@ -4,10 +4,13 @@
     border-bottom:2px soid rgb(46, 46, 101) ;
 
 }
-img{
-   
+.org{
+    text-align: center;
+    color: white;
+    height: 60px;
+    background-color:  #14418a;
+    padding-top: 15px;
 }
-
 .org-img
 {
     /* border: 2px solid black; */

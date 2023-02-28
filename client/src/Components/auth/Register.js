@@ -65,6 +65,7 @@ function Register(prop) {
       </Helmet>
       <div className='register-container bg-grey'>
         <div className='form bg-white'>
+<<<<<<< HEAD
           <Toaster position="top-right" reverseOrder={false} toastOptions={{
               // Define default options
               duration: 5000,
@@ -73,14 +74,21 @@ function Register(prop) {
               },
             }}/>
           <span className='span'>Registration</span>
+=======
+          <Toaster position="top-right" reverseOrder={false} toastOptions={{ style: { fontSize: '14px' } }} />
+          {/* <img src='./picture/profile-user.png' alt='logo' className='img-container'></img> */}
+          <span className='span'>Register</span>
+>>>>>>> 0ce4835fc4ca7c81f338d82fc8f524c01c9d7e1e
           <form id='register-form' onSubmit={handleClick} method="POST">
             <input type="text" name="name" value={state.name} placeholder='Enter Name' onChange={handleState} ></input>
             <input type="text" name="email" value={state.email} placeholder='Enter Email' onChange={handleState}></input>
             <input type="text" name="phone" value={state.phone} placeholder='Enter mobile no' onChange={handleState}></input>
             <input type="password" name="password" value={state.password} placeholder='Enter Password' onChange={handleState}></input>
             <input type="password" name="cpassword" value={state.cpassword} placeholder='Re-Enter Password' onChange={handleState}></input>
-            <input type="submit" className="button" value={loading ? <Loading/>: 'Register'}>
-            </input>
+            <button type="submit" className="button" value={loading ? <Loading/>: 'Register'}>Register
+            </button>
+            <p className='p1'>OR</p>
+            <p className='para2'>Already have an account? Login here</p>
           </form>
         </div>
       </div>
