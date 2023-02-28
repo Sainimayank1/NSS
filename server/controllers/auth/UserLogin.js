@@ -37,10 +37,10 @@ export const Login = async (req, res) => {
                     await sendMail(user.email, url);        // SEND MAIL
                     return res
                         .status(400)
-                        .send({ message: "An Email sent to your account please verify" });
+                        .json({ errors: "An Email sent to your account please verify" });
                 }
-                const token = createToken(user);        // SEND TOKEN IN RESPONSE 
-                return res.status(200).json({ msg: "User login succesfully", token});
+                const maintoken = createToken(user);        // SEND TOKEN IN RESPONSE 
+                return res.status(200).json({ msg: "User login succesfully", maintoken});
             }
             else
                 return res.status(401).json({ errors :[ "Password Does't match"] });

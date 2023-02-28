@@ -28,13 +28,18 @@ function Register(prop) {
   useEffect(() => {
     if (RegisterError.length > 0)
       RegisterError.map(error => toast.error(error.msg))
+    dispatch({type:"CLEAR-REGISTER-ERRORS"});
 
   }, [RegisterError])
 
 
   useEffect(() => {
     if (RegisterMessage.length > 0)
-        toast.success(RegisterMessage);
+    {
+      toast.success(RegisterMessage);
+      // navigate('/login')
+    }
+    dispatch({type:"CLEAR-REGISTER-SUCCESS"});
   }, [RegisterMessage])
   
   const handleState = (e) => {
@@ -60,7 +65,13 @@ function Register(prop) {
       </Helmet>
       <div className='register-container bg-grey'>
         <div className='form bg-white'>
-          <Toaster position="top-right" reverseOrder={false} toastOptions={{ style: { fontSize: '14px' } }} />
+          <Toaster position="top-right" reverseOrder={false} toastOptions={{
+              // Define default options
+              duration: 5000,
+              style: {
+                fontsize:'16px'
+              },
+            }}/>
           <span className='span'>Registration</span>
           <form id='register-form' onSubmit={handleClick} method="POST">
             <input type="text" name="name" value={state.name} placeholder='Enter Name' onChange={handleState} ></input>

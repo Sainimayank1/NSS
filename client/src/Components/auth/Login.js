@@ -2,33 +2,35 @@ import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { useDispatch, useSelector } from 'react-redux';
 import './Login.css'
-// import { postLogin } from '../../store/asyncMethods/AuthMethods';
+import loginMethod from "../../Store/AsyncMethods/loginMethod"
 import toast, { Toaster } from "react-hot-toast"
 
 function Login() {
-  const [state, setState] = useState({email:"",password:""}) ;
-  // const {loading , LoginError} = useSelector((state) =>state.authReducer);
-  // const dispatch = useDispatch();
+  const [state, setState] = useState({ email: "", password: "" });
+  const {loading , LoginError , LoginMessage} = useSelector((state) =>state.authReducer);
+  const dispatch = useDispatch();
 
-  const handleSubmit = e =>
-  {
+  const handleSubmit = e => {
     e.preventDefault();
-    // dispatch(postLogin(state))
+    dispatch(loginMethod(state))
   }
 
-  const handleChange = props =>
-  {
-    setState({...state,[props.target.name] : props.target.value});
+  const handleChange = props => {
+    setState({ ...state, [props.target.name]: props.target.value });
   }
 
-  // useEffect(() =>{
-  //   // console.log("Hey")
-  //   // if(LoginError.lenght >0)
-  //   // {
-  //     LoginError.map((error) =>toast.error(error));
-  //   // }
+  useEffect(() =>{
+    if(LoginError.length >0)
+    toast.error(LoginError);
+    // LoginError.map((error) =>toast.error(error));
+      dispatch({type:"CLEAR-LOGIN-ERRORS"});
+  },[LoginError])
 
-  // },[LoginError])
+  useEffect(() =>{
+    if(LoginMessage.length > 0)
+        toast.success(LoginMessage);
+    dispatch({type:"CLEAR-LOGIN-SUCCESS"});
+  },[LoginMessage])
   return (
     <>
       <Helmet>
@@ -38,11 +40,18 @@ function Login() {
       <div className='login-container bg-grey'>
         <div className='login-form bg-white'>
           <span className="login-span">Login</span>
-        <Toaster position="top-right" reverseOrder={false} toastOptions={{ style: { fontSize: '14px' } }} />
-          <form id='login-form' onSubmit={handleSubmit}>
-            <input type="text" onChange={handleChange} name="email" placeholder='Enter Email' value={state.email}required></input>
+          <Toaster position="top-right" reverseOrder={false}
+            toastOptions={{
+              // Define default options
+              duration: 5000,
+              style: {
+                fontsize:'16px'
+              },
+            }} />
+          <form id='login-form' >
+            <input type="text" onChange={handleChange} name="email" placeholder='Enter Email' value={state.email} required></input>
             <input type="password" onChange={handleChange} name="password" placeholder='Enter Password' value={state.password} required></input>
-            {/* <button>{loading ? "..." : "Submit"}</button> */}
+            <button onClick={handleSubmit}>{loading ? "..." : "Submit"}</button>
           </form>
         </div>
       </div>
