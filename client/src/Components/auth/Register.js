@@ -61,15 +61,18 @@ function Register(prop) {
       <div className='register-container bg-grey'>
         <div className='form bg-white'>
           <Toaster position="top-right" reverseOrder={false} toastOptions={{ style: { fontSize: '14px' } }} />
-          <span className='span'>Registration</span>
+          {/* <img src='./picture/profile-user.png' alt='logo' className='img-container'></img> */}
+          <span className='span'>Register</span>
           <form id='register-form' onSubmit={handleClick} method="POST">
             <input type="text" name="name" value={state.name} placeholder='Enter Name' onChange={handleState} ></input>
             <input type="text" name="email" value={state.email} placeholder='Enter Email' onChange={handleState}></input>
             <input type="text" name="phone" value={state.phone} placeholder='Enter mobile no' onChange={handleState}></input>
             <input type="password" name="password" value={state.password} placeholder='Enter Password' onChange={handleState}></input>
             <input type="password" name="cpassword" value={state.cpassword} placeholder='Re-Enter Password' onChange={handleState}></input>
-            <input type="submit" className="button" value={loading ? <Loading/>: 'Register'}>
-            </input>
+            <button type="submit" className="button" value={loading ? <Loading/>: 'Register'}>Register
+            </button>
+            <p className='p1'>OR</p>
+            <p className='para2'>Already have an account? Login here</p>
           </form>
         </div>
       </div>

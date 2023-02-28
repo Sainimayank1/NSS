@@ -1,29 +1,33 @@
 .login-container {
   /* // border: 2px solid black; */
   width: 100vw;
-  height: 80rem;
-  margin-top: 8rem;
-  height: 62.5rem;
+  height: 50rem;
+  margin-top: 0px;
+  height: 50rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-color: #14418a; */
 }
 
 .login-form {
-  width: 50%;
-  height: 50rem;
+  width: 35%;
+  height: 40rem;
   /* // border: 2px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 1px;
-  box-shadow: 0px 10px 4rem 0.1px rgba(165, 148, 148, 0.251);
+  box-shadow: 10px 10px 20px #14418a;
+  
 }
 
 .login-span {
-  margin-bottom: 1rem;
-  font-size: 3rem;
+  margin-bottom:1rem;
+  font-size: 2rem;
+  color:#14418a;
+  border-bottom: 3px solid #14418a;
 }
 
 #login-form {
@@ -37,14 +41,16 @@
 
 #login-form input {
   margin: 2rem;
-  width: 80%;
-  height: 5rem;
+  width: 90%;
+  height: 3rem;
   display: block;
-  padding-left: 2rem;
+  padding-left: 1rem;
   outline: none;
   border: none;
   transition: all 0.5s ease-in-out;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  border-bottom: 3px solid #14418a;
+  border-radius: 25px;
 }
 
 #login-form input :hover {
@@ -54,27 +60,51 @@
 }
 
 
-#login-form button {
-  margin: 2rem;
-  width: 80%;
-  height: 5rem;
+ .btn {
+  margin: 1rem;
+  width: 30%;
+  height: 3rem;
   outline: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
-  border-radius: 2px;
-  background-color: white;
   transition: all 0.5s ease-in-out;
+  border-radius: 50px;
+  background-color: #14418a;
+  color: white;
+
+}
+.btn:hover{
+  background-color: rgb(208, 78, 78);
+}
+.p{
+  color: black;
+  font-size: 1rem;
+}
+.para1{
+  color: black;
+  font-size: 1rem;
 }
 
 #login-form:hover {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   scale: 1.1;
 }
-
-
-
-
+.img-container{
+  height: 60px;
+  /* margin-top: 30px; */
+  
+}
+.pl{
+  margin: 0rem;
+  color: black;
+  font-size: 1rem;
+}
+.fp{
+  text-align: center;
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
 /* @media  (max-width:780px) {
     .login-span{
         font-size: 2.7rem !important;
