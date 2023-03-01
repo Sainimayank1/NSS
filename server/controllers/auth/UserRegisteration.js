@@ -59,6 +59,7 @@ export const registeration = async (req, res) => {
             } catch (error) {
               res.status(200).json({ error });
             }
+            // 
             const url =`${process.env.BASE_URL}users/${user.id}/verify/${TokenRes.token}`;
             sendMail(email, url);                 // INVOKE SENDMAIL FUNC
             res
