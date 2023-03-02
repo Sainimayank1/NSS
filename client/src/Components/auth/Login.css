@@ -44,6 +44,8 @@
   width: 90%;
   height: 3rem;
   display: block;
+  /* padding-bottom: 2rem; */
+  font-weight: bold;
   padding-left: 1rem;
   outline: none;
   border: none;
@@ -62,7 +64,7 @@
 
  .btn {
   margin: 1rem;
-  width: 30%;
+  width: 80%;
   height: 3rem;
   outline: none;
   border: none;
@@ -86,6 +88,10 @@
   font-size: 1rem;
 }
 
+.para1 a{
+  font-weight: bold;
+}
+
 #login-form:hover {
   /* border: 1px solid black; */
   scale: 1.1;
@@ -104,14 +110,22 @@
   text-align: center;
   margin-bottom: 4px;
   font-size: 1rem;
+  font-weight: bold;
 }
-/* @media  (max-width:780px) {
+
+@media  (max-width:1200px) {
+  .login-form
+    {   
+        width: 50% !important;
+    }
+}
+@media  (max-width:780px) {
     .login-span{
         font-size: 2.7rem !important;
     }
 
-    input{
-        font-size: 1.3rem !important;
+    #login-form input{
+        font-size: 1rem !important;
         font-weight: bold;
     }
 
@@ -123,9 +137,23 @@
     button{
         font-size: 1.3rem !important;
     }
+    .btn
+    {
+      width: 90%;
+    }
+    .fp{
+      font-size: 0.8rem;
+    }
+    .p{
+      font-size: 0.8rem;
+    }
+    .para1{
+      font-size: 0.8rem;
+    }
   }
 
   @media  (max-width:430px) {
+
 
     .login-container
     {
@@ -134,7 +162,28 @@
 
     .login-form
     {
-        height: 40rem !important;
+        height: 35rem !important;
     }
 
-  } */
+    #login-form input{
+      font-size: 1rem !important;
+      font-weight: bold;
+  }
+
+    .login-span
+    {
+      font-size: 1.6rem !important;
+      
+    }
+
+    .pl
+    {
+      font-size: 0.8rem;
+      visibility: hidden;
+    }
+
+   
+
+
+
+  } 

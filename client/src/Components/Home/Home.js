@@ -5,9 +5,9 @@ import Organization from '../Organization/Organization';
 function Home() {
   return (
     <>
-        <MyCarousel />
-      <Main1 />
-      <Organization />
+        {/* <MyCarousel /> */}
+      {/* <Main1 /> */}
+      {/* <Organization /> */}
     </>
   )
 }
