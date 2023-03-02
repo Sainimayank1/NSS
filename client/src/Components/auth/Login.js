@@ -4,10 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import './Login.css'
 import loginMethod from "../../Store/AsyncMethods/loginMethod"
 import toast, { Toaster } from "react-hot-toast"
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+  const navigate = useNavigate();
   const [state, setState] = useState({ email: "", password: "" });
-  const { loading, LoginError, LoginMessage } = useSelector((state) => state.authReducer);
+  const { loading, LoginError, LoginMessage ,user} = useSelector((state) => state.authReducer);
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
@@ -32,6 +34,13 @@ function Login() {
       toast.success(LoginMessage);
     dispatch({ type: "CLEAR-LOGIN-SUCCESS" });
   }, [LoginMessage])
+
+  useEffect(()=>
+  {
+    if(user)
+      navigate("/");
+      
+  },[user])
   return (
     <>
       <Helmet>

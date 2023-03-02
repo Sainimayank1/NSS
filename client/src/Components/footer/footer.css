@@ -5,7 +5,7 @@
 .top_footer{
     display: block;
     text-align: center;
-    background:  #14418a;
+    background:  #303983;
     color:  #b8b8b8;
     position:relative;
     box-sizing: border-box;
@@ -18,7 +18,7 @@
     color: white;
 }
 .bottom_footer{
-    background: #14418a;
+    background: #303983;
     margin-top: 0rem;
 }
 .bottom_footer h3{

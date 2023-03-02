@@ -18,10 +18,9 @@ function App() {
       <Main_navbar/>
       <Navbar/>
       <Routes>
-      {/* <MyCarousel />  */}
       <Route path="/" element={<Home/>} />
-      <Route path="/login" element={<Login/>} />
-      <Route path="/register" element={<Register/>} />
+      <Route path="/login" element={user ? <Home/> : <Login/>} />
+      <Route path="/register" element={user ? <Home/> :<Register/>} />
       <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
       <Route path="/loader" element={<Loading/>} />
       <Route path='*' element={<NotFound/>}/>
