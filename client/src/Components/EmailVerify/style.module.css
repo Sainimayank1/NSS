@@ -1,20 +1,59 @@
 .container {
 	width: 100vw;
-	height: 100vh;
+	height: 60vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+
+}
+.container h1{
+	font-size: 5rem;
 }
 
 .green_btn {
 	border: none;
 	outline: none;
 	padding: 12px 0;
-	background-color: #3bb19b;
+	background-color: #303983;
 	border-radius: 20px;
 	width: 180px;
 	font-weight: bold;
 	font-size: 14px;
 	cursor: pointer;
+	color: white;
+}
+
+
+@media (max-width: 1000px) {
+	.container h1{
+		font-size: 3.5rem;
+	}
+	.green_btn{
+		width: 160px;
+		padding: 11px 0;
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 800px) {
+	.container h1{
+		font-size: 2.5rem;
+	}
+	.green_btn{
+		width: 120px;
+		padding: 10px 0;
+		font-size: 9px;
+	}
+}
+
+@media (max-width: 600px) {
+	.container h1{
+		font-size: 1.5rem;
+	}
+	.green_btn{
+		width: 140px !important;
+		padding: 9px 0 !important;
+		font-size: 9px !important;
+	}
 }
