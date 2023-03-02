@@ -73,7 +73,7 @@ function Register(prop) {
               },
             }}/>
           <Toaster position="top-right" reverseOrder={false} toastOptions={{ style: { fontSize: '14px' } }} />
-          {/* <img src='./picture/profile-user.png' alt='logo' className='img-container'></img> */}
+          <img src='./picture/profile-user.png' alt='logo' className='img-contain'></img>
           <span className='span'>Register</span>
           <form id='register-form' onSubmit={handleClick} method="POST">
             <input type="text" name="name" value={state.name} placeholder='Enter Name' onChange={handleState} ></input>

@@ -4,7 +4,7 @@
   height: 80rem;
   margin-top: 8rem;
   margin-bottom: 8rem;
-  height: 50rem;
+  height: 40rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,9 +20,9 @@
   box-shadow: 10px 10px 20px #14418a;
 }
 .span {
-  margin-bottom: 1rem;
+  /* margin-top: 1rem; */
   font-size: 2rem;
-  border-bottom:4px solid  #14418a;;
+  border-bottom:4px solid  #14418a;
 }
 
 #register-form {
@@ -32,18 +32,29 @@
   /* // border: 2px solid green; */
   flex-direction: column;
   width: 80%;
+  margin-bottom: 6rem;
+
+}
+.img-contain{
+  height:60px;
+  margin-top: 7rem;
+
 }
 #register-form input {
-  margin: 1.5rem;
+  margin: 1rem;
   width: 90%;
   height: 2rem;
-  padding-left: 1rem;
+  /* padding-left: 1rem; */
+  padding: 1rem;
   outline: none;
   border: none;
   font-size: 1rem;
   transition: all 0.5s ease-in-out;
   border-bottom: 3px solid #14418a;;
-  border-radius: 10px;
+  border-radius: 25px;
+  padding-top:4px ;
+  padding-bottom: 4px;
+  /* border: 2px solid black; */
 }
 #register-form input :hover {
   /* // background-color: rgb(240, 244, 249); */
