@@ -55,9 +55,7 @@
   border-radius: 25px;
 }
 
-#login-form input :hover {
-   /* background-color: rgb(240, 244, 249); */
-  border-bottom: 1px solid black;
+#login-form  :hover {
   scale: 1.07;
 }
 
@@ -77,7 +75,8 @@
 
 }
 .btn:hover{
-  background-color: rgb(208, 78, 78);
+  background-color: #e53624;
+  color: white;
 }
 .p{
   color: black;
@@ -92,10 +91,7 @@
   font-weight: bold;
 }
 
-#login-form:hover {
-  /* border: 1px solid black; */
-  scale: 1.1;
-}
+
 .img-container{
   height: 60px;
   /* margin-top: 30px; */

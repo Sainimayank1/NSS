@@ -58,9 +58,9 @@
   border-radius: 25px;
   font-weight: bold;
 }
-#register-form input :hover {
-  /* // background-color: rgb(240, 244, 249); */
-  border-bottom: 1px solid black;
+
+
+#register-form  :hover {
   scale: 1.07;
 }
 
@@ -81,7 +81,7 @@
   color: white;
 }
 .button:hover {
-  border: 1px solid black;
+  background: #e53624;
   scale: 1.1;
 
   /* // background-color: rgb(240, 244, 249); */

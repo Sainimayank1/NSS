@@ -9,23 +9,21 @@ const EmailVerify = () => {
 	const [validUrl, setValidUrl] = useState(true);
 	const param = useParams();
 
-	// setValidUrl()
-
-	// useEffect(() => {
-	// 	const verifyEmailUrl = async () => {
-	// 		try {
-	// 			const url = `http://localhost:5000/users/${param.id}/verify/${param.token}`;
-	// 			console.log(param.id , param.token)
-	// 			const { data } = await axios.get(url);
-	// 			console.log(data);
-	// 			setValidUrl(true);
-	// 		} catch (error) {
-	// 			console.log(error);
-	// 			setValidUrl(false);
-	// 		}
-	// 	};
-	// 	verifyEmailUrl();
-	// }, [param]);
+	useEffect(() => {
+		const verifyEmailUrl = async () => {
+			try {
+				const url = `http://localhost:5000/users/${param.id}/verify/${param.token}`;
+				console.log(param.id , param.token)
+				const { data } = await axios.get(url);
+				console.log(data);
+				setValidUrl(true);
+			} catch (error) {
+				console.log(error);
+				setValidUrl(false);
+			}
+		};
+		verifyEmailUrl();
+	}, [param]);
 
 	return (
 		<div>
