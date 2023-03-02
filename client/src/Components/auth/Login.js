@@ -5,6 +5,7 @@ import './Login.css'
 import loginMethod from "../../Store/AsyncMethods/loginMethod"
 import toast, { Toaster } from "react-hot-toast"
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 function Login() {
   const navigate = useNavigate();
@@ -70,9 +71,9 @@ function Login() {
               <button className='btn'  onClick={handleSubmit}>
                 {loading ? "......" : "Login"}
               </button>
-              <a href='#' className='fp'>Forgot Password</a>
+              <Link to='#' className='fp'>Forgot Password</Link>
               <p className='p'>OR</p>
-              <p className='para1'>New User? Register here</p>
+              <p className='para1'>New User? <Link to="/register">Register here</Link></p>
             </form>
         </div>
       </div>
