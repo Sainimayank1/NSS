@@ -58,7 +58,8 @@ const authReducer = (state = initail, action) => {
             return { ...state, token: action.payload, user: user };
     }
     else if(action.type === "REMOVE-USER")
-        return{...state , user:""};
+        return{...state , user:"" , token:""};
+    
     else if (action.type === "LOGOUT") 
         return { ...state, token: "", user: "" };
     else return state;

@@ -20,7 +20,7 @@ function App() {
       <Navbar/>
       <Routes>
       <Route path="/" element={<Home/>} />
-      <Route path="/login" element={user ? <Home/> : <Login/>} />
+      <Route path="/login" element= {user ? <Home/> : <Login/> }/>
       <Route path="/register" element={user ? <Home/> :<Register/>} />
       <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
       <Route path="/loader" element={<Loading/>} />

@@ -4,17 +4,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import './Login.css'
 import loginMethod from "../../Store/AsyncMethods/loginMethod"
 import toast, { Toaster } from "react-hot-toast"
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 
 function Login() {
-  const navigate = useNavigate();
   const [state, setState] = useState({ email: "", password: "" });
   const { loading, LoginError, LoginMessage ,user} = useSelector((state) => state.authReducer);
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
     e.preventDefault();
+    if(state.email === "" || state.password === "")
+      dispatch({type:"LOGIN_ERRORS",payload:["Please enter email & password"]})
+    else
     dispatch(loginMethod(state))
   }
 
@@ -25,7 +26,7 @@ function Login() {
   useEffect(() => {
   if (LoginError.length > 0)
   {
-    LoginError.map((error) =>toast.error(error));
+    toast.error(LoginError);
     dispatch({ type: "CLEAR-LOGIN-ERRORS" });
   }
   }, [LoginError])
@@ -33,23 +34,15 @@ function Login() {
   useEffect(() => {
     if (LoginMessage.length > 0)
       toast.success(LoginMessage);
-    dispatch({ type: "CLEAR-LOGIN-SUCCESS" });
+    dispatch({ type:"CLEAR-LOGIN-SUCCESS"});
   }, [LoginMessage])
 
-  useEffect(()=>
-  {
-    if(user)
-      navigate("/");
-      
-  },[user])
   return (
     <>
-      <Helmet>
+       <Helmet>
         <meta charSet="utf-8" />
-        <div className='img-container'>
-        </div>
-        <title>Login Here!</title>
-      </Helmet>
+         <title>Login Here!</title>
+       </Helmet>
       <div className='login-container bg-grey'>
         <div className='login-form bg-white'>
           {/* login img */}
@@ -64,7 +57,6 @@ function Login() {
               },
             }} />
             <p className='pl'>Please enter your login and Password</p>
-            <Toaster position="top-right" reverseOrder={false} toastOptions={{ style: { fontSize: '14px' } }} />
             <form id='login-form'>
               <input type="text" onChange={handleChange} name="email" placeholder='Enter Email' value={state.email} required></input>
               <input type="password" onChange={handleChange} name="password" placeholder='Enter Password' value={state.password} required></input>

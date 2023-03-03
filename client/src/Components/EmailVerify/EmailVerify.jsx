@@ -4,6 +4,7 @@ import axios from "axios";
 // import success from "../../images/success.png";
 import styles from "./style.module.css";
 // import { Fragment } from "react/cjs/react.production.min";
+import { Helmet } from "react-helmet";
 
 const EmailVerify = () => {
 	const [validUrl, setValidUrl] = useState(true);
@@ -26,6 +27,12 @@ const EmailVerify = () => {
 	}, [param]);
 
 	return (
+		<>
+		<Helmet>
+        <meta charSet="utf-8" />
+         <title>Login Here!</title>
+       </Helmet>
+
 		<div>
 			{validUrl ? (
 				<div className={styles.container}>
@@ -39,6 +46,7 @@ const EmailVerify = () => {
 				<h1>404 Not Found</h1>
 			)}
 		</div>
+		</>
 	);
 };
 
