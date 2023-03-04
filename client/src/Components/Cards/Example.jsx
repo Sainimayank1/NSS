@@ -12,7 +12,7 @@ const Example = () => {
       <div className='row'>
         <div className='col-sm'>
         <Card  style={{ width: '20rem' }} className='card'>
-        <Card.Img variant="Middle" className='img-card' src="./picture/75years.png" className='card-img' />
+        <Card.Img variant="Middle" className='card-img' src="./picture/75years.png"  />
         <Card.Body>
         <Card.Title className='title'>Card Title</Card.Title>
         <Card.Text className='text-card'>
