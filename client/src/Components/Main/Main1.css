@@ -1,14 +1,37 @@
-.main1-head{
-    text-align: center;
-    color: rgb(29, 31, 31);
-    margin-top: 2%;
-    border-bottom:2px solid black ;
-    font-size: large;
-    
+.mainbox-main
+{
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3.5rem;
 }
-.main1-head,p{
-    margin: 10px;
+
+.mainbox-main-2
+{
+    /* border: 2px solid black; */
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
-.about-nss{
-    
+
+h5{
+    color: #303983;
+    font-size: 1.5rem;
+    width: 27% !important;
+    /* border: 2px solid black; */
+}
+
+h5 div{
+    font-size: 3.5rem;
+}
+
+p{
+    width: 70%;
+    /* border: 2px solid black; */
+}
+
+p a{
+    color: #e53624;
 }
