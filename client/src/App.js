@@ -10,6 +10,8 @@ import Register from "./Components/auth/Register";
 import Loading from "./Components/Loader/Loading";
 import NotFound from "./Components/auth/NotFound";
 import { useSelector } from "react-redux";
+import Example from "./Components/Cards/Example";
+import Gallery from "./Components/Gallery/Gallery";
 
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
       <Route path='*' element={<NotFound/>}/>
     </Routes>
     <Footer />
+    <Example />
+    <Gallery />
     </>
   );
 }
