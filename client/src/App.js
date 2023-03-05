@@ -10,7 +10,7 @@ import Register from "./Components/auth/Register";
 import Loading from "./Components/Loader/Loading";
 import NotFound from "./Components/auth/NotFound";
 import { useSelector } from "react-redux";
-
+import CreatePost from "./Components/Createpost/CreatePost";
 
 function App() {
   const {user} = useSelector((state) => state.authReducer)
@@ -22,6 +22,7 @@ function App() {
       <Route path="/" element={<Home/>} />
       <Route path="/login" element= {user ? <Home/> : <Login/> }/>
       <Route path="/register" element={user ? <Home/> :<Register/>} />
+      <Route path="/createPost" element={user ? <CreatePost/> :<Login/>} />
       <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
       <Route path="/loader" element={<Loading/>} />
       <Route path='*' element={<NotFound/>}/>

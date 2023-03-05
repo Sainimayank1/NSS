@@ -60,7 +60,7 @@ function Login() {
             <form id='login-form'>
               <input type="text" onChange={handleChange} name="email" placeholder='Enter Email' value={state.email} required></input>
               <input type="password" onChange={handleChange} name="password" placeholder='Enter Password' value={state.password} required></input>
-              <button className='btn'  onClick={handleSubmit}>
+              <button className='btn-login'  onClick={handleSubmit}>
                 {loading ? "......" : "Login"}
               </button>
               <Link to='#' className='fp'>Forgot Password</Link>

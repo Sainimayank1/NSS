@@ -38,7 +38,8 @@ function Navbar() {
         <div className='Navbar-right'>
           {user ? <>
             <div className='Navbar-posts'><Link to='/'>Posts</Link></div>
-            <div className='Navbar-create'><Link to='/register'>Create Post</Link></div>
+            <div className='Navbar-create'><Link to='/createPost'>Create Post</Link></div>
+            <div className='Navbar-name'>{user.name}</div>
             <div className='Navbar-login'><Link onClick={() => { logout() }}>Logout</Link></div>
           </>
             :

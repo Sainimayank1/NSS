@@ -59,8 +59,15 @@
   scale: 1.07;
 }
 
+.btn-login :hover
+{
+  scale: 1.1;
+  background: #14418a;
+  color: white;
+}
 
- .btn {
+
+ .btn-login {
   margin: 1rem;
   width: 80%;
   height: 3rem;
@@ -72,12 +79,8 @@
   border-radius: 50px;
   background-color: #14418a;
   color: white;
+}
 
-}
-.btn:hover{
-  background-color: #e53624;
-  color: white;
-}
 .p{
   color: black;
   font-size: 1rem;
@@ -133,7 +136,7 @@
     button{
         font-size: 1.3rem !important;
     }
-    .btn
+    .btn-login
     {
       width: 90%;
     }
