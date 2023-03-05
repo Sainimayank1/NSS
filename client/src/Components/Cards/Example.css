@@ -1,0 +1,34 @@
+
+.container{
+    width: 100vw;
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+    padding-left:2rem;
+    padding-bottom: 1rem;
+    /* background-color: #303983; */
+    border-top: 1px solid wheat;
+    display: block;
+}
+.col-sm{
+    margin-top: 1rem;
+    text-align: center;
+    color: white;
+
+}
+.title{
+    border-bottom: 2px solid red;
+
+}
+.btn{
+    font-size: 12px;
+    border-radius: 25px;
+    width: 55%;
+    color: white;
+}
+
+.card{
+    background-color:#303983 ;
+}
+.card-img{
+    background-color: white;
+}

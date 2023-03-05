@@ -16,6 +16,31 @@
     /* border: 2px solid black; */
     display: flex;
     justify-content: space-around;
-    height: 100px;
+    height: 200px;
     margin-top: 3%;
+}
+@media screen and (max-width:1100px) {
+    .org-img {
+        height:200px;
+    }
+}
+@media screen and (max-width:667px) {
+    .org-img {
+        height:70px;
+    }
+}
+/* @media screen and (max-width:667px) {
+    .org-img {
+        height:70px;
+    }
+} */
+@media screen and (max-width:720px) {
+    .org-img {
+        height:100px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .org-img {
+        height:90px;
+    }
 }

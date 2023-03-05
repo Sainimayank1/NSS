@@ -12,6 +12,7 @@ import NotFound from "./Components/auth/NotFound";
 import { useSelector } from "react-redux";
 import CreatePost from "./Components/Createpost/CreatePost";
 
+
 function App() {
   const {user} = useSelector((state) => state.authReducer)
   return (
