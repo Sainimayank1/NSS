@@ -13,11 +13,21 @@ import { Helmet } from 'react-helmet'
 function Home() {
   const dispatch = useDispatch();
   const { loading, LoginError, LoginMessage, user } = useSelector((state) => state.authReducer);
+  const {createSucces } = useSelector(state => state.PostReducer);
+
   useEffect(() => {
     if (LoginMessage.length > 0)
       toast.success(LoginMessage);
     dispatch({ type: "CLEAR-LOGIN-SUCCESS" });
   }, [LoginMessage])
+
+  useEffect(() => {
+    if(createSucces.length > 0)
+    {
+        toast.success(createSucces[0].msg);
+        dispatch({type:"CLEAR_CREATE_SUCCES"});
+    }
+}, [createSucces])
 
   return (
     <>

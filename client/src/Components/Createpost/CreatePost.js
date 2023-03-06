@@ -28,12 +28,7 @@ function CreatePost(props) {
     const handlefile = (e) => {
         if (e.target.files.length !== 0) {
             setState(e.target.files[0].name);
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                setimagepreview(reader.result);
-            }
-            reader.readAsDataURL(e.target.files[0]);
-            setinputValue({ ...inputValue, image: e.target.files[0] })
+            setinputValue({ ...inputValue, image:e.target.files[0] })
         }
     }
 
@@ -59,12 +54,6 @@ function CreatePost(props) {
         setinputValue({ ...inputValue, [e.target.name]: e.target.value })
     }
 
-    // useEffect(()=>
-    // { 
-    //     // if(redirect)
-    //     navigate("/dashboard/1");
-    // },[redirect])
-
     useEffect(() => {
         if(createError.length > 0)
         {
@@ -76,8 +65,7 @@ function CreatePost(props) {
     useEffect(() => {
         if(createSucces.length > 0)
         {
-            createSucces.map((error) => toast.success(error.msg));
-            dispatch({type:"CLEAR_CREATE_SUCCES"});
+            navigate("/");
         }
     }, [createSucces])
 
@@ -91,6 +79,7 @@ function CreatePost(props) {
         formdata.append("_id", _id);
         formdata.append("name", name);
         formdata.append("image", inputValue.image);
+        console.log({...formdata})
         dispatch(PostCreateMethod(formdata));
     }
 
@@ -117,7 +106,7 @@ function CreatePost(props) {
                                 </div>
                                 <div className='react-quil'>
                                 <label htmlFor="post_body">Post Body</label>
-                                <ReactQuill  theme="snow"  value={value} onChange={setValue} id="post_body" />
+                                <ReactQuill   value={value} onChange={setValue} id="post_body" />
                                 </div>
                                 <div className='desc'>
                                     <label htmlFor="description">Meta Description</label>

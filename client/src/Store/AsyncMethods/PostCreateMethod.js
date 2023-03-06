@@ -19,7 +19,6 @@ import axios from "axios"
             const data  = await axios.post("http://localhost:5000/post/create",postData,config);
             dispatch({type:"CLOSE_LOADER"})
             dispatch({type:'SET_CREATE_SUCCES',payload:data.data})
-            console.log(data);
         } catch (error) {
             dispatch({type:"CLOSE_LOADER"})
             dispatch({type:"SET_CREATE_ERROR" ,payload:error.response.data.errors})

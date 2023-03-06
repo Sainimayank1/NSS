@@ -1,4 +1,5 @@
 const initail = {
+    AllPosts:[],
     createError:[],
     createSucces:[],
 };
@@ -13,6 +14,10 @@ const PostReducer = (state = initail, action) => {
         return { ...state, createSucces: action.payload };
     else if (action.type === "CLEAR_CREATE_SUCCES") 
         return { ...state, createSucces: [] };
+    else if (action.type === "SET_ALL_POSTS") 
+        return { ...state, AllPosts: action.payload };
+    else if (action.type === "CLEAR_ALL_POSTS") 
+        return { ...state, AllPosts: [] };
     else
         return state;
 }

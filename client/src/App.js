@@ -11,6 +11,7 @@ import Loading from "./Components/Loader/Loading";
 import NotFound from "./Components/auth/NotFound";
 import { useSelector } from "react-redux";
 import CreatePost from "./Components/Createpost/CreatePost";
+import Posts from "./Components/Posts/Posts";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route path="/login" element= {user ? <Home/> : <Login/> }/>
       <Route path="/register" element={user ? <Home/> :<Register/>} />
       <Route path="/createPost" element={user ? <CreatePost/> :<Login/>} />
+      <Route path="posts" element={<Posts/>} />
       <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
       <Route path="/loader" element={<Loading/>} />
       <Route path='*' element={<NotFound/>}/>

@@ -37,14 +37,14 @@ function Navbar() {
         </div>
         <div className='Navbar-right'>
           {user ? <>
-            <div className='Navbar-posts'><Link to='/'>Posts</Link></div>
+            <div className='Navbar-posts'><Link to='/posts'>Posts</Link></div>
             <div className='Navbar-create'><Link to='/createPost'>Create Post</Link></div>
             <div className='Navbar-name'>{user.name}</div>
             <div className='Navbar-login'><Link onClick={() => { logout() }}>Logout</Link></div>
           </>
             :
             <>
-              <div className='Navbar-posts'><Link to='/'>Posts</Link></div>
+              <div className='Navbar-posts'><Link to='/posts'>Posts</Link></div>
               <div className='Navbar-login'><Link to='/login'>Login</Link></div>
               <div className='Navbar-login'><Link to='/register'>Register</Link></div>
             </>
@@ -64,13 +64,13 @@ function Navbar() {
           <Link to='/'>Home</Link>
         </div>
           {user ? <>
-            <div className='slider-posts' onClick={() => change()}><Link to='/'>Posts</Link></div>
+            <div className='slider-posts' onClick={() => change()}><Link to='/posts'>Posts</Link></div>
             <div className='slider-create' onClick={() => change()}><Link to='/register'>Create Post</Link></div>
             <div className='slider-login' onClick={() => change()}><Link onClick={() => { logout() }}>Logout</Link></div>
           </>
             :
             <>
-              <div className='slider-posts' onClick={() => change()}><Link to='/'>Posts</Link></div>
+              <div className='slider-posts' onClick={() => change()}><Link to='/posts'>Posts</Link></div>
               <div className='slider-login' onClick={() => change()}><Link to='/login'>Login</Link></div>
               <div className='slider-register' onClick={() => change()}><Link to='/register'>Register</Link></div>
             </>
