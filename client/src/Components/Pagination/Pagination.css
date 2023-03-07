@@ -1,0 +1,48 @@
+.pagination {
+    display: flex;
+    margin: 1rem 0;
+    /* // border : 2px solid red;/
+    // width: 100%; */
+}
+
+.active {
+    background: green;
+    color: white;
+}
+
+.active a {
+    color: white;
+}
+
+.pagination li {
+    list-style-type: none;
+    padding: 0.9rem;
+    padding-right: 1.3rem;
+    padding-left: 1.3rem;
+    border: 2px solid green;
+    margin: 0.6rem;
+}
+
+.pagination li a {
+    text-decoration: none;
+    color: green;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-size: bold;
+}
+
+.pagination li a :hover {
+    scale: 1.1;
+    transition: all .2s ease-in-out;
+}
+
+
+
+@media (max-width:750px) {
+    li {
+        /* // padding: 0 !important; */
+        padding: 0.4rem !important;
+        padding-right: 0.9rem !important;
+        padding-left: 0.9rem !important;
+    }
+}

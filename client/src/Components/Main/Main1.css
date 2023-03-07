@@ -29,9 +29,81 @@ h5 div{
 
 p{
     width: 70%;
+    font-weight:400;
     /* border: 2px solid black; */
 }
 
 p a{
     color: #e53624;
 }
+
+@media  screen and (max-width: 1200px){
+    h5 div{
+        font-size: 2.8rem !important;
+    }
+    h5{
+        font-size: 1rem !important;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+}
+
+@media  screen and (max-width: 950px){
+    h5 div{
+        font-size: 2.5rem !important;
+    }
+    h5{
+        font-size: 0.9rem !important;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+
+@media  screen and (max-width: 850px){
+   .mainbox-main-2{
+    width: 90%;
+   }
+}
+
+
+@media  screen and (max-width: 750px){
+    h5 div{
+        font-size: 2rem !important;
+    }
+    h5{
+        font-size: 0.7rem !important;
+    }
+    p{
+        font-size: 0.7rem;
+    }
+ }
+
+ @media  screen and (max-width: 600px){
+    .mainbox-main-2
+    {
+        flex-direction: column;
+        /* border: 2px solid black; */
+        align-items: center;
+        justify-content: center;
+    }
+    .main1-head{
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        /* border: 2px solid black; */
+    }
+    h5 div{
+        font-size: 1.5rem !important;
+        display: flex;
+
+    }
+    h5{
+        font-size: 1rem !important;
+    }
+    p{
+        font-size: 0.9rem;
+        width: 100%;
+    }
+ }

@@ -9,6 +9,6 @@ const router = express.Router();
 
 
 router.post("/create", auth , expressFormidable({maxFileSize : 5 * 1024 * 1024}) , createPost);
-router.get("/posts" , auth , FetchAllPosts);
+router.get("/posts/:page" , FetchAllPosts);
 
 export default router

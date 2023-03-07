@@ -2,6 +2,7 @@ const initail = {
     AllPosts:[],
     createError:[],
     createSucces:[],
+
 };
 
 

@@ -1,0 +1,118 @@
+.dash-container {
+    /* margin-top: 6rem; */
+    display: flex;
+    justify-content: center;
+    min-height: 62.8rem;
+    /* // border: 2px solid black; */
+    width: 100%;
+}
+
+
+.grid-container{
+    margin-top: 6rem;
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    gap: 5rem;
+    height: auto;
+    margin-bottom: 5rem;
+}
+
+.grid-main
+{
+    padding: 1rem;
+    box-shadow: 10px 10px 20px #14418a;
+}
+
+
+.grid-first-level
+{
+
+    /* border: 2px solid black; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.grid-logo img{
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.grid-name{
+    margin-left: 0.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.grid-first-level span{
+    font-size: 0.6rem;
+    margin-left: 0.2rem;
+}
+
+.grid-title
+{
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.grod-description
+{
+
+}
+
+.grid-third-level
+{
+    width: 100%;
+}
+
+.grid-third-level img
+{
+    object-fit:fill;
+    width: 90%;
+    
+}
+
+.fourth-level-logo
+{
+    font-size: 1.4rem;
+    margin-right: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+ /* /* .grid-container .grid-first-level :first-child {
+    border-top: none !important; */
+    /* border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem; */
+
+
+/*.grid-container:last-child {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.grid-container {
+    box-shadow: 0px 10px 4rem 0.1px rgba(165, 148, 148, 0.251);
+    background-color: white;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.grid-items {
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-bottom: 2px solid #f5f7fcdf;
+    width: 90%;
+}
+
+.link {
+    margin: 0.5rem;
+    font-size: 1.8rem;
+    color: black;
+} */

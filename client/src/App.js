@@ -25,7 +25,7 @@ function App() {
       <Route path="/login" element= {user ? <Home/> : <Login/> }/>
       <Route path="/register" element={user ? <Home/> :<Register/>} />
       <Route path="/createPost" element={user ? <CreatePost/> :<Login/>} />
-      <Route path="posts" element={<Posts/>} />
+      <Route path="/posts/:page" element={<Posts/>} />
       <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
       <Route path="/loader" element={<Loading/>} />
       <Route path='*' element={<NotFound/>}/>
