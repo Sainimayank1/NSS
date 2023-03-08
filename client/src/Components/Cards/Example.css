@@ -33,7 +33,7 @@
 
 }
 .title{
-    border-bottom: 2px solid red;
+    /* border-bottom: 3px solid white; */
 
 }
 .btn{
@@ -48,4 +48,14 @@
 }
 .card-img{
     background-color: white;
+}
+.img-circle{
+    border-radius: 50%;
+    background-color: aqua;
+}
+.text-card{
+    text-align: justify;
+}
+.head-name{
+    border-bottom: 3px solid white;
 }

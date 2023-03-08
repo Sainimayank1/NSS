@@ -84,10 +84,12 @@
 .p{
   color: black;
   font-size: 1rem;
+  text-align: center;
 }
 .para1{
   color: black;
   font-size: 1rem;
+  text-align: center;
 }
 
 .para1 a{
@@ -104,6 +106,7 @@
   margin: 0rem;
   color: black;
   font-size: 1rem;
+  text-align: center;
 }
 .fp{
   text-align: center;
