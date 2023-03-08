@@ -12,6 +12,10 @@
     height: 60px;
     padding-top: 0.66px;
     font-size:18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
     
    
 }
@@ -34,8 +38,13 @@
     padding: 20px 30px;
     padding-left: 50px;
      align-items: center; 
-    border-bottom: 2px solid white;
+    /* border-bottom: 2px solid white; */
     
+ }
+ .icon-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
  }
 a.social
 {
@@ -54,33 +63,12 @@ a.social
     text-align: center;
     display: block;
     color: white;
-    font-size: 15px;
-    padding-bottom: 15px;
-}
-@media screen and (max-width:667px) {
-.bottom_footer h3{
-            font-size: 15px;
-            }
-.top_footer{
-                font-size: 15px;
-            }
-}
-@media screen and (max-width:1240px) {
-a.social{
-         padding-left: 50px;
-    }
-            
- }
-@media screen and (max-width:667px) {
-    a.social{
-        padding-right:200px;
-        display: flex;
-        flex-direction: row;
-    }
-    
-} 
-@media screen (max-width:745px) {
-    .icons a.social {
-        padding-right:500px;
-    }
+    font-size: 18px;
+    padding-bottom: 13px;
+    border-top: 2px solid white;
+    /* margin-top: 4px; */
+    padding-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }

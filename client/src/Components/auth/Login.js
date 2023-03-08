@@ -56,7 +56,7 @@ function Login() {
                 fontsize: '16px'
               },
             }} />
-            <p className='pl'>Please enter your login and Password</p>
+            <p className='pl'>Please enter your email and Password</p>
             <form id='login-form'>
               <input type="text" onChange={handleChange} name="email" placeholder='Enter Email' value={state.email} required></input>
               <input type="password" onChange={handleChange} name="password" placeholder='Enter Password' value={state.password} required></input>

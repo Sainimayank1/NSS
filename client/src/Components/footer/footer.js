@@ -11,10 +11,11 @@ const footer = () => {
   return (
     <>
     <div className='top_footer bg-blue'>
-      <p>Home | Links | footer | Feedback | Contact us</p>
+      <p>Home | Links | Feedback | Contact us</p>
     </div>
     <div className='bottom_footer'>
       <h3>Follow Us</h3>
+      <div className='icon-main'> 
       <div className='icons'>
       <a href="#f"
         className="youtube social">
@@ -31,6 +32,7 @@ const footer = () => {
         className="instagram social">
         <FontAwesomeIcon icon={faInstagram} size="1.7x" />
       </a>
+      </div>
       </div>
       <div className='para'>
       <p>@Copyrights NSS Jmieti | ALL rights Reserved</p>

@@ -12,14 +12,15 @@ const Example = () => {
       <div className='row'>
         <div className='col-sm'>
         <Card  style={{ width: '20rem' }} className='card'>
-        <Card.Img variant="Middle" className='card-img' src="./picture/75years.png"  />
+        <Card.Img variant="Middle" className='card-img' src=""  />
+        {/* <Card.Img variant="Middle" className='img-circle' src=" ./picture/75years.png"  /> */}
         <Card.Body>
-        <Card.Title className='title'>Card Title</Card.Title>
+        <h3 className='head-name'>Mr.Tajinder Kumar</h3>
+        <Card.Title className='title'>Asst.Professor</Card.Title>
         <Card.Text className='text-card'>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Some quick example text to build on the card title. 
         </Card.Text>
-        <Button variant="primary" className='btn'>Read More</Button>
+        {/* <Button variant="primary" className='btn'>Read More</Button> */}
         </Card.Body>
         </Card>
         </div>
@@ -27,14 +28,14 @@ const Example = () => {
         {/* //seconnd */}
         <div className='col-sm'>
         <Card style={{ width: '20rem' }} className='card'>
-        <Card.Img variant="Middle" src="./picture/75years.png" className=' card-img' />
+        <Card.Img variant="Middle" src="" className=' card-img' />
         <Card.Body>
-        <Card.Title className='title'>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+        <h3 className='head-name'>Dr.Niti Sakhuja</h3>
+        <Card.Title className='title'>Asst.Professor</Card.Title>
+        <Card.Text className='text-card'>
+        Some quick example text to build on the card title.
         </Card.Text>
-        <Button variant="primary" className='btn'>Read More</Button>
+        {/* <Button variant="primary" className='btn'>Read More</Button> */}
         </Card.Body>
         </Card>
         </div>
