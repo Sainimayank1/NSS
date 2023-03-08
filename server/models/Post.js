@@ -6,10 +6,6 @@ const PostSchema = new mongoose.Schema(
             type:String,
             required:true
         },
-        body:{
-            type:String,
-            required:true
-        },
         image:{
             public_id: {
                 type: String,

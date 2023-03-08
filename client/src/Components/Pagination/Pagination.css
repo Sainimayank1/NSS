@@ -6,7 +6,7 @@
 }
 
 .active {
-    background: green;
+    background: #303983;
     color: white;
 }
 
@@ -19,13 +19,13 @@
     padding: 0.9rem;
     padding-right: 1.3rem;
     padding-left: 1.3rem;
-    border: 2px solid green;
+    border: 2px solid #303983;
     margin: 0.6rem;
 }
 
 .pagination li a {
     text-decoration: none;
-    color: green;
+    color: #303983;
     font-size: 1.3rem;
     cursor: pointer;
     font-size: bold;
@@ -44,5 +44,14 @@
         padding: 0.4rem !important;
         padding-right: 0.9rem !important;
         padding-left: 0.9rem !important;
+    }
+}
+
+@media (max-width:380px) {
+    li {
+        /* // padding: 0 !important; */
+        padding: 0.1rem !important;
+        padding-right: 0.6rem !important;
+        padding-left: 0.6rem !important;
     }
 }

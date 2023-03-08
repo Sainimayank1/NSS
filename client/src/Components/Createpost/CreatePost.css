@@ -4,7 +4,7 @@
      /* border: 2px solid black; */
      align-items: flex-start;
      justify-content: center;
-    height: 63rem;
+    min-height: 55rem;
 }
 
 .main_left {
@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* // border: 2px solid red; */
+     /* border: 2px solid red; */
 }
 
 .desc {
@@ -43,7 +43,7 @@
 .create_form {
     background-color: white;
     min-height: 80%;
-    width: 70%;
+    width: 80%;
     border-radius: 2px;
     box-shadow: 10px 10px 20px #303983;
     padding: 10px;
@@ -129,10 +129,17 @@
     /* // border: 2px solid red; */
 }
 
+.create-post-p
+{
+    width: 100%;
+    display: flex;
+
+}
+
 .create_slug {
     background-color: white;
     min-height: 80%;
-    width: 70%;
+    width: 80%;
     border-radius: 2px;
     box-shadow: 10px 10px 20px #303983;
     padding: 10px;
@@ -169,7 +176,7 @@
     padding: 0.1rem 1rem;
     font-weight: bold;
     color: white;
-    width: 100%;
+    width:99%;
     outline: none;
     border: none;
     cursor: pointer;
@@ -216,14 +223,14 @@
 
 
 
-@media (max-width: 100px) {
+@media (max-width: 1000px) {
 
     .main_left {
         flex: 2.5  !important;
     }
 
     .main_right{
-        flex: 2;
+        flex: 2.5;
     }
 
 }
@@ -232,13 +239,50 @@
 
     .create_main {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
     }
-
+    .desc textarea{
+        width: 100%;
+    }
+    .main_left {
+        width: 95%;
+    }
+    .main_right{
+        width: 95%;
+        margin-bottom: 5rem;
+    }
 }
 
-
+@media (max-width :780px) {
+    .slug_button button
+    {
+        height: 2rem;
+        font-size: 0.7rem !important;
+    }
+}
 @media (max-width: 440px) {
-    .create-label {
-        /* // height:fit-content !important; */
+    .main_left {
+        width: 100%;
+    }
+    .main_right{
+        width: 100%;
+    }
+    .slug_button 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .slug_button button
+    {
+        height: 1.5rem;
+        width: 100% !important;
+        margin: 0 !important;
+        font-size: 0.5rem !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

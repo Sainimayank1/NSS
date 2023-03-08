@@ -1,15 +1,15 @@
-.main-notfound {
+.main-notfound1{
   margin-top: 8rem;
   margin-bottom: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
   /* // font-size: 10rem; */
-  /* height: 63rem; */
-  height:20rem;
- /* border: 2px solid black; */
+  /* height: 63rem !important; */
+  height: 20rem;
+ /* border: 2px solid black !important; */
 }
-._notFound {
+.notFound{
   height: 80%;
   width: 80%;
   /* border: 2px solid black; */
@@ -18,13 +18,13 @@
   justify-content: center;
   flex-direction: column;
 }
-h1 {
-  /* color: green; */
+h1{
   font-size: 7rem;
+  color: #303983;
 }
-
-span {
-  font-size: 4rem;
+.notfound-span{
+  font-size: 4rem !important;
+  /* color: white; */
 }
 
 
@@ -32,8 +32,8 @@ span {
   h1{
     font-size: 5rem;
   }
-  span{
-    font-size: 3rem;
+  .notfound-span{
+    font-size: 3rem !important;
   }
 
  }
@@ -44,8 +44,8 @@ span {
   h1{
     font-size: 4rem;
   }
-  span{
-    font-size: 2.5rem;
+  .notfound-span{
+    font-size: 2.5rem !important;
   }
 }
 
@@ -53,8 +53,8 @@ span {
     h1{
       font-size: 3rem;
     }
-    span{
-      font-size: 1.5rem;
+    .notfound-span{
+      font-size: 1.5rem !important; 
     }
  }
 
@@ -63,8 +63,8 @@ span {
   h1{
     font-size: 2.5rem;
   }
-  span{
-    font-size: 1rem;
+  .notfound-span{
+    font-size: 1rem !important;
   }
 
 

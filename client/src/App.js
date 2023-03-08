@@ -8,7 +8,7 @@ import Home from "./Components/Home/Home";
 import Login from "./Components/auth/Login"
 import Register from "./Components/auth/Register";
 import Loading from "./Components/Loader/Loading";
-import NotFound from "./Components/auth/NotFound";
+import NotFound from "./Components/auth/NotFound.js";
 import { useSelector } from "react-redux";
 import CreatePost from "./Components/Createpost/CreatePost";
 import Posts from "./Components/Posts/Posts";

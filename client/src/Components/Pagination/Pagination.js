@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import '../scss/components/_pagination.scss'
+import "./Pagination.css"
 import { useSelector } from 'react-redux';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 

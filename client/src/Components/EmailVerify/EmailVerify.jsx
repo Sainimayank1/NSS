@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
+import NotFound from "../auth/NotFound";
 // import success from "../../images/success.png";
 import styles from "./style.module.css";
 // import { Fragment } from "react/cjs/react.production.min";
@@ -30,7 +31,7 @@ const EmailVerify = () => {
 		<>
 		<Helmet>
         <meta charSet="utf-8" />
-         <title>Login Here!</title>
+         <title>Email Verify</title>
        </Helmet>
 
 		<div>
@@ -43,7 +44,7 @@ const EmailVerify = () => {
 					</Link>
 				</div>
 			) : (
-				<h1>404 Not Found</h1>
+				<h1><NotFound/></h1>
 			)}
 		</div>
 		</>

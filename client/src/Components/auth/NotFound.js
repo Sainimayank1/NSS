@@ -6,10 +6,10 @@ function NotFound() {
     <Helmet>
         <title>404! Not found.</title>
     </Helmet>
-    <div className='main-notfound bg-grey'>
-        <div className='_notFound'>
+    <div className='main-notfound1'>
+        <div className='notFound'>
             <h1 className='blue'>404</h1>
-            <span>Opps! That page not found.</span>
+            <span className='notfound-span'>Opps! That page not found.</span>
         </div>
     </div>
   </>

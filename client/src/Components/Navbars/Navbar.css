@@ -11,7 +11,11 @@
 }
 .phone , .phone-main{
     display: none;
+    
+
 }
+
+
 
 .phone-1-x
 {
@@ -159,6 +163,7 @@
         display: visible;
         display: flex;
         justify-content: flex-end;
+        margin-right: 1.5rem !important;
     }
     .phone{
         display: block;
@@ -175,7 +180,7 @@
     }
     .phone-1 , .phone-2 , .phone-3
     {
-        height: 2.5px;
+        height: 3px;
         width: 42px !important;
         background: #000;
         display: visible;

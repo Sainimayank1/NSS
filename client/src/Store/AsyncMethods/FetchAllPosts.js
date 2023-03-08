@@ -1,14 +1,12 @@
 import axios from "axios"
 
 function fetchPosts(page) {
-    return async (dispatch, getData) => {
-        const { authReducer } = getData();
-        const token = authReducer.token
+    return async (dispatch) => {
         dispatch({ type: "SET_LOADER" })
         try {
             const response = await axios.get('http://localhost:5000/post/posts/:'+page)
-            console.log(response.data.data);
-            dispatch({type:"SET_ALL_POSTS",payload : response.data.data})
+            const {data ,  likes , dislikes ,count,perPage} = response.data
+            dispatch({type:"SET_ALL_POSTS" , payload : {data ,  likes , dislikes ,count,perPage}})
             dispatch({type:"CLOSE_LOADER"})
         } catch (error) {
             dispatch({ type:"CLOSE_LOADER"})

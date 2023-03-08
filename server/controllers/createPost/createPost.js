@@ -4,14 +4,11 @@ import cloudinary from "cloudinary";
 const createPost = async (req, res) => {
         const errors = [];
         const files = req.files;
-        const { title, body, description, slug, _id, name} = req.fields;
+        const { title, description, slug, _id, name} = req.fields;
         // Validation
 
         if (title === "") {
             errors.push({ msg: "Tittle is required" });
-        }
-        if (body === "") {
-            errors.push({ msg: "Body is required" });
         }
         if (description === "") {
             errors.push({ msg: "Description is required" });
@@ -52,7 +49,6 @@ const createPost = async (req, res) => {
                 const result = await cloudinary.uploader.upload(files.image.path, {folder: "UsersImages",})
                 const response = await Post.create({
                     title,
-                    body,
                     image: {
                         public_id: result.public_id,
                         url: result.secure_url
