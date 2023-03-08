@@ -19,18 +19,18 @@ const footer = () => {
       <div className='icons'>
       <a href="#f"
         className="youtube social">
-        <FontAwesomeIcon icon={faYoutube} size="1.7x" />
+        <FontAwesomeIcon icon={faYoutube}  />
       </a>
       <a href="#f"
         className="facebook social">
-        <FontAwesomeIcon icon={faFacebook} size="1.7x" />
+        <FontAwesomeIcon icon={faFacebook}  />
       </a>
       <a href="#f" className="twitter social">
-        <FontAwesomeIcon icon={faTwitter} size="1.7x" />
+        <FontAwesomeIcon icon={faTwitter}  />
       </a>
       <a href="#f"
         className="instagram social">
-        <FontAwesomeIcon icon={faInstagram} size="1.7x" />
+        <FontAwesomeIcon icon={faInstagram} />
       </a>
       </div>
       </div>
