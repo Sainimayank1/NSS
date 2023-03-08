@@ -4,6 +4,8 @@
   height: 80rem;
   margin-top: 10rem;
   margin-bottom: 10rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
   height: 40rem;
   display: flex;
   justify-content: center;
@@ -42,7 +44,6 @@
 
 }
 #register-form input {
-  
   margin: 0.8rem;
   width: 90%;
   height: 3rem;
@@ -50,6 +51,11 @@
   /* padding-bottom: 2rem; */
   font-weight: bold;
   padding-left: 1rem;
+  margin: 1rem;
+  width: 90%;
+  height: 2rem;
+  /* padding-left: 1rem; */
+  padding: 1rem;
   outline: none;
   border: none;
   transition: all 0.5s ease-in-out;
@@ -57,6 +63,11 @@
   border-bottom: 3px solid #14418a;
   border-radius: 25px;
   font-weight: bold;
+  border-bottom: 3px solid #14418a;;
+  border-radius: 25px;
+  padding-top:4px ;
+  padding-bottom: 4px;
+  /* border: 2px solid black; */
 }
 
 
@@ -90,7 +101,7 @@
   color: black;
   font-size: 1rem;
   text-align: center;
-  
+
 }
 .para2{
   color: black;

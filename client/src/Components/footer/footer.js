@@ -34,8 +34,10 @@ const footer = () => {
       </a>
       </div>
       </div>
+      <div className='main-para'>
       <div className='para'>
       <p>@Copyrights NSS Jmieti | ALL rights Reserved</p>
+      </div>
      </div>
     </div>
     </>

@@ -36,9 +36,9 @@
  .icons {
 
     padding: 20px 30px;
-    padding-left: 50px;
+    /* padding-left: 50px; */
      align-items: center; 
-    /* border-bottom: 2px solid white; */
+     /* border-bottom: 2px solid white;  */
     
  }
  .icon-main{
