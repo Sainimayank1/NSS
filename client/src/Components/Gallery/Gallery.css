@@ -1,8 +1,41 @@
 .heading h3{
     text-align: center;
     margin-top: 1rem;
-    background-color:#303983;
-    color: white;
+    border-bottom: 1px solid #303983;
+    color: #303983;
     height: 50px;
     padding-top:0.5rem ;
+    margin: 1rem;
+}
+.main1-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, .2);
+    width: 100%;
+    padding-top: 0.5rem;
+    margin-top: 1px;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+
+}
+.first-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 2px solid red;
+    width: 550px;
+    height: 302px;
+    /* margin-bottom: rem; */
+    border: 3px solid #303983;
+
+}
+.second-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 2px solid red;
+    width: 550px;
+    height: 302px;
+    border: 3px solid #303983;
 }

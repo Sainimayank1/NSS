@@ -13,10 +13,10 @@
 }
 .org-img
 {
-    /* border: 2px solid black; */
+      /* border: 2px solid black; */
     display: flex;
     justify-content: space-around;
-    height: 200px;
+    height: 180px;
     margin-top: 3%;
 }
 @media screen and (max-width:1100px) {
@@ -25,8 +25,8 @@
     }
 }
 @media screen and (max-width:667px) {
-    .org-img {
-        height:70px;
+    .org-img img{
+        height:60px;
     }
 }
 /* @media screen and (max-width:667px) {
