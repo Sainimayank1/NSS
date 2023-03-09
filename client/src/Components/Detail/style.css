@@ -1,0 +1,101 @@
+.home-container
+{
+    width: 100%;
+    /* border:2px solid black; */
+    min-height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 0 4rem 0;
+}
+
+.home-items
+{
+    padding: 1rem;
+
+}
+.home-smaller
+{
+    width: 90%;
+    /* border: 2px solid black; */
+    box-shadow: 10px 10px 20px #14418a;
+}
+
+.detail-username
+{
+    font-weight: bold;
+    margin: 0 0.5rem 0 0.5rem ;    
+}
+
+.detail-date
+{
+    font-size: 0.8rem;
+}
+
+.detail-title
+{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.detail-desc
+{
+    font-size: 2rem;
+}
+
+.detail-form {
+    min-width: 100%;
+    border:2px solid black;
+    padding: 1rem;
+}
+
+.detail-right
+{
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.detail-right img{
+    width: 100%;
+}
+
+.detail-form form {
+    /* // border: 2px solid black; */
+    display: flex;
+    min-width: 99%;
+    flex-direction: column;
+}
+
+form input {
+    width: 99%;
+    display: block;
+    padding: 1rem;
+    border: none;
+    outline: none;
+}
+
+.detail-inp {
+    margin-bottom: 1rem;
+    background: #dbdfe9;
+    padding: 0.8rem;
+    font-size: 1rem;
+}
+
+.submit-detail {
+    background: #303983;
+    color: white;
+    font-weight: bold;
+    width: 10%;
+    font-size: 0.8rem;
+}
+
+@media (max-width : 500px) {
+    .detail-inp {
+        padding: 1.1rem !important;
+        font-size: 1.1rem !important;
+    }
+
+    .submit-detail {
+        font-size: 1rem !important;
+    }
+}

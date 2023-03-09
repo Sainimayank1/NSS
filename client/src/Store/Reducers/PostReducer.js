@@ -1,12 +1,10 @@
 const initail = {
     AllPosts:[],
-    Likes:[],
-    Dislikes:[],
     count:0,
     perPage:0,
     createError:[],
     createSucces:[],
-
+    details:{},
 };
 
 
@@ -20,10 +18,11 @@ const PostReducer = (state = initail, action) => {
     else if (action.type === "CLEAR_CREATE_SUCCES") 
         return { ...state, createSucces: [] };
     else if (action.type === "SET_ALL_POSTS") 
-        return { ...state, AllPosts: action.payload.data , count : action.payload.count , perPage : action.payload.perPage , 
-        Likes : action.payload.likes , Dislikes : action.payload.dislikes };
+        return { ...state, AllPosts: action.payload.data , count : action.payload.count , perPage : action.payload.perPage };
     else if (action.type === "CLEAR_ALL_POSTS") 
         return { ...state, AllPosts: [] };
+    else if( action.type === "SET_DETAIL")
+        return { ...state , details:action.payload}
     else
         return state;
 }

@@ -16,3 +16,13 @@
 .blue{
   color: #303983;
 }
+
+.hidden
+{
+  visibility: hidden;
+}
+
+.display-none
+{
+  display: none;
+}

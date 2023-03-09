@@ -10,6 +10,8 @@
 }
 
 
+
+
 .grid-container{
     margin-top: 6rem;
     display: flex;
@@ -76,11 +78,38 @@
     
 }
 
+.grid-fourth-level
+{
+    /* border: 2px solid black; */
+    display: flex;
+    /* align-items: center;     */
+    justify-content: center;
+    flex-direction: column;
+}
+
+.grid-fourth-level-like-main
+{
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center; 
+}
 .fourth-level-logo
 {
     font-size: 1.4rem;
     margin-right: 0.8rem;
     margin-top: 0.5rem;
+}
+.fourth-level-logo:hover
+{
+    scale :1.2;
+    cursor: pointer;
+}
+
+.grid-fourth-level-comment-box
+{
+    width: 100%;
+    border: 2px solid black;
+    height: 20rem;
 }
 
  /* /* .grid-container .grid-first-level :first-child {
