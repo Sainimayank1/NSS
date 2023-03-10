@@ -7,73 +7,69 @@ import { useDispatch } from 'react-redux';
 import moment from "moment"
 import toast, { Toaster } from "react-hot-toast"
 import FetchAllPosts from "../../Store/AsyncMethods/FetchAllPosts.js"
-import { AiOutlineLike, AiOutlineDislike } from "react-icons/ai";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { BiComment } from "react-icons/bi";
 import Loading from "../Loader/Loading";
 import { useParams } from 'react-router-dom';
 import LOGO from "../profile-user.png"
 import Pagination from '../Pagination/Pagination';
 import { Link } from 'react-router-dom';
+import detailsMethod from '../../Store/AsyncMethods/detailsMethod';
+import { useNavigate } from 'react-router-dom';
 
 function Posts() {
     const dispatch = useDispatch();
     const param = useParams();
+    const navigate = useNavigate();
     const page = param.page;
     let isTrue = true;
     const { user, loading, token } = useSelector(state => state.authReducer);
-    const { AllPosts, Likes, Dislikes, count, perPage } = useSelector(state => state.PostReducer);
+    const { AllPosts,count, perPage } = useSelector(state => state.PostReducer);
     const _id = user._id;
-    const [isLike, setlike] = useState(false);
-    const [isDrop, setDrop] = useState(false)
+    const [isClick, setCLick] = useState(false);
 
     useEffect(() => {
-        dispatch(FetchAllPosts(page))
+         dispatch(FetchAllPosts(page))
         isTrue = false;
     }, isTrue)
+    
 
-    const HandleLike = async (prop) => {
-        try {
-            const config =
-            {
-                headers: {
-                    Authorizaton: 'Bearer ' + token
+    const handleClick = async (prop) => {
+        if (!isClick) {
+            try {
+                const config =
+                {
+                    headers: {
+                        Authorizaton: 'Bearer ' + token
+                    }
                 }
-            }
-            setlike(false)
-            prop.likes.map((element) => {
-                if (_id == element) {
-                    setlike(true)
-                }
-            })
-            const props = prop._id;
-            const sendData = { props, _id }
-            if (!isLike) {
+
+                const props = prop._id;
+                const sendData = { props, _id }
+                setCLick(true)
                 const response = await axios.post('http://localhost:5000/post/like', sendData, config);
                 dispatch(FetchAllPosts(page))
-                setlike(true)
-            }
-        } catch (error) {
-            dispatch(FetchAllPosts(page))
-        }
-    }
 
-    const HandleDislike = async (prop) => {
-        dispatch({ type: "SET_LOADER" })
-        try {
-            const config =
-            {
-                headers: {
-                    Authorizaton: 'Bearer ' + token
-                }
+            } catch (error) {
+                dispatch(FetchAllPosts(page))
             }
-            const props = prop._id;
-            const sendData = { props, _id }
-            const response = await axios.post('http://localhost:5000/post/dislike', sendData, config);
-            dispatch(FetchAllPosts(page))
-            dispatch({ type: "CLOSE_LOADER" })
-        } catch (error) {
-            dispatch({ type: "CLOSE_LOADER" })
-            dispatch(FetchAllPosts(page))
+        }
+        else {
+            try {
+                const config =
+                {
+                    headers: {
+                        Authorizaton: 'Bearer ' + token
+                    }
+                }
+                const props = prop._id;
+                const sendData = { props, _id }
+                setCLick(false)
+                const response = await axios.post('http://localhost:5000/post/dislike', sendData, config);
+                dispatch(FetchAllPosts(page))
+            } catch (error) {
+                dispatch({ type: "CLOSE_LOADER" })
+            }
         }
     }
 
@@ -102,7 +98,7 @@ function Posts() {
                                     </div>
                                     <div className='grid-second-level'>
                                         <div className='grid-title'>
-                                        <Link to={'/details/:'+content._id}>{content.title}</Link>
+                                            <Link to={'/details/:' + content._id}>{content.title}</Link>
                                         </div>
                                         <div className='grid-description'>
                                             {content.description}
@@ -112,17 +108,17 @@ function Posts() {
                                         <img src={content.image.url} alt='img' className='user-img'></img>
                                     </div>
                                     <div className={user ? 'grid-fourth-level' : 'hidden'}>
-                                        <span className='grid-fourth-level-like-main'>
-                                            <AiOutlineLike className='fourth-level-logo' onClick={() => { HandleLike(content) }} />
-                                            <span className='grid-fourth-level-dislike-main'>
-                                                <AiOutlineDislike className='fourth-level-logo' onClick={() => { HandleDislike(content) }} />
-                                                <span className='grid-fourth-level-comment-main'>
-                                                    <BiComment className='fourth-level-logo' onClick={() => {
-                                                            <Link to={'/details/'+content._id}></Link>
-                                                    }} />
-                                                </span>
+                                        {/* <span className='grid-fourth-level-like-main'>
+                                            {isClick ?
+                                                <AiFillHeart className='fourth-level-logo' onClick={() => { handleClick(content) }} /> :
+                                                <AiOutlineHeart className='fourth-level-logo' onClick={() => { handleClick(content) }} />
+                                            }*/}
+                                            <span className='grid-fourth-level-comment-main'>
+                                                <BiComment className='fourth-level-logo' onClick={() => {
+                                                    navigate('/details/'+content._id)
+                                                }} />
                                             </span>
-                                        </span>
+                                        {/* </span>  */}
                                         <span className="grid-fourth-level-total-like">{content.likes.length} Likes</span>
                                     </div>
                                 </div>

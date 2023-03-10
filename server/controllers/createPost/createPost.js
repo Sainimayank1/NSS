@@ -46,7 +46,7 @@ const createPost = async (req, res) => {
                     api_key: process.env.CLOUD_KEY, 
                     api_secret: process.env.CLOUD_KEY_SECRET 
                 });  
-                const result = await cloudinary.uploader.upload(files.image.path, {folder: "UsersImages",})
+                const result = await cloudinary.uploader.upload(files.image.path, {public_id: "myfolder/UsersImages",})
                 const response = await Post.create({
                     title,
                     image: {

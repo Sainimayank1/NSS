@@ -12,7 +12,7 @@ function postComment(data) {
             }
         }
         try {
-            const response = await axios.post('http://localhost:5000/comment',data, config)
+            const response = await axios.post('http://localhost:5000/post/comment',data, config)
             console.log(response.data.msg);
             dispatch({ type: "CLOSE_LOADER" })
         } catch (error) {

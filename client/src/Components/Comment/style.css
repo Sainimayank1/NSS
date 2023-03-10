@@ -1,0 +1,31 @@
+.comment-smaller
+{
+    width: 20%;
+    /* background: beige; */
+    padding: 0.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #303983;; 
+}
+
+.comment-avatar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.comment-avatar img{
+    width: 1.2rem;
+}
+
+.comment-avatar-name
+{
+    font-size:1rem;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.comment-avatar-date
+{
+    font-size:0.7rem;
+}

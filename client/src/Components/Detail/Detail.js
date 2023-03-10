@@ -8,82 +8,81 @@ import Loading from '../Loader/Loading';
 import fetchdetails from "../../Store/AsyncMethods/detailsMethod"
 import "./style.css"
 import LoGO from "./profile-user.png"
-import { AiOutlineLike, AiOutlineDislike } from "react-icons/ai";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import Comments from '../Comment/Comment';
 import axios from "axios"
 import { useNavigate } from 'react-router-dom';
 import postComment from "../../Store/AsyncMethods/PostCommentMethod.js";
 
 function Details() {
-  const navigate  = useNavigate();
+  const navigate = useNavigate();
   let { id } = useParams();
   const [comment, setComment] = useState("")
   const dispatch = useDispatch();
-  const { loading, user ,token } = useSelector(state => state.authReducer)
+  const { loading, user, token } = useSelector(state => state.authReducer)
   const { details } = useSelector(state => state.PostReducer)
   let isTrue = true;
-  const [isLike, setlike] = useState(false);
-  const [isDislike, setDislike] = useState(false);
+  const [isClick, setCLick] = useState(false);
   const _id = user._id;
+  id = id.split(':')[1];
 
   const submitComment = (e) => {
-    // e.preventDefault();
-    // dispatch(postComment({postId:details._id,comment,userName:user.name}))
-    // dispatch(fetchdetails(id));
-    // setComment("");
+    e.preventDefault();
+    dispatch(postComment({ postId: details.data._id, comment, userName: user.name }))
+    dispatch(fetchdetails(id));
+    setComment("");
   }
 
   useEffect(() => {
-    id = id.split(':')[1];
     dispatch(fetchdetails(id));
-  }, [id  , isLike  , isDislike])
+    details.data.likes.map((element)=>
+    {
+      if(element === _id)
+      {
+        setCLick(true)
+      }
+    })
+    isTrue = false
+  }, [isTrue])
 
-const HandleLike = async (prop) => {
-    try {
+  const handleClick = async (prop) => {
+    if (!isClick) {
+      try {
         const config =
         {
-            headers: {
-                Authorizaton: 'Bearer ' + token
-            }
+          headers: {
+            Authorizaton: 'Bearer ' + token
+          }
         }
-        setlike(false)
-        prop.likes.map((element) => {
-            if (_id.cmp(element)) {
-                setlike(true)
-            }
-        })
-        const props = prop._id;
+
+        const props = id;
         const sendData = { props, _id }
-        if (!isLike) {
-            const response = await axios.post('http://localhost:5000/post/like', sendData, config);
-            setlike(true)
-        }
-    } catch (error) {
+        setCLick(true)
+        const response = await axios.post('http://localhost:5000/post/like', sendData, config);
         dispatch(fetchdetails(id))
-    }
-}
 
-const HandleDislike = async (prop) => {
-    try {
+      } catch (error) {
+        dispatch(fetchdetails(id))
+      }
+    }
+    else {
+      try {
         const config =
         {
-            headers: {
-                Authorizaton: 'Bearer ' + token
-            }
+          headers: {
+            Authorizaton: 'Bearer ' + token
+          }
         }
-        setDislike(false)
-        const props = prop._id;
+        const props = id;
         const sendData = { props, _id }
+        setCLick(false)
         const response = await axios.post('http://localhost:5000/post/dislike', sendData, config);
-        setDislike(true);
         dispatch(fetchdetails(id))
-        dispatch({ type: "CLOSE_LOADER" })
-    } catch (error) {
+      } catch (error) {
         dispatch(fetchdetails(id))
+      }
     }
-}
-
-
+  }
 
   return (
     <>
@@ -92,45 +91,47 @@ const HandleDislike = async (prop) => {
         <title>{details.title}</title>
       </Helmet>
       <div className='home-container'>
-      {loading ? <Loading /> :
-        <div className='home-smaller'>
+        {loading ? <Loading /> :
+          details ? 
+          <div className='home-smaller'>
             <div className='home-items'>
               <div className='home-left'>
                 <div className='avatar'>
                   <div className='avatar-right'>
-                    <span className='grid-logo'><img src={LoGO} className="img-container"></img></span>
-                    <span className='detail-username'>{details.userName}</span>
-                    <span className='detail-date'>{moment(details.updatedAt).format("MMM Do YY")}</span>
+                    <span className='grid-logo'><img src={LoGO} alt="image" className="img-container"></img></span>
+                    <span className='detail-username'>{details.data.userName}</span>
+                    <span className='detail-date'>{moment(details.data.createdAt).format("MMM Do YY")}</span>
                   </div>
                 </div>
                 <div className='detail-title'>
-                  {details.title}
+                  {details.data.title}
                 </div>
                 <div className='detail-desc'>
-                  {details.description}
+                  {details.data.description}
                 </div>
               </div>
               <div className='detail-right'>
-                <img className='detail-right-image' src={details.image.url}></img>
+                <img className='detail-right-image' src={ details.data.image.url}></img>
               </div>
               <div className={user ? 'grid-fourth-level' : 'hidden'}>
                 <span className='grid-fourth-level-like-main'>
-                  <AiOutlineLike className='fourth-level-logo' onClick={() => { HandleLike(details) }} />
-                  <span className='grid-fourth-level-dislike-main'>
-                    <AiOutlineDislike className='fourth-level-logo' onClick={() => { HandleDislike(details) }} />
-                  </span>
+                  {isClick ?
+                    <AiFillHeart className='fourth-level-logo' onClick={() => { handleClick(details) }} />
+                    :
+                    <AiOutlineHeart className='fourth-level-logo' onClick={() => { handleClick(details) }} />
+                  }
                 </span>
-                <span className="grid-fourth-level-total-like">{details.likes.length} Likes</span>
+                <span className="grid-fourth-level-total-like">{details.data.likes.length} Likes</span>
               </div>
             </div>
             <div className='detail-form'>
-            <form>
-              <input type='text' className='detail-inp ' onChange={(e) => setComment(e.target.value)} value={comment} placeholder='Enter Comment.'></input>
-              <input type='submit' onClick={submitComment} value="Submit" className='submit-detail'></input>
-            </form>
-            <Comments />
-          </div>
-        </div>}
+              <form>
+                <input type='text' className='detail-inp ' onChange={(e) => setComment(e.target.value)} value={comment} placeholder='Enter Comment.'></input>
+                <input type='submit' onClick={submitComment} value="Submit" className='submit-detail'></input>
+              </form>
+              <Comments />
+            </div>
+          </div> : <Loading/>}
       </div>
     </>
   )

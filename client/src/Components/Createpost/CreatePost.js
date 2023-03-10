@@ -36,6 +36,20 @@ function CreatePost(props) {
         }
     }
 
+    const handleVediofile = (e) => {
+        console.log(e.target.files[0])
+        // if (e.target.files.length !== 0) {
+        //     setState(e.target.files[0].name);
+        //     setinputValue({ ...inputValue, image: e.target.files[0] })
+        //     const reader = new FileReader();
+        //     reader.onloadend = () => {
+        //         setimagepreview(reader.result);
+        //     }
+        //     reader.readAsDataURL(e.target.files[0]);
+        // }
+    }
+
+
 
 const handleInput = (e) => {
 
@@ -105,6 +119,10 @@ return (
                             <div className='left-input_file'>
                                 <label htmlFor="post_pic" className='create-label'>{state ? state : "Choose Image.."}</label>
                                 <input className="bg-grey" type="file" id='post_pic' onChange={handlefile}></input>
+                            </div>
+                            <div className='left-input_file'>
+                                <label htmlFor="post_vid" className='create-label'>{state ? state : "Choose Vedio.."}</label>
+                                <input className="bg-grey" type="file" id='post_vid' onChange={handleVediofile}></input>
                             </div>
                             <div className='desc'>
                                 <label htmlFor="description">Meta Description</label>

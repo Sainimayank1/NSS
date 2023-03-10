@@ -1,22 +1,25 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import moment from "moment";
-import "./style.module.css";
+import LoGo from "./profile-user.png"
+import "./style.css";
 
 function Comments() {
-  const { comments } = useSelector(state => state.profileReducer);
-  const { loading } = useSelector(state => state.authReducer)
+  const { details } = useSelector(state => state.PostReducer);
+  const { loading } = useSelector(state => state.authReducer);
+  const {comment} = details
   return (
     <div className='main-comment'>
-      {comments.length > 0 ?
-        comments.map((data) =>
+      {comment.length > 0 ?
+        comment.map((data) =>
           <div className='comment-smaller'>
             <div className='comment-avatar'>
-              <span className='avatar-name'>
+              <img src={LoGo}></img>
+              <span className='comment-avatar-name'>
                 {data.userName}
               </span>
-              <span className='avatar-date'>
-              {moment(data.updatedAt).format("MMM Do YY")}
+              <span className='comment-avatar-date'>
+              {moment(data.createdAt).format("MMM Do YY")}
               </span>
             </div>
             <div>
