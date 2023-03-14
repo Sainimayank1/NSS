@@ -1,0 +1,134 @@
+.dash-user-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 90vh;
+}
+
+.dash-user-left {
+    width:40% !important;
+    /* height: 80% !important; */
+    /* flex: 0.9; */
+    margin: 0 5rem 2rem 5rem;
+    margin-top: 3rem;
+     /* border: 2px solid black; */
+    display: flex;
+    /* justify-content: flex-end; */
+
+}
+
+.dash-user-right {
+    margin: 0 5rem 2rem 5rem;
+    margin-top: 3rem;
+    width: 60%;
+     /* border: 2px solid black; */
+    display: flex;
+    /* align-items: flex-start; */
+    flex-direction: column;
+    height: auto;
+}
+
+ .grid-user-container:first-child {
+    border-top: 2px solid #f5f7fcdf;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+} 
+
+.grid-user-container:last-child {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.grid-user-container {
+    box-shadow: 10px 10px 20px #14418a;
+    background-color: white;
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.grid-user-items {
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 2px solid #f5f7fcdf;
+    width: 90%;
+}
+
+.div-user-first {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.div-user-first a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.div-user-first a{
+    font-size: 1rem;
+}
+
+.div-user-first span {
+    font-size: 1.2rem;
+    display: block !important;
+    color: silver;
+}
+.grid-user-items-span
+{
+    font-size: 0.8rem !important;
+}
+/* div {
+    display: flex;
+    align-items: center;
+} */
+
+.dash-link {
+    margin: 0.5rem;
+    font-size: 1.3rem;
+    color: black;
+}
+
+@media (max-width:650px) {
+    .dash-user-container {
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+         border: 2px solid red;
+        gap: 5rem;
+    }
+
+    .dash-user-left {
+        width: 80%;
+        flex: 1 !important;
+         border: 2px solid red;
+    }
+
+    .dash-user-right {
+         border: 2px solid red;
+        flex: 1 !important;
+        width: 80%;
+        margin-top: 1rem !important;
+    }
+
+    .grid-user-container {
+        width: 100%;
+    }
+}
+
+@media (max-width:350px) {
+    .link {
+        font-size: 1.5rem !important;
+    }
+} 
