@@ -29,15 +29,13 @@ const Gallery = () => {
     <div className='main-gallery'>
     <h3 className='h3g'>Gallery section</h3>
     <Carousel responsive={responsive}>
-    <img src='./picture/p1.jpg' alt='img' className='img-gallery' ></img>
-    <img src='./picture/p2.jpg' alt='img' className='img-gallery'></img>
-    <img src='./picture/p3.jpg' alt='img' className='img-gallery'></img>
-    <img src='./picture/p4.jpg' alt='img' className='img-gallery'></img>
-    <img src='./picture/p5.jpg' alt='img' className='img-gallery'></img>
-    <img src='./picture/p2.jpg' alt='img' className='img-gallery'></img>
-    <img src='./picture/p3.jpg' alt='img' className='img-gallery'></img>
-    <img src='./picture/p4.jpg' alt='img' className='img-gallery'></img>
-    <img src='./picture/p5.jpg' alt='img' className='img-gallery'></img>
+    <a href=''><img src='./picture/p1.jpg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p2.jpg' alt='img' className='img-gallery' ></img></a> 
+    <a href=''><img src='./picture/p2.jpg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p2.jpg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p2.jpg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p2.jpg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p2.jpg' alt='img' className='img-gallery' ></img></a>
   </Carousel>
    </div>
 
