@@ -1,28 +1,48 @@
 import React from 'react'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import './Gallery.css';
-import SimpleImageSlider from "react-simple-image-slider";
-import { Link } from 'react-router-dom';
 
 const Gallery = () => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
+
   return (
-   <>
-    <div className='heading'>
-        <h3>Gallery Section</h3>
-    </div>
-     <div className='main1-container'>
-    <div className='first-div'>
-    <Link to="/posts">
-    <img src='./picture/g1.jpg' alt='photo' />
-    </Link>
-    </div>
-     <div className='second-div'>
-     <Link to="/posts">
-     <img src='./picture/g2.jpg' alt='photo'></img>
-    </Link>
-    </div>
-    </div>
+    <>
+    <div className='main-gallery'>
+    <h3 className='h3g'>Gallery section</h3>
+    <Carousel responsive={responsive}>
+    <img src='./picture/p1.jpg' alt='img' className='img-gallery' ></img>
+    <img src='./picture/p2.jpg' alt='img' className='img-gallery'></img>
+    <img src='./picture/p3.jpg' alt='img' className='img-gallery'></img>
+    <img src='./picture/p4.jpg' alt='img' className='img-gallery'></img>
+    <img src='./picture/p5.jpg' alt='img' className='img-gallery'></img>
+    <img src='./picture/p2.jpg' alt='img' className='img-gallery'></img>
+    <img src='./picture/p3.jpg' alt='img' className='img-gallery'></img>
+    <img src='./picture/p4.jpg' alt='img' className='img-gallery'></img>
+    <img src='./picture/p5.jpg' alt='img' className='img-gallery'></img>
+  </Carousel>
+   </div>
+
+    </>
     
-   </>
   )
 }
 
