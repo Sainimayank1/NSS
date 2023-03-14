@@ -11,9 +11,10 @@ const Example = () => {
     <div className='container'>
       <div className='row'>
         <div className='col-sm'>
+        <div className='col-sm'>
         <Card  style={{ width: '20rem' }} className='card'>
         <Card.Img variant="Middle" className='card-img' src=""  />
-        {/* <Card.Img variant="Middle" className='img-circle' src=" ./picture/75years.png"  /> */}
+         {/* <Card.Img variant="Middle" className='img-circle' src=" ./picture/t1.png" />  */}
         <Card.Body>
         <h3 className='head-name'>Mr.Tajinder Kumar</h3>
         <Card.Title className='title'>Asst.Professor</Card.Title>
@@ -23,6 +24,7 @@ const Example = () => {
         {/* <Button variant="primary" className='btn'>Read More</Button> */}
         </Card.Body>
         </Card>
+        </div>
         </div>
 
         {/* //seconnd */}
