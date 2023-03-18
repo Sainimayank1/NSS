@@ -13,10 +13,16 @@ import { useSelector } from "react-redux";
 import CreatePost from "./Components/Createpost/CreatePost";
 import Posts from "./Components/Posts/Posts";
 import Details from "./Components/Detail/Detail";
+
 import Card from "./Components/Card2/Card";
+
+import Dashboard from "./Components/DashBoard/DashBoard";
+import Edit from "./Components/edit/Edit";
+// import dotenv from "dotenv"
 
 function App() {
   const {user} = useSelector((state) => state.authReducer)
+  // dotenv.config()
   return (
     <>
       <Main_navbar/>
@@ -26,8 +32,10 @@ function App() {
       <Route path="/login" element= {user ? <Home/> : <Login/> }/>
       <Route path="/register" element={user ? <Home/> :<Register/>} />
       <Route path="/createPost" element={user ? <CreatePost/> :<Login/>} />
+      <Route path="/dashboard/:page" element={user ? <Dashboard/> :<Login/>} />
       <Route path="/posts/:page" element={<Posts/>} />
       <Route path="/details/:id" exact element={<Details />} />
+      <Route path="/edit/:Postid" exact  element={user ? <Edit/> : <Login/>} />
       <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
       <Route path="/loader" element={<Loading/>} />
       <Route path='*' element={<NotFound/>}/>

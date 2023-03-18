@@ -1,9 +1,7 @@
 .login-container {
-  /* // border: 2px solid black; */
+   /* border: 2px solid black; */
   width: 100vw;
-  height: 50rem;
-  margin-top: 0px;
-  height: 50rem;
+  min-height: 50rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,14 +11,13 @@
 .login-form {
   width: 35%;
   height: 40rem;
-  /* // border: 2px solid red; */
+   /* border: 2px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 1px;
   box-shadow: 10px 10px 20px #14418a;
-  
 }
 
 .login-span {
@@ -154,17 +151,18 @@
     }
   }
 
-  @media  (max-width:430px) {
+  @media  (max-width:450px) {
 
 
     .login-container
     {
-        height: 60rem !important;
+        min-height: 50rem !important;
     }
 
     .login-form
     {
-        height: 35rem !important;
+        height: 32rem !important;
+        width: 82% !important;
     }
 
     #login-form input{
@@ -177,15 +175,48 @@
       font-size: 1.6rem !important;
       
     }
+    .btn-login
+    {
+      height: 2.2rem;
+      width: 80%;
+      font-size: 1rem !important;
+    }
 
     .pl
     {
       font-size: 0.8rem;
       visibility: hidden;
     }
+  } 
+
+  @media  (max-width:390px) {
+
+
+    .login-container
+    {
+        min-height: 45rem !important;
+    }
+
+    .login-form
+    {
+      height: 31rem !important;
+    }
+
+    #login-form input{
+      font-size: 0.8rem !important;
+      font-weight: bold;
+    }
+
+    .login-span
+    {
+      font-size: 1.6rem !important;
+    }
 
    
 
-
-
+    .pl
+    {
+      font-size: 0.8rem;
+      visibility: hidden;
+    }
   } 

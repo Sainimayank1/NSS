@@ -16,6 +16,18 @@ const PostSchema = new mongoose.Schema(
                 required: true
             }
         },
+        vedio:{
+            public_id: {
+                type: String,
+            },
+            url: {
+                type: String,
+            },
+            thumbnail_url:
+            {
+                type:String,
+            }
+        },
         description:{
             type:String,
             required:true

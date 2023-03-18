@@ -1,0 +1,23 @@
+.h-199 {
+    height: auto;
+}
+
+
+
+@media (max-width:600px) {
+    .h-199 {
+        height: 15rem !important;
+    }
+}
+
+@media (max-width:450px) {
+    .h-199 {
+        height: 12rem !important;
+    }
+}
+
+@media (max-width:310px) {
+    .h-199 {
+        height: 10rem !important;
+    }
+}

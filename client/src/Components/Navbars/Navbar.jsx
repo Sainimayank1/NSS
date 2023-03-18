@@ -39,7 +39,7 @@ function Navbar() {
           {user ? <>
             <div className='Navbar-posts'><Link to='/posts/1'>Posts</Link></div>
             <div className='Navbar-create'><Link to='/createPost'>Create Post</Link></div>
-            <div className='Navbar-name'>{user.name}</div>
+            <div className='Navbar-name'><Link to="/dashboard/1">{user.name}</Link></div>
             <div className='Navbar-login'><Link onClick={() => { logout() }}>Logout</Link></div>
           </>
             :
@@ -65,7 +65,8 @@ function Navbar() {
         </div>
           {user ? <>
             <div className='slider-posts' onClick={() => change()}><Link to='/posts/1'>Posts</Link></div>
-            <div className='slider-create' onClick={() => change()}><Link to='/register'>Create Post</Link></div>
+            <div className='slider-create' onClick={() => change()}><Link to='/createPost'>Create Post</Link></div>
+            <div className='slider-create' onClick={() => change()}><Link to='/dashboard/1'>{user.name}</Link></div>
             <div className='slider-login' onClick={() => change()}><Link onClick={() => { logout() }}>Logout</Link></div>
           </>
             :
