@@ -13,6 +13,7 @@ import { useSelector } from "react-redux";
 import CreatePost from "./Components/Createpost/CreatePost";
 import Posts from "./Components/Posts/Posts";
 import Details from "./Components/Detail/Detail";
+import Card from "./Components/Card2/Card";
 
 function App() {
   const {user} = useSelector((state) => state.authReducer)
@@ -32,6 +33,7 @@ function App() {
       <Route path='*' element={<NotFound/>}/>
     </Routes>
     <Footer />
+ 
     </>
   );
 }

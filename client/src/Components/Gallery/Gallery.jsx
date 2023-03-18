@@ -31,11 +31,11 @@ const Gallery = () => {
     <Carousel responsive={responsive}>
     <a href=''><img src='./picture/p1.jpg' alt='img' className='img-gallery' ></img></a>
     <a href=''><img src='./picture/p2.jpg' alt='img' className='img-gallery' ></img></a> 
-    <a href=''><img src='./picture/p2.jpg' alt='img' className='img-gallery' ></img></a>
-    <a href=''><img src='./picture/p2.jpg' alt='img' className='img-gallery' ></img></a>
-    <a href=''><img src='./picture/p2.jpg' alt='img' className='img-gallery' ></img></a>
-    <a href=''><img src='./picture/p2.jpg' alt='img' className='img-gallery' ></img></a>
-    <a href=''><img src='./picture/p2.jpg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p3.jpg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p4.jpg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p5.jpg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p1.jpg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p3.jpg' alt='img' className='img-gallery' ></img></a>
   </Carousel>
    </div>
 
