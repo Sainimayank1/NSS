@@ -13,6 +13,9 @@ import { useSelector } from "react-redux";
 import CreatePost from "./Components/Createpost/CreatePost";
 import Posts from "./Components/Posts/Posts";
 import Details from "./Components/Detail/Detail";
+
+import Card from "./Components/Card2/Card";
+
 import Dashboard from "./Components/DashBoard/DashBoard";
 import Edit from "./Components/edit/Edit";
 import UpdateName from "./Components/update/updateName";
@@ -40,6 +43,7 @@ function App() {
       <Route path='*' element={<NotFound/>}/>
     </Routes>
     <Footer />
+ 
     </>
   );
 }

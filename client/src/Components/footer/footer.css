@@ -36,9 +36,9 @@
  .icons {
 
     padding: 20px 30px;
-    /* padding-left: 50px; */
-     align-items: center; 
-     /* border-bottom: 2px solid white;  */
+    align-items: center; 
+
+     
     
  }
  .icon-main{
@@ -53,7 +53,7 @@ a.social
     display: inline;
     color: white;
     height: 8px;
-    font-size: 24px;
+    font-size: 15px;
        
  }
 
