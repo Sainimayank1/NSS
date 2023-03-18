@@ -8,7 +8,7 @@ const  FetchAllPosts = async(req,res) => {
     // console.log(skip)
     try {
         const count = await Post.find({}).countDocuments();
-        const data = await Post.find({}).skip(skip).limit(perPage).sort({updateAt:-1});
+        const data = await Post.find({}).skip(skip).limit(perPage).sort({createdAt:-1});
         return res.status(200).json({data  , count , perPage})
     } catch (error) {
         return res.status(500).json({error});

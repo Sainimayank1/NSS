@@ -21,7 +21,7 @@
 {
 
         height: 2.5px;
-        width: 42px !important;
+        width: 32px !important;
         background: #000;
         transform-origin: left;
         transform: rotate(45deg);
@@ -36,7 +36,7 @@
 .phone-3-x
 {
         height: 2.5px;
-        width: 42px !important;
+        width: 32px !important;
         background: #000;
         transform-origin: left;
         transform: rotate(-45deg);
@@ -53,6 +53,7 @@
     display: visible !important;
     width: 100%;
     margin-top: 1rem;
+    transition: all 5s ease-in-out;
     /* border: 2px solid black; */
     transition: all 1s ease-in-out;
     padding: 1rem;
@@ -60,14 +61,16 @@
 
 .slider-posts ,  .slider-home , .slider-create, .slider-login , .slider-register
 {
-    border-bottom: 1px solid white;
+    /* border-bottom: 1px solid black; */
+    color: white;
     padding: 2px;
     border-radius: 2px;
 }
 
+
 .slider-posts a , .slider-home a , .slider-create a , .slider-login a , .slider-register a{
     text-decoration: none;
-    color: aliceblue;
+    color: white;
     padding: 2px 0 2px 5px;
 }
 
@@ -170,7 +173,7 @@
         display:visible;
         /* border: 2px solid black; */
         width: 1.5rem;
-        height: 2rem;
+        height: 1.5rem;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -180,8 +183,8 @@
     }
     .phone-1 , .phone-2 , .phone-3
     {
-        height: 3px;
-        width: 42px !important;
+        height: 2.9px;
+        width: 32px !important;
         background: #000;
         display: visible;
     }
@@ -261,6 +264,12 @@
 
 @media screen and (max-width: 600px)
 {
+    .Left_main_navbar
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .Right_main_navbar
     {
         flex-direction: column;
@@ -269,12 +278,31 @@
 
 @media screen and (max-width: 600px)
 {
-    .Left_main_navbar
+    .Main_navbar
     {
-        width: 80%;
+        align-items: center;
+        justify-content: center;
     }
-    .Right_main_navbar
+    .Left_main_navbar img
     {
-        width: 80%;
+        width: 90%;
+    }
+    .Right_main_navbar img
+    {
+        width: 40%;
     }
 }
+
+@media screen and (max-width: 470px)
+{
+    
+    .Left_main_navbar img
+    {
+        width: 70%;
+    }
+    .Right_main_navbar img
+    {
+        width: 40%;
+    }
+}
+

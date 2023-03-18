@@ -13,6 +13,7 @@ import Comments from '../Comment/Comment';
 import axios from "axios"
 import { useNavigate } from 'react-router-dom';
 import postComment from "../../Store/AsyncMethods/PostCommentMethod.js";
+import VedioPlayer from "../VedioPlayer/VideoPlayer.js"
 
 function Details() {
   const navigate = useNavigate();
@@ -112,6 +113,7 @@ function Details() {
               </div>
               <div className='detail-right'>
                 <img className='detail-right-image' src={ details.data.image.url}></img>
+                {details.data.vedio.url === ' ' ? '' : <VedioPlayer src={details.data.vedio.url} thumbnail={details.data.vedio.thumbnail_url}/>}
               </div>
               <div className={user ? 'grid-fourth-level' : 'hidden'}>
                 <span className='grid-fourth-level-like-main'>

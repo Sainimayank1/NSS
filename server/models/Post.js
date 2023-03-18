@@ -19,11 +19,13 @@ const PostSchema = new mongoose.Schema(
         vedio:{
             public_id: {
                 type: String,
-                required: true
             },
             url: {
                 type: String,
-                required: true
+            },
+            thumbnail_url:
+            {
+                type:String,
             }
         },
         description:{

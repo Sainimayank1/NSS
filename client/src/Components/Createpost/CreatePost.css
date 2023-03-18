@@ -16,6 +16,16 @@
      /* border: 2px solid red; */
 }
 
+
+                /* img button*/
+.left-input_file button{
+    font-size: 0.8rem;
+    font-weight: bold;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: white;
+}
 .desc {
     margin-top: 1rem;
 }
@@ -125,9 +135,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* margin-top: 1rem; */
+    margin-bottom: 1rem;
     /* // border: 2px solid red; */
 }
+
 
 .create-post-p
 {

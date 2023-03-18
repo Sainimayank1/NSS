@@ -105,7 +105,8 @@ function Posts() {
                                         </div>
                                     </div>
                                     <div className='grid-third-level'>
-                                        <img src={content.image.url} alt='img' className='user-img'></img>
+                                        <img src={content.image.url} alt='img' className='grid-user-img'></img>
+                                        <div className={content.vedio.url === ' ' ? 'hidden' : 'gird-third-level-1'  }><Link to={'/details/:' + content._id}>+1</Link></div>
                                     </div>
                                     <div className={user ? 'grid-fourth-level' : 'hidden'}>
                                         {/* <span className='grid-fourth-level-like-main'>

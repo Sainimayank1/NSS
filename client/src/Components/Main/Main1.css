@@ -32,6 +32,10 @@ p{
     /* border: 2px solid black; */
 }
 
+.main-img{
+    background: transparent;
+}
+
 p a{
     color: #e53624;
 }

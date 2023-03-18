@@ -1,28 +1,34 @@
 const initail = {
+    message: "",
+    updateError: "",
     AllPosts: [],
     count: 0,
     perPage: 0,
     createError: [],
     createSucces: [],
     details: {
-        data:{
-        image: {
-            public_id: '',
-            url: ''
+        data: {
+            image: {
+                public_id: '',
+                url: ''
+            },
+            vedio: {
+                public_id: ' ',
+                url: ' ',
+                thumbnail_url: ' '
+            },
+            _id: '',
+            title: '',
+            description: '',
+            slug: '',
+            userName: '',
+            userId: '',
+            createdAt: '',
+            updatedAt: '',
+            __v: 0,
+            likes: []
         },
-        _id: '',
-        title: '',
-        body: '<p>sadasd</p>',
-        description: '',
-        slug: '',
-        userName: '',
-        userId: '',
-        createdAt: '',
-        updatedAt: '',
-        __v: 0,
-        likes: []
-    },
-    comment:[]
+        comment: []
     }
 };
 
@@ -42,6 +48,10 @@ const PostReducer = (state = initail, action) => {
         return { ...state, AllPosts: [] };
     else if (action.type === "SET_DETAIL")
         return { ...state, details: action.payload }
+    else if (action.type === "SET_MESSAGE")
+        return { ...state, message: action.payload };
+    else if (action.type === "REMOVE_MESSAGE")
+        return { ...state, message: "" }
     else
         return state;
 }

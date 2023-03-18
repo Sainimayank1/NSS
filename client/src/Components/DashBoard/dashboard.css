@@ -3,15 +3,12 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 90vh;
+    min-height: 90vh;
 }
 
 .dash-user-left {
     width:40% !important;
-    /* height: 80% !important; */
-    /* flex: 0.9; */
-    margin: 0 5rem 2rem 5rem;
-    margin-top: 3rem;
+    margin: 3rem 5rem 2rem 5rem;
      /* border: 2px solid black; */
     display: flex;
     /* justify-content: flex-end; */
@@ -19,8 +16,7 @@
 }
 
 .dash-user-right {
-    margin: 0 5rem 2rem 5rem;
-    margin-top: 3rem;
+    margin: 3rem 5rem 2rem 5rem;
     width: 60%;
      /* border: 2px solid black; */
     display: flex;
@@ -88,10 +84,15 @@
 {
     font-size: 0.8rem !important;
 }
-/* div {
+
+.dash-user-right-no-post
+{
+    height: 3rem;
     display: flex;
     align-items: center;
-} */
+    justify-content: center !important;
+    padding: 1rem;
+}
 
 .dash-link {
     margin: 0.5rem;
@@ -99,26 +100,64 @@
     color: black;
 }
 
+                                /* Media Quaries */
+
+@media (max-width:1200px) {
+    .dash-user-left{
+        width: 70% !important;
+        margin: 3rem 3rem 2rem 3rem;
+    }
+
+    .dash-user-right {
+        margin: 3rem 3rem 2rem 3rem;
+        width: 90% !important;
+    }
+
+}
+
+@media (max-width:900px) {
+    .dash-link{
+        font-size: 1rem;
+    }
+    .grid-user-items-span
+    {
+        font-size: 0.7rem !important;
+    }
+}
+
+
+@media (max-width:800px) {
+   .grid-user-items{
+    width: 100%;
+   }
+}
+
+
+@media (max-width:700px) {
+    .dash-user-right
+    {
+        width: 110% !important;
+    }
+ }
+
 @media (max-width:650px) {
     .dash-user-container {
-
         flex-direction: column;
         align-items: center;
         justify-content: center;
-         border: 2px solid red;
-        gap: 5rem;
+         /* border: 2px solid red; */
     }
 
     .dash-user-left {
         width: 80%;
         flex: 1 !important;
-         border: 2px solid red;
+         /* border: 2px solid red; */
     }
 
     .dash-user-right {
-         border: 2px solid red;
+         /* border: 2px solid red; */
         flex: 1 !important;
-        width: 80%;
+        width: 80% !important;
         margin-top: 1rem !important;
     }
 
@@ -127,8 +166,16 @@
     }
 }
 
-@media (max-width:350px) {
-    .link {
-        font-size: 1.5rem !important;
+@media (max-width:400px) {
+    .grid-user-items-span{
+        font-size: 0.6rem !important;
+    }
+    .div-user-first a{
+        font-size: 0.9rem;
+    }
+    .dash-link   
+    {
+        margin: 0.3rem !important;
+        font-size: 0.9rem;
     }
 } 
