@@ -5,7 +5,7 @@ import authReducer from './Reducers/authReducer.js'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import PostReducer from './Reducers/PostReducer';
 import fetchReducer from './Reducers/fetchReducer.js';
-// import updateReducer from './reducer/updateReducer.js';
+import updateReducer from './Reducers/updateReducer.js';
 import profileReducer from './Reducers/profileReducer.js';
 
 const rootreducer  = combineReducers(
@@ -14,6 +14,7 @@ const rootreducer  = combineReducers(
         profileReducer,
         fetchReducer,
         PostReducer,
+        updateReducer,
     }
 );
 

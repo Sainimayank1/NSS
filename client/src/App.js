@@ -15,6 +15,7 @@ import Posts from "./Components/Posts/Posts";
 import Details from "./Components/Detail/Detail";
 import Dashboard from "./Components/DashBoard/DashBoard";
 import Edit from "./Components/edit/Edit";
+import UpdateName from "./Components/update/updateName";
 // import dotenv from "dotenv"
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Route path="/details/:id" exact element={<Details />} />
       <Route path="/edit/:Postid" exact  element={user ? <Edit/> : <Login/>} />
       <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
+      <Route path="/updateName" exact element={<UpdateName/>}/>
       <Route path="/loader" element={<Loading/>} />
       <Route path='*' element={<NotFound/>}/>
     </Routes>
