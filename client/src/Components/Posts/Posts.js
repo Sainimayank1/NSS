@@ -101,19 +101,19 @@ function Posts() {
                                             <Link to={'/details/:' + content._id}>{content.title}</Link>
                                         </div>
                                         <div className='grid-description'>
-                                            {content.description}
+                                            {content.description} {content.vedio.url != ' ' && <div><Link to={'/details/:' + content._id}>Read more...</Link></div>}
                                         </div>
                                     </div>
                                     <div className='grid-third-level'>
                                         <img src={content.image.url} alt='img' className='grid-user-img'></img>
-                                        <div className={content.vedio.url === ' ' ? 'hidden' : 'gird-third-level-1'  }><Link to={'/details/:' + content._id}>+1</Link></div>
+                                        {/* <div className={content.vedio.url === ' ' ? 'hidden' : 'gird-third-level-1'  }><Link to={'/details/:' + content._id}>+1</Link></div> */}
                                     </div>
                                     <div className={user ? 'grid-fourth-level' : 'hidden'}>
                                         {/* <span className='grid-fourth-level-like-main'>
                                             {isClick ?
                                                 <AiFillHeart className='fourth-level-logo' onClick={() => { handleClick(content) }} /> :
                                                 <AiOutlineHeart className='fourth-level-logo' onClick={() => { handleClick(content) }} />
-                                            }*/}
+                                            } */}
                                             <span className='grid-fourth-level-comment-main'>
                                                 <BiComment className='fourth-level-logo' onClick={() => {
                                                     navigate('/details/:'+content._id)

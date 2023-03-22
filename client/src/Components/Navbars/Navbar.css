@@ -52,7 +52,7 @@
 {
     display: visible !important;
     width: 100%;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     transition: all 5s ease-in-out;
     /* border: 2px solid black; */
     transition: all 1s ease-in-out;
@@ -188,6 +188,7 @@
         background: #000;
         display: visible;
     }
+
 }
 
 

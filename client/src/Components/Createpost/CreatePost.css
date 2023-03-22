@@ -1,9 +1,9 @@
 .create_main {
     padding-top: 5rem;
     display: flex;
-     /* border: 2px solid black; */
-     align-items: flex-start;
-     justify-content: center;
+    /* border: 2px solid black; */
+    align-items: flex-start;
+    justify-content: center;
     min-height: 55rem;
 }
 
@@ -13,12 +13,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-     /* border: 2px solid red; */
+    /* border: 2px solid red; */
 }
 
 
-                /* img button*/
-.left-input_file button{
+/* img button*/
+.left-input_file button {
     font-size: 0.8rem;
     font-weight: bold;
     background: transparent;
@@ -26,6 +26,7 @@
     border: none;
     color: white;
 }
+
 .desc {
     margin-top: 1rem;
 }
@@ -36,10 +37,12 @@
     border: none;
     outline: none;
 }
-.desc label{
+
+.desc label {
     font-size: 1rem !important;
     /* border: 2px solid black; */
 }
+
 .desc textarea:focus {
     border-bottom: 4px solid #303983;
 }
@@ -48,6 +51,8 @@
     font-size: 1rem;
     margin-left: calc(100% - 8rem);
 }
+
+
 
 
 .create_form {
@@ -81,7 +86,7 @@
     flex-direction: column;
 }
 
-.input_title label{
+.input_title label {
     font-size: 1rem;
 }
 
@@ -124,8 +129,8 @@
     visibility: hidden;
 }
 
-.react-quil label{
-    font-size:1rem;
+.react-quil label {
+    font-size: 1rem;
 }
 
 
@@ -140,8 +145,7 @@
 }
 
 
-.create-post-p
-{
+.create-post-p {
     width: 100%;
     display: flex;
 
@@ -181,21 +185,23 @@
     font-size: 1.3rem;
     margin-bottom: 5px;
 }
-.slug-button-submit{
+
+.slug-button-submit {
     margin: .8rem 0;
     background-color: #303983;
     padding: 0.1rem 1rem;
     font-weight: bold;
     color: white;
-    width:99%;
+    width: 99%;
     outline: none;
     border: none;
     cursor: pointer;
     height: 2.5rem !important;
     display: flex;
     align-items: center;
-    
+
 }
+
 .post_url {
     display: flex;
     flex-direction: column;
@@ -218,7 +224,7 @@
     display: inline-block;
     height: 2.5rem;
     display: flex;
-    align-items: center; 
+    align-items: center;
     margin-top: 1rem;
     width: 25%;
 }
@@ -237,10 +243,10 @@
 @media (max-width: 1000px) {
 
     .main_left {
-        flex: 2.5  !important;
+        flex: 2.5 !important;
     }
 
-    .main_right{
+    .main_right {
         flex: 2.5;
     }
 
@@ -254,40 +260,47 @@
         justify-content: center;
         gap: 5rem;
     }
-    .desc textarea{
+
+    .desc textarea {
         width: 100%;
     }
+
     .main_left {
         width: 95%;
     }
-    .main_right{
+
+    .main_right {
         width: 95%;
         margin-bottom: 5rem;
     }
 }
 
 @media (max-width :780px) {
-    .slug_button button
-    {
+    .slug_button button {
         height: 2rem;
         font-size: 0.7rem !important;
     }
+    .upload-widgte-btn {
+        font-size: 0.8rem !important;
+    }
 }
+
 @media (max-width: 440px) {
     .main_left {
         width: 100%;
     }
-    .main_right{
+
+    .main_right {
         width: 100%;
     }
-    .slug_button 
-    {
+
+    .slug_button {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .slug_button button
-    {
+
+    .slug_button button {
         height: 1.5rem;
         width: 100% !important;
         margin: 0 !important;
@@ -296,4 +309,6 @@
         align-items: center;
         justify-content: center;
     }
+
+   
 }

@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import Loading from '../Loader/Loading'
 import { Link } from 'react-router-dom'
+import logo from './profile-user.png'
 
 
 function Register(prop) {
@@ -79,8 +80,9 @@ function Register(prop) {
                 fontsize:'16px'
               },
             }}/>
-          <img src='./picture/profile-user.png' alt='logo' className='img-contain'></img>
-          <span className='span'>Register</span>
+          <img src={logo} alt='logo' className='img-contain'></img>
+          <span className='login-span'>Register</span>
+          <p className='pl'>Please enter your Details</p>
           <form id='register-form' onSubmit={handleClick} method="POST">
             <input type="text" name="name" value={state.name} placeholder='Enter Name' onChange={handleState} ></input>
             <input type="text" name="email" value={state.email} placeholder='Enter Email' onChange={handleState}></input>

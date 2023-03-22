@@ -18,6 +18,8 @@ import Dashboard from "./Components/DashBoard/DashBoard";
 import Edit from "./Components/edit/Edit";
 import UpdateName from "./Components/update/updateName";
 import UpdatePassword from "./Components/update/updatePassword.js";
+import Feedback from "./Components/feedback/feedback.js";
+import Contact from "./Components/contact/Contact";
 
 function App() {
   const {user} = useSelector((state) => state.authReducer)
@@ -35,8 +37,10 @@ function App() {
       <Route path="/details/:id" exact element={<Details />} />
       <Route path="/edit/:Postid" exact  element={user ? <Edit/> : <Login/>} />
       <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
-      <Route path="/updateName" exact element={<UpdateName/>}/>
-      <Route path="/updatePassword" exact element={<UpdatePassword/>} />
+      <Route path="/updateName" exact element={user ? <UpdateName/> :<Login/>}/>
+      <Route path="/updatePassword" exact element={user ? <UpdatePassword/> : <Login/>} />
+      <Route path="/feedback" exact element={user ? <Feedback/> : <Login/>} />
+      <Route path="/contact" exact element={<Contact/>}/>
       <Route path="/loader" element={<Loading/>} />
       <Route path='*' element={<NotFound/>}/>
     </Routes>

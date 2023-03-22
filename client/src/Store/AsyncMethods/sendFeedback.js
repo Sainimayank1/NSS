@@ -1,7 +1,7 @@
 import axios from "axios"
 
 
-function updateName(data) {
+function sendFeedback(data) {
     return async (dispatch,getData) => {
         const { authReducer } = getData();
         const token = authReducer.token
@@ -13,17 +13,15 @@ function updateName(data) {
             }
         }
         try {
-            const response = await axios.post('http://localhost:5000/user/updateNames',data ,  config)
-            localStorage.setItem('NSSTOKEN',response.data.token);
-            dispatch({type:"SET_UPDATENAMESUCESS",payload:response.data.msg})
-            dispatch({type:"SET_TOKEN",payload:response.data.token})
+            console.log(data)
+            const response = await axios.post('http://localhost:5000/user/feedback',data ,  config)
+            dispatch({type:"SET_FEEDBACK_RES",payload:response.data.msg})
             dispatch({ type: "CLOSE_LOADER" })
         } catch (error) {
             console.log(error)
-            dispatch({type:"SET_UPDATENAMEERROR" , payload:error.response.data.error})
             dispatch({ type: "CLOSE_LOADER" })
         }
     }
 }
 
-export default updateName;
+export default sendFeedback;

@@ -113,7 +113,7 @@ function Details() {
               </div>
               <div className='detail-right'>
                 <img className='detail-right-image' src={ details.data.image.url}></img>
-                {details.data.vedio.url === ' ' ? '' : <VedioPlayer src={details.data.vedio.url} thumbnail={details.data.vedio.thumbnail_url}/>}
+                {details.data.vedio.url === ' ' ? '' : <VedioPlayer className="vedio-player" src={details.data.vedio.url} thumbnail={details.data.vedio.thumbnail_url}/>}
               </div>
               <div className={user ? 'grid-fourth-level' : 'hidden'}>
                 <span className='grid-fourth-level-like-main'>
