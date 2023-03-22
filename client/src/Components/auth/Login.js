@@ -43,7 +43,7 @@ function Login() {
         <meta charSet="utf-8" />
          <title>Login Here!</title>
        </Helmet>
-      <div className='login-container bg-grey'>
+      <div className='login-container'>
         <div className='login-form bg-white'>
           {/* login img */}
           <img src='./picture/profile-user.png' alt='logo' className='img-container'></img>

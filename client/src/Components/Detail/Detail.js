@@ -127,10 +127,10 @@ function Details() {
               </div>
             </div>
             <div className='detail-form'>
-              <form>
+              {user ? <form>
                 <input type='text' className='detail-inp ' onChange={(e) => setComment(e.target.value)} value={comment} placeholder='Enter Comment.'></input>
                 <input type='submit' onClick={submitComment} value="Submit" className='submit-detail'></input>
-              </form>
+              </form> : ""}
               <Comments />
             </div>
           </div> : <Loading/>}

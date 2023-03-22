@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 50rem;
+    min-height: 40rem;
     /* border: 2px solid black; */
     width: 100%;
 }
@@ -69,8 +69,8 @@
 
 .grid-user-img
 {
-    max-height: 25rem !important;
-    width: auto;
+    /* height: ; */
+    max-width: 100%;
     object-fit:fill;
 }
 
@@ -125,6 +125,14 @@
     height: 20rem;
 }
 
+.posts-no
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 1.5rem;
+}
  /* /* .grid-container .grid-first-level :first-child {
     border-top: none !important; */
     /* border-top-left-radius: 1rem;

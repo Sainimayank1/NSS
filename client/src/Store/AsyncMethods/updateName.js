@@ -15,12 +15,12 @@ function updateName(data) {
         try {
             console.log(data.name ,data._id)
             const response = await axios.post('http://localhost:5000/user/updateNames',data ,  config)
-            console.log(response)
             localStorage.setItem('NSSTOKEN',response.data.token);
+            dispatch({type:"SET_UPDATENAMESUCESS",payload:response.data.msg})
+            dispatch({type:"SET_TOKEN",payload:response.data.token})
             dispatch({ type: "CLOSE_LOADER" })
-            // dispatch({type:"SET_MESSAGE",payload:response.data.msg})
-            // dispatch({type:"SET_TOKEN",payload:response.data.token})
         } catch (error) {
+            console.log(error)
             dispatch({type:"SET_UPDATENAMEERROR" , payload:error.response.data.error})
             dispatch({ type: "CLOSE_LOADER" })
         }

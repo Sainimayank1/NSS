@@ -31,7 +31,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* // border: 2px solid green; */
+   /* border: 2px solid green; */
   flex-direction: column;
   width: 80%;
 }
@@ -41,7 +41,7 @@
   width: 90%;
   height: 3rem;
   display: block;
-  /* padding-bottom: 2rem; */
+  padding-bottom: 2rem;
   font-weight: bold;
   padding-left: 1rem;
   outline: none;
@@ -199,12 +199,19 @@
 
     .login-form
     {
-      height: 31rem !important;
+      height: 35rem !important;
+      padding: 0 !important;
     }
 
     #login-form input{
       font-size: 0.8rem !important;
+      padding: 0.7rem;
       font-weight: bold;
+      margin: 1rem;
+    }
+
+    #login-form{
+      margin: 0;
     }
 
     .login-span

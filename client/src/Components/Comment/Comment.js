@@ -28,7 +28,7 @@ function Comments() {
               </div>
             </div>
           </div>)
-        : <div>No Comment</div>}
+        : <div className='no_comment'>No Comment</div>}
     </div>
   )
 }

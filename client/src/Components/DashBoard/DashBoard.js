@@ -21,7 +21,6 @@ function Dashboard() {
     const {  message } = useSelector(state => state.PostReducer);
     const { user, loading } = useSelector(state => state.authReducer);
     const { posts, count, perPage } = useSelector(state => state.fetchReducer);
-    // const { updateMsg } = useSelector(state => state.updateReducer)
     let { page } = useParams();
     if (page === undefined)
         page = 1;
@@ -36,12 +35,13 @@ function Dashboard() {
         dispatch(fetchPosts(_id, page))
     }, [page , message])
 
+
     const delePost = async (id) => {
-        // let confirm = window.confirm("Are you really want to delete Post..")
-        // if (confirm) {
+        let confirm = window.confirm("Are you really want to delete Post..")
+        if (confirm) {
             dispatch(deletePost(id));
             // dispatch(fetchPosts(_id, page));
-        // }
+        }
     }
 
     return (
@@ -67,8 +67,8 @@ function Dashboard() {
                                         <span className='grid-user-items-span'>Published: {moment(content.createdAt).fromNow()}</span>
                                     </div>
                                     <div>
-                                        <Link className='dash-link' to={'/updateImage/' + content._id}><BsImage /></Link>
-                                        <Link to={'/edit/' + content._id}><AiOutlineEdit className='dash-link' /></Link>
+                                        {/* <Link className='dash-link' to={'/updateImage/' + content._id}><BsImage /></Link> */}
+                                        {/* <Link to={'/edit/' + content._id}><AiOutlineEdit className='dash-link' /></Link> */}
                                         <Link ><AiFillDelete onClick={() => delePost(content._id)} className='dash-link' /></Link>
                                     </div>
                                 </div>) : <div className='dash-user-right-no-post'>No post</div>}

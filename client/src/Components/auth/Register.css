@@ -11,6 +11,14 @@
   justify-content: center;
   align-items: center;
 }
+
+.dropdown-email{
+   /* border: 2px solid black; */
+   width: 90%;
+   font-size: 0.7rem;
+}
+
+.dropdown-email:hover{scale: 1.0 !important;}
 .form {
   width: 37%;
   /* height:50rem; */
@@ -32,7 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* // border: 2px solid green; */
+   /* border: 2px solid green; */
   flex-direction: column;
   width: 80%;
   margin-bottom: 6rem;
@@ -164,8 +172,15 @@
   .span {
     font-size: 1.5rem !important;
   }
-  input {
-    margin: 0.7rem !important;
-  }
+
+  .form
+  {
+    height: 40rem;
+    width: 85% !important;
+  } 
   
+  #register-form input{
+    font-size: 0.8rem !important;
+  }
+
 }

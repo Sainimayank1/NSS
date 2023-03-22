@@ -116,14 +116,14 @@ function Posts() {
                                             }*/}
                                             <span className='grid-fourth-level-comment-main'>
                                                 <BiComment className='fourth-level-logo' onClick={() => {
-                                                    navigate('/details/'+content._id)
+                                                    navigate('/details/:'+content._id)
                                                 }} />
                                             </span>
                                         {/* </span>  */}
                                         <span className="grid-fourth-level-total-like">{content.likes.length} Likes</span>
                                     </div>
                                 </div>
-                            ) : <div>No post</div>}
+                            ) : <div className='posts-no'>No post</div>}
                     </div>}
                 {loading ? "" : <Pagination path="posts" page={page} count={count} perPage={perPage} />}
             </div>

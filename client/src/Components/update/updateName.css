@@ -20,7 +20,7 @@
     border-radius: 1rem !important;
 }
 
-h3 {
+.main-updateName h3 {
     font-size: 2rem;
     font-weight: bold;
 }
@@ -40,3 +40,16 @@ input:focus {
 }
 
 
+@media (max-width:800px) {
+
+   .main-updateName h3{
+    font-size: 1.5rem ;
+   }
+}
+
+
+@media (max-width:400px) {
+    .main-updateName h3{
+        font-size: 1.1rem ;
+       }
+}

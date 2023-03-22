@@ -15,6 +15,7 @@ import { Link } from 'react-router-dom'
 function Register(prop) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [isDropEmail , setEmialDrop] = useState(false);
   const [state, setState] = useState(
     {
       name: "",
@@ -45,6 +46,11 @@ function Register(prop) {
   
   const handleState = (e) => {
     const { name, value } = e.target
+    if(name == "email")
+    {
+      if(!isDropEmail)
+      setEmialDrop(!isDropEmail)
+    }
     setState({ ...state, [name]: value })
   }
 
@@ -73,15 +79,12 @@ function Register(prop) {
                 fontsize:'16px'
               },
             }}/>
-          <img src='./picture/profile-user.png' alt='logo' className='img-container'></img>
-
-          <Toaster position="top-right" reverseOrder={false} toastOptions={{ style: { fontSize: '14px' } }} />
           <img src='./picture/profile-user.png' alt='logo' className='img-contain'></img>
-
           <span className='span'>Register</span>
           <form id='register-form' onSubmit={handleClick} method="POST">
             <input type="text" name="name" value={state.name} placeholder='Enter Name' onChange={handleState} ></input>
             <input type="text" name="email" value={state.email} placeholder='Enter Email' onChange={handleState}></input>
+            <div className={isDropEmail ? 'dropdown-email' : 'display-none'}>Please use collage email id.</div>
             <input type="text" name="phone" value={state.phone} placeholder='Enter mobile no' onChange={handleState}></input>
             <input type="password" name="password" value={state.password} placeholder='Enter Password' onChange={handleState}></input>
             <input type="password" name="cpassword" value={state.cpassword} placeholder='Re-Enter Password' onChange={handleState}></input>

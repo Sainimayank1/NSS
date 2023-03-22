@@ -14,21 +14,17 @@ import Loading from "../Loader/Loading.js"
 function UpdateName() {
     const navigate = useNavigate();
     const { user ,loading } = useSelector(state => state.authReducer);
-    const {profileError} = useSelector(state => state.profileReducer);
-    const {updateNameError} = useSelector(state => state.updateReducer);
+    const {updateNameError , updateNameSucces} = useSelector(state => state.updateReducer);
     const [name,setName] = useState('')
     const userName = user.name;
     const {_id} = user;
     const dispatch = useDispatch();
 
-    // useEffect(()=>{
-    //    setName(userName)
-    // },[])
-
     const handleSubmit = (e) =>
     {
         e.preventDefault();
-        dispatch(updateName({name,_id}))
+        var con = window.confirm("DO you want to change name");
+        if(con)dispatch(updateName({name,_id}))
 
     }
 
@@ -41,13 +37,14 @@ function UpdateName() {
        }
     },[updateNameError])
 
-    // useEffect(()=>
-    // {
-    //    if(redirect)
-    //    {
-    //      navigate('/dashboard/1')
-    //    }
-    // },[redirect])
+    useEffect(()=>
+    {
+       if(updateNameSucces != "")
+       {
+            toast.success(updateNameSucces)
+             dispatch({type:"RESET_UPDATENAMESUCESS"})
+       }
+    },[updateNameSucces])
      
     return (
         <>
