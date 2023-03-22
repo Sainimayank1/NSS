@@ -36,6 +36,10 @@ const Gallery = () => {
     <a href=''><img src='./picture/p5.jpg' alt='img' className='img-gallery' ></img></a>
     <a href=''><img src='./picture/p7.jpg' alt='img' className='img-gallery' ></img></a>
     <a href=''><img src='./picture/p3.jpg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/bd1.jpg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/bd2.jpg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/bd4.jpg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p8.jpg' alt='img' className='img-gallery' ></img></a>
   </Carousel>
    </div>
 

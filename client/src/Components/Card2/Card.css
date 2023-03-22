@@ -92,6 +92,13 @@
     width: 60%;
     height: auto;
   }
+  .link-event{
+    border-bottom: 1px solid #303983;
+    
+  }
+  .date-event{
+    color: red;
+  }
   /* .second-img{
     text-align: left;
     padding-top: 5rem;
@@ -114,21 +121,73 @@
       float: none;
     }
   }
-  @media screen  and (max-width:667px){
+  @media screen  and (max-width:767px){
     .fspan2{
       font-size: 15px;
-      padding-left: 28px;
+      padding-left: 20px;
     }
     .fspan3{
-      font-size: 25px;
-      padding-left: 18px;
-      font-weight: 550;
+      font-size: 15px;
+      padding-left: 15px;
+      font-weight: 500;
     }
     .fspan{
-      font-size: 20px;
+      font-size: 15px;
       padding-left: 10px;
-    }
+    }   
     
-    
-    
+}
+@media screen  and (max-width:767px){
+  .fspan2{
+    font-size: 13px;
+    padding-left: 10px;
+  }
+  .fspan4{
+    font-size: 15px;
+    padding-left: 10px;
+    font-weight: 500;
+  }
+  .fspan{
+    font-size: 15px;
+    padding-left: 10px;
+  }   
+  
+}
+@media screen and (max-width:1368px) {
+  .tc{
+      font-size: 20px;
+  }
+  
+}
+@media screen  and (max-width:1368px){
+  .fspan2{
+    font-size: 13px;
+    padding-left: 20px;
+  }
+  .fspan3{
+    font-size: 12px;
+    padding-left: 15px;
+    font-weight: 500;
+  }
+  .fspan{
+    font-size: 10px;
+    padding-left: 10px;
+  }   
+  
+}
+@media screen  and (max-width:1368px){
+.fspan2{
+  font-size: 10px;
+  padding-left: 10px;
+}
+.fspan4{
+  font-size: 12px;
+  padding-left: 10px;
+  font-weight: 500;
+}
+.fspan{
+  font-size: 12px;
+  padding-left: 10px;
+}   
+
 }
