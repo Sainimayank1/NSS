@@ -14,10 +14,11 @@
     font-size:18px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around;  
+}
 
-    
-   
+.top_footer a{
+    margin: 0 0.5rem;
 }
 .top_footer p{
     color: white;

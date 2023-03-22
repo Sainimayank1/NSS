@@ -6,7 +6,7 @@ import 'react-html5video/dist/styles.css';
 function VideoPlayer(props) {
     return (
         <div className='vedio-player'>
-        <Video loop 
+        <Video
             controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
             poster={props.thumbnail}>
             <source src={props.src} type="video/webm" />

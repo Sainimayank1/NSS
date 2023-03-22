@@ -5,6 +5,7 @@ import './Login.css'
 import loginMethod from "../../Store/AsyncMethods/loginMethod"
 import toast, { Toaster } from "react-hot-toast"
 import { Link } from 'react-router-dom'
+import logo from './profile-user.png'
 
 function Login() {
   const [state, setState] = useState({ email: "", password: "" });
@@ -46,7 +47,7 @@ function Login() {
       <div className='login-container'>
         <div className='login-form bg-white'>
           {/* login img */}
-          <img src='./picture/profile-user.png' alt='logo' className='img-container'></img>
+          <img src={logo} alt='logo' className='img-container'></img>
           <span className="login-span">Login</span>
           <Toaster position="top-right" reverseOrder={false}
             toastOptions={{
@@ -56,7 +57,7 @@ function Login() {
                 fontsize: '16px'
               },
             }} />
-            <p className='pl'>Please enter your email and Password</p>
+            <p className='pl'>Please enter your Email and Password</p>
             <form id='login-form'>
               <input type="text" onChange={handleChange} name="email" placeholder='Enter Email' value={state.email} required></input>
               <input type="password" onChange={handleChange} name="password" placeholder='Enter Password' value={state.password} required></input>

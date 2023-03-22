@@ -46,7 +46,7 @@ class CloudinaryUploadVidWidget extends Component {
     }
     render() {
         return (
-            <button id="upload_widget_vedio" className="">
+            <button id="upload_widget_vedio" className="upload-widgte-btn">
                 Choose video..
             </button>
         );
@@ -87,7 +87,7 @@ class CloudinaryUploadImgWidget extends Component {
     }
     render() {
         return (
-            <button id="upload_widget_Img" className="">
+            <button id="upload_widget_Img" className="upload-widgte-btn">
                 Choose image..
             </button>
         );

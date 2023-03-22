@@ -32,6 +32,7 @@ function Dashboard() {
             toast.success(message);
             dispatch({ type:"REMOVE_MESSAGE"});
         }
+        console.log(_id,page,"Hello")
         dispatch(fetchPosts(_id, page))
     }, [page , message])
 

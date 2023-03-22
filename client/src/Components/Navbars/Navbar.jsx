@@ -58,7 +58,7 @@ function Navbar() {
           <div className={show ? 'phone-3' : "phone-3-x " }></div>
         </div>
       </div>
-      <div className={show ? 'slider-hidden' : 'slider-main red-bg'}>
+      <div className={show ? 'slider-hidden' : 'slider-main blue-bg'}>
       <div className='slider-dropdown'>
       <div className='slider-home' onClick={() => change()}>
           <Link to='/'>Home</Link>
