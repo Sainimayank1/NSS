@@ -14,75 +14,76 @@ const Card = () => {
         onmouseout="this.setAttribute('scrollamount',8,0);this.start();"
         className="movingbody">
        <div className='event-date-news'>
-        <span className='date-event'>12-2-2023</span>
+        <span className='date-event'>02-Feb-2023</span>
         <div>
-          <a href=''>google.com (youth red cross society) and national service scheme</a>
+          <a href="/youth-affairs/topics-state-youth-parliament-festival-2023-english-and-hindi">The Topics for State Youth Parliament Festival-2023 in English and Hindi</a>
         </div>
        </div>
        <div className='event-date-news'>
-        <span className='date-event'>12-2-2023</span>
-        <div>
-          <a href=''>google.com (youth red cross society) and national service scheme</a>
+        <span className='date-event'>24-jan-2023</span>
+        <div><a href="/topics-district-youth-parliament-festival-2023-english-and-hindi">The Topics for District Youth Parliament Festival-2023 in English and Hindi</a>
+          
         </div>
        </div>
        <div className='event-date-news'>
-        <span className='date-event'>12-2-2023</span>
+        <span className='date-event'>23-jan-2023</span>
         <div>
-          <a href=''>google.com (youth red cross society) and national service scheme</a>
+         <a href="/national-youth-parliament-festival-nypf-2023-guidelines">National Youth Parliament Festival (NYPF), 2023 Guidelines</a>
         </div>
        </div>
        <div className='event-date-news'>
-        <span className='date-event'>12-2-2023</span>
+        <span className='date-event'>08-july-2022</span>
         <div>
-          <a href=''>google.com (youth red cross society) and national service scheme</a>
+         <a href="/activity-report-during-covid-19-nss-volunteers">Activity Report During Covid-19 by NSS volunteers</a>
         </div>
        </div>
        <div className='event-date-news'>
+        <span className='date-event'>12-may-2023</span>
+        <div>
+          <a href="/national-youth-policy-0">National Youth Policy</a>
+        </div>
+       </div>
+       {/* <div className='event-date-news'>
         <span className='date-event'>12-2-2023</span>
         <div>
           <a href=''>google.com (youth red cross society) and national service scheme</a>
         </div>
-       </div>
-       <div className='event-date-news'>
-        <span className='date-event'>12-2-2023</span>
-        <div>
-          <a href=''>google.com (youth red cross society) and national service scheme</a>
-        </div>
-       </div>
+       </div> */}
       </marquee>
     {/* </div> */}
     </div>
     <div className="content">
         <h4 className="card-contents">UPCOMING-EVENTS</h4>
+        <div className=''>
+        <span className='date-event'>29-March-2023</span>
+        <div>
+          <a href="#">Blood Donation Mela In Jmieti</a>
+          <img src='./picture/m1.jpg' alt='logo' className='up-img'></img>
+        </div>
+       </div>
     </div>
     <div className="content">
         <div className='teacher-main'>
-          <span>Teacher Co-ordinator</span>
+          <span className='tc'>Teacher Co-ordinator</span>
         </div>
         <div className='first-img'>
-        <div>
        <h4 className='fspan'>
-          Mr.Tajinder Kumar 
-          Assistant Professor.
-       </h4>
+          <img src='./picture/t1.png' alt='photo' className='t1-img' align='right'></img>
+          Mr.Tajinder Kumar
+          </h4>
+          <h3 className='fspan2'>Assistant Professor.</h3>
+          <p className='fspan3'>(Nss-Incharge)</p>
         </div>
-        <div className='img-t1'>
-        <img src='./picture/t1.png' alt='photo' className='t1-img' align='right'></img>
-        </div>
-        </div>
-        <div className='second-img'>
-        <div>
-        <h4 className='fspan'>
-          Mr.Tajinder Kumar 
-          Assistant Professor.
-       </h4>
-        </div>
-        <div className='img-t1'>
-        {/* <img src='./picture/t1.png' alt='photo' className='t1-img' align='right'></img> */}
+        <div className='first-img'>
+       <h4 className='fspan'>
+          <img src='./picture/n1.png' alt='photo' className='t2-img' align='right'></img>
+          Dr.Niti Sakhuja 
+          </h4>
+          <h3 className='fspan2'>Assistant Professor.</h3>
+          <p className='fspan4'>(Red Cross Society-Incharge)</p>
         </div>
         </div>
-    </div>
-     </div>
+        </div>  
     </>
   );
 }

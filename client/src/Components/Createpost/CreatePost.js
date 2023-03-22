@@ -202,7 +202,7 @@ function CreatePost(props) {
                             </div>
                             <div className='left-input_file'>
                                 <CloudinaryUploadVidWidget />
-                            </div>
+                            </div> 
                         </div>
                     </div>
                     <div className='main_right'>
