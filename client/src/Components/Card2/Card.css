@@ -12,7 +12,7 @@
     height: 400px;
     margin: 1rem;
     margin-left: 3rem;
-    border: 1px solid #303983;
+    border: 3px solid #303983;
 
     
     /* background-color: #000080; */
@@ -59,11 +59,44 @@
     padding-top: 3rem;
 
   }
-  .second-img{
+
+  .fspan{
+    font-size: 25px;
+    padding-left: 12px;
+    
+    
+  }
+  .fspan2{
+    font-size: 15px;
+    padding-left: 44px;
+  }
+  .fspan3{
+    font-size: 25px;
+    padding-left: 30px;
+    font-weight: 550;
+  }
+  .tc{
+    color: #303983;
+    font-weight: 500;
+    border-bottom:2px solid #303983;
+  }
+  .t2-img{
+      padding-right: 1rem;
+  }
+  .fspan4{
+    font-size: 18px;
+    padding-left: 0px;
+    font-weight: 550;
+  }
+  .up-img{
+    width: 60%;
+    height: auto;
+  }
+  /* .second-img{
     text-align: left;
     padding-top: 5rem;
-  }
-  .fspan{
+  } */
+  /* .fspan{
     max-width: 45% !important;
     padding-left: .5rem;
     font-weight: bold;
@@ -72,8 +105,7 @@
   }  
   .img-t1{
     /* border: 2px solid red; */
-    padding-bottom: 1rem;
-  }
+  
   @media (max-width: 767px) {
     .content {
       width: 90%;
@@ -82,3 +114,21 @@
       float: none;
     }
   }
+  @media screen  and (max-width:667px){
+    .fspan2{
+      font-size: 15px;
+      padding-left: 28px;
+    }
+    .fspan3{
+      font-size: 25px;
+      padding-left: 18px;
+      font-weight: 550;
+    }
+    .fspan{
+      font-size: 20px;
+      padding-left: 10px;
+    }
+    
+    
+    
+}
