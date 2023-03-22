@@ -1,13 +1,28 @@
 .pro-area{
     padding: 80px 0;
     border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.card{
+
+.contact-row
+{
+    width: 100%;
+    display: flex !important;
+    align-items:center !important ;
+
+}
+.card-contact{
     box-shadow: 10px 10px 20px #14418a;
-    width: 90%;
-    margin-top: 5rem;
+    /* width: 90%; */
+    margin: 3rem;
     /* overflow: hidden; */
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     border: 2px solid black;
 
 }
@@ -23,25 +38,46 @@
     margin-left: auto;
     margin-right: auto;
     z-index: 1;
-    width: 14opx;
-    height: 140px;
-    border-radius: 50%;
+    width: 12rem;
+    height: auto;
+    /* border-radius: 50%; */
     border: 6px solid #fff;
     margin-top: -80px;
 } 
-.card:hover .img2 img{
-    border-color: aqua;
-    transition: .7;
-}
-.main{
+
+.main-contact{
     padding: 30px 0;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-.main h2{
-    text-transform: uppercase;
+
+.contact-follow
+{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    /* border: 2px solid black; */
+}
+
+.contact-follow img{
+    width: 20%;
+}
+
+
+.main-contact h2{
+    color: #303983;
     font-weight: 500;
     font-size: 25px;
     margin: 0 0 20px;
+}
+
+.main-contact img{
+    width: 50%;
 }
 
 /* css typing animation add  */
@@ -97,7 +133,7 @@
     }
   } */
   /* end of this css typing animation */
-.main p{
+.main-contact p{
     font-size: 16px;
     padding: 35px;
 }
