@@ -16,31 +16,31 @@ const Card = () => {
        <div className='event-date-news'>
         <span className='date-event'>02-Feb-2023</span>
         <div>
-          <a href="/youth-affairs/topics-state-youth-parliament-festival-2023-english-and-hindi">The Topics for State Youth Parliament Festival-2023 in English and Hindi</a>
+          <a href="https://nss.gov.in/youth-affairs/topics-state-youth-parliament-festival-2023-english-and-hindi" className='link-event'>The Topics for State Youth Parliament Festival-2023 in English and Hindi</a>
         </div>
        </div>
        <div className='event-date-news'>
         <span className='date-event'>24-jan-2023</span>
-        <div><a href="/topics-district-youth-parliament-festival-2023-english-and-hindi">The Topics for District Youth Parliament Festival-2023 in English and Hindi</a>
-          
+        <div>
+        <a href="https://nss.gov.in/topics-district-youth-parliament-festival-2023-english-and-hindi" className='link-event'>The Topics for District Youth Parliament Festival-2023 in English and Hindi</a> 
         </div>
        </div>
        <div className='event-date-news'>
         <span className='date-event'>23-jan-2023</span>
         <div>
-         <a href="/national-youth-parliament-festival-nypf-2023-guidelines">National Youth Parliament Festival (NYPF), 2023 Guidelines</a>
+         <a href="https://nss.gov.in/national-youth-parliament-festival-nypf-2023-guidelines" className='link-event'>National Youth Parliament Festival (NYPF), 2023 Guidelines</a>
         </div>
        </div>
        <div className='event-date-news'>
         <span className='date-event'>08-july-2022</span>
         <div>
-         <a href="/activity-report-during-covid-19-nss-volunteers">Activity Report During Covid-19 by NSS volunteers</a>
+         <a href="https://nss.gov.in/activity-report-during-covid-19-nss-volunteers" className='link-event'>Activity Report During Covid-19 by NSS volunteers</a>
         </div>
        </div>
        <div className='event-date-news'>
         <span className='date-event'>12-may-2023</span>
         <div>
-          <a href="/national-youth-policy-0">National Youth Policy</a>
+          <a href="https://nss.gov.in/national-youth-policy-0" className='link-event'>National Youth Policy</a>
         </div>
        </div>
        {/* <div className='event-date-news'>
@@ -64,7 +64,7 @@ const Card = () => {
     </div>
     <div className="content">
         <div className='teacher-main'>
-          <span className='tc'>Teacher Co-ordinator</span>
+          <span className='tc'>Teacher-Incharge</span>
         </div>
         <div className='first-img'>
        <h4 className='fspan'>
