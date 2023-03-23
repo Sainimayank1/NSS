@@ -61,18 +61,19 @@
   }
 
   .fspan{
-    font-size: 25px;
-    padding-left: 12px;
+    font-size: 16px;
+    padding-left: 6px;
+    font-weight: 500;
     
     
   }
   .fspan2{
-    font-size: 15px;
-    padding-left: 44px;
+    font-size: 14px;
+    padding-left:10px;
   }
   .fspan3{
-    font-size: 25px;
-    padding-left: 30px;
+    font-size: 20px;
+    padding-left: 10px;
     font-weight: 550;
   }
   .tc{
@@ -84,20 +85,22 @@
       padding-right: 1rem;
   }
   .fspan4{
-    font-size: 18px;
+    font-size: 17px;
     padding-left: 0px;
     font-weight: 550;
   }
-  .up-img{
-    width: 60%;
-    height: auto;
-  }
+  
   .link-event{
     border-bottom: 1px solid #303983;
     
   }
   .date-event{
     color: red;
+  }
+  .up-img{
+    width: 60%;
+    height: auto;
+    padding-top: 2rem;
   }
   /* .second-img{
     text-align: left;
@@ -112,6 +115,8 @@
   }  
   .img-t1{
     /* border: 2px solid red; */
+
+ 
   
   @media (max-width: 767px) {
     .content {
@@ -191,3 +196,84 @@
 }   
 
 }
+@media screen  and (max-width:678px){
+  .fspan2{
+    font-size: 15px;
+    padding-left: 20px;
+  }
+  .fspan3{
+    font-size: 20px;
+    padding-left: 15px;
+    font-weight: 500;
+  }
+  .fspan{
+    font-size: 15px;
+    padding-left: 10px;
+  }   
+  
+}
+@media screen  and (max-width:678px){
+.fspan2{
+  font-size: 15px;
+  padding-left: 10px;
+}
+.fspan4{
+  font-size: 20px;
+  padding-left: 10px;
+  font-weight: 500;
+}
+.fspan{
+  font-size: 15px;
+  padding-left: 10px;
+}   
+
+}
+@media screen  and (max-width:678px){
+  .fspan2{
+    font-size: 13px;
+    padding-left: 20px;
+  }
+  .fspan3{
+    font-size: 12px;
+    padding-left: 15px;
+    font-weight: 500;
+  }
+  .fspan{
+    font-size: 10px;
+    padding-left: 10px;
+  }   
+  
+}
+
+@media screen  and (max-width:667px){
+  .fspan2{
+    font-size: 15px;
+    padding-left: 10px;
+  }
+  .fspan4{
+    font-size: 18px;
+    padding-left: 10px;
+    font-weight: 500;
+  }
+  .fspan{
+    font-size: 15px;
+    padding-left: 10px;
+  }   
+  
+  }
+  @media screen  and (max-width:667px){
+    .fspan2{
+      font-size: 14px;
+      padding-left: 10px;
+    }
+    .fspan3{
+      font-size: 18px;
+      padding-left: 15px;
+      font-weight: 500;
+    }
+    .fspan{
+      font-size: 16px;
+      padding-left: 10px;
+    }   
+    
+  }
