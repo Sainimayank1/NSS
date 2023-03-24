@@ -86,7 +86,7 @@ function Register(prop) {
           <form id='register-form' onSubmit={handleClick} method="POST">
             <input type="text" name="name" value={state.name} placeholder='Enter Name' onChange={handleState} ></input>
             <input type="text" name="email" value={state.email} placeholder='Enter Email' onChange={handleState}></input>
-            <div className={isDropEmail ? 'dropdown-email' : 'display-none'}>Please use collage email id.</div>
+            <div className={isDropEmail ? 'dropdown-email' : 'display-none'}>Please use college email id.</div>
             <input type="text" name="phone" value={state.phone} placeholder='Enter mobile no' onChange={handleState}></input>
             <input type="password" name="password" value={state.password} placeholder='Enter Password' onChange={handleState}></input>
             <input type="password" name="cpassword" value={state.cpassword} placeholder='Re-Enter Password' onChange={handleState}></input>
