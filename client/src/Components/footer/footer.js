@@ -22,7 +22,7 @@ const footer = () => {
           </Link>
           |
           <Link to="/contact">
-            Contact us
+            Developer-Info
           </Link>
         </p>
       </div>
@@ -34,14 +34,14 @@ const footer = () => {
               className="youtube social">
               <FontAwesomeIcon icon={faYoutube} />
             </a>
-            <a href="#f"
+            <a href="https://www.facebook.com/jmietiinstitute/"
               className="facebook social">
               <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a href="#f" className="twitter social">
+            <a href="https://twitter.com/jmietiradaur?lang=en" className="twitter social">
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a href="#f"
+            <a href="https://www.instagram.com/jmietiofficial/?hl=en"
               className="instagram social">
               <FontAwesomeIcon icon={faInstagram} />
             </a>

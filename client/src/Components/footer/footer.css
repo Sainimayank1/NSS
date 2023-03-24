@@ -21,7 +21,15 @@
     margin: 0 0.5rem;
 }
 .top_footer p{
+    /* color: white; */
     color: white;
+
+}
+.top_footer p a{
+    color: white;
+}
+.top_footer p a:hover{
+    color:red;
 }
 .bottom_footer{
     background: #303983;

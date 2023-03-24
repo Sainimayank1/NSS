@@ -47,6 +47,7 @@ function Navbar() {
               <div className='Navbar-posts'><Link to='/posts/1'>Posts</Link></div>
               <div className='Navbar-login'><Link to='/login'>Login</Link></div>
               <div className='Navbar-login'><Link to='/register'>Register</Link></div>
+              {/* <div className='Navbar-login'><Link to='/medals'>Medals</Link></div> */}
             </>
           }
         </div>
