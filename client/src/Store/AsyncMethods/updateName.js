@@ -13,7 +13,7 @@ function updateName(data) {
             }
         }
         try {
-            const response = await axios.post('http://localhost:5000/user/updateNames',data ,  config)
+            const response = await axios.post('/user/updateNames',data ,  config)
             localStorage.setItem('NSSTOKEN',response.data.token);
             dispatch({type:"SET_UPDATENAMESUCESS",payload:response.data.msg})
             dispatch({type:"SET_TOKEN",payload:response.data.token})

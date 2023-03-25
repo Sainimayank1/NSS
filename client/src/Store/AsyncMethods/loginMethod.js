@@ -11,7 +11,7 @@ const postLogin = (state) =>
     }
     dispatch({ type: 'SET_LOADER' })
     try {
-      const response = await axios.post('http://localhost:5000/login', state,config)
+      const response = await axios.post('/login', state,config)
       if (response) {
         localStorage.setItem('NSSTOKEN',response.data.maintoken);
         dispatch({type:"LOGIN-SUCCESS",payload:response.data.msg})

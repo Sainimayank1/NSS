@@ -59,7 +59,7 @@ function Details() {
         const props = id;
         const sendData = { props, _id }
         setCLick(true)
-        const response = await axios.post('http://localhost:5000/post/like', sendData, config);
+        const response = await axios.post('/post/like', sendData, config);
         dispatch(fetchdetails(id))
 
       } catch (error) {
@@ -77,7 +77,7 @@ function Details() {
         const props = id;
         const sendData = { props, _id }
         setCLick(false)
-        const response = await axios.post('http://localhost:5000/post/dislike', sendData, config);
+        const response = await axios.post('/post/dislike', sendData, config);
         dispatch(fetchdetails(id))
       } catch (error) {
         dispatch(fetchdetails(id))

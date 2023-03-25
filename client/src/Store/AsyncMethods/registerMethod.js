@@ -12,11 +12,7 @@ export const registerMethod = (state) => {
 
     dispatch({ type: "SET_LOADER" });
     try {
-      const response = await axios.post(
-        "http://localhost:5000/register",
-        state,
-        config
-      );
+      const response = await axios.post("http://localhost:5000/register",state,config );
       if (!response)
         dispatch({ type: "REGISTER_ERRORS", payload: response.data.errors });
       else
@@ -24,6 +20,7 @@ export const registerMethod = (state) => {
       dispatch({ type: "CLOSE_LOADER" });
     } catch (error) {
       dispatch({ type: "CLOSE_LOADER" });
+      console.log(error)
       dispatch({
         type: "REGISTER_ERRORS",
         payload: error.response.data.errors,

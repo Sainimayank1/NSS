@@ -23,7 +23,8 @@ function Contact() {
                             </div>
                             <div className='contact-follow'>
                                 <div>Follow Us On :</div>
-                                <img src={linkedin}></img>
+                                <a href="https://www.linkedin.com/in/mayank-7a90b2178/"><img src={linkedin} className="
+contact-follow-img"></img></a>
                             </div>
                         </div>
                     </div>
@@ -38,7 +39,8 @@ function Contact() {
                             </div>
                             <div className='contact-follow'>
                                 <div>Follow Us On :</div>
-                                <img src={linkedin}></img>
+                                <a href='https://www.linkedin.com/in/manu-kumar-pal-28197a220/'><img src={linkedin} className="
+contact-follow-img"></img></a>
                             </div>
                         </div>
 
@@ -54,7 +56,8 @@ function Contact() {
                             </div>
                             <div className='contact-follow'>
                                 <div>Follow Us On :</div>
-                                <img src={linkedin}></img>
+                                <a href='https://www.linkedin.com/in/mridul-vij-31969b160/'><img src={linkedin} className="
+contact-follow-img"></img></a>
                             </div>
                         </div>
                     </div>

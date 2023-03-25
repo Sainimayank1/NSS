@@ -3,6 +3,8 @@ const init = {
     updateNameError: [],
     updatePasswordSucces:"",
     updatePasswordError:[],
+    updatePostSucces:"",
+    updatePostError:[],
     feedback:"",
 
 }
@@ -27,6 +29,14 @@ const updateReducer = (state = init, action) => {
         return { ...state, feedback:""};
     else if (action.type === "RESET_UPDATEPASSWORDSUCESS")
         return { ...state, updatePasswordSucces:""}
+    else if (action.type === "SET_UPDATE_POST_SUCESS")
+        return { ...state, updatePostSucces:action.payload};
+    else if (action.type === "RESET_UPDATE_POST_SUCESS")
+        return {...state, updatePostSucces:""}
+    else if (action.type === "SET_UPDATE_POST_ERROR")
+        return { ...state, updatePostError:action.payload};
+    else if (action.type === "RESET_UPDATE_POST_ERROR")
+        return {...state, updatePostError:[]}
     else
         return state;
 }

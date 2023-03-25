@@ -1,12 +1,9 @@
 .register-container {
    /* border: 2px solid black; */
   width: 100vw;
-  height: 80rem;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
   margin-top: 8rem;
   margin-bottom: 8rem;
-  height: 40rem;
+  height: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,8 +18,8 @@
 .dropdown-email:hover{scale: 1.0 !important;}
 .form {
   width: 37%;
-  height:45rem;
-  padding: 1rem 0 0 0;
+  /* height:60rem; */
+  height: max-content;
   /* border: 2px solid red; */
   display: flex;
   justify-content: center;
@@ -31,7 +28,67 @@
   box-shadow: 10px 10px 20px #303983;
 }
 
+.register-st-th
+{
+  margin: 0.8rem 0.5rem;
+  width: 80%;
+   /* border: 2px solid red; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 5rem !important;
+  }
 
+.register-st-th-sub{
+  border-radius: 5rem;
+  background: #303983 ;
+  /* border: 2px solid red; */
+  position:relative;
+}
+
+.register-st-th-sub-hover{
+  background: white;
+  position: absolute;
+  width: 5rem;
+  height: 3rem;
+  border-radius: 5rem;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #303983 ;
+}
+
+.left-hover{
+  left: 0;
+  color: black !important;
+}
+
+.right-hover{
+  right: 0;
+  color: black !important;
+  transition: all 0.5s ease-out;
+}
+
+.register-st-th button{
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 5rem;
+  height: 3rem;
+  /* padding: 0.7rem 1rem; */
+  color: white;
+}
+
+.or{
+  margin: 1rem 0rem;
+  width: 80%;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 #register-form {
   display: flex;
   justify-content: center;
@@ -39,12 +96,13 @@
    /* border: 2px solid green; */
   flex-direction: column;
   width: 80%;
-  margin-bottom: 6rem;
+  /* height: 10rem; */
+  /* margin-bottom: 6rem; */
 
 }
 .img-contain{
   height:60px;
-  margin-top: 7rem;
+  margin-top: 2rem;
 
 }
 #register-form input {
@@ -65,9 +123,22 @@
   /* border: 2px solid black; */
 }
 
+#uploadeduserimage{
+  margin-top: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  height: 4rem;
+  width: 4rem;
+}
 
 #register-form  :hover {
   scale: 1.07;
+}
+
+.upload-widgte-btn-user{
+  border: none;
+  outline: none;
+  background: transparent;
 }
 
 .button {
@@ -118,6 +189,24 @@
 }
 
 @media (max-width: 780px) {
+
+  .register-btn{
+    font-size: 0.9rem !important;
+  }
+  .register-st-th-sub-hover{
+    width: 4rem;
+    height: 2.5rem;
+  }
+  .register-st-th button{
+    width: 4rem;
+    height: 2.5rem;
+  }
+  .p1{
+    font-size: 0.9rem;
+  }
+  .para2{
+    font-size: 0.9rem;
+  }
   .span {
     font-size: 2rem !important;
   }
@@ -150,6 +239,29 @@
   
   #register-form input{
     font-size: 0.8rem !important;
+  }
+
+  .register-st-th
+{
+  margin: 0.2rem 0.5rem !important;
+}
+
+  .p1{
+    font-size: 0.8rem;
+  }
+  .para2{
+    font-size: 0.8rem;
+  }
+  .register-st-th-sub{
+    width: 80%;
+  }
+
+  .register-btn{
+    width: 50% !important;
+  }
+
+  .register-st-th-sub-hover{
+    width: 50%;
   }
 
 }

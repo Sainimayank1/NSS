@@ -12,7 +12,7 @@ function detailsMethod(id) {
             }
         }
         try {
-            const response = await axios.post('http://localhost:5000/post/delete/' + id, config)
+            const response = await axios.post('/post/delete/' + id, config)
             dispatch({ type: "CLOSE_LOADER" })
             dispatch({type:"SET_MESSAGE",payload:response.data.msg});
         } catch (error) {

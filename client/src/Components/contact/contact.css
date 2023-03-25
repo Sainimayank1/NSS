@@ -1,6 +1,6 @@
 .pro-area{
     padding: 80px 0;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,15 +23,10 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 
 }
-.img1 img{
-    height: 200px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    width: 100%;
-}
+
 .img2 img{
     position: relative;
     display: block;
@@ -41,7 +36,7 @@
     width: 12rem;
     height: auto;
     /* border-radius: 50%; */
-    border: 6px solid #fff;
+    /* border: 6px solid #fff; */
     margin-top: -80px;
 } 
 
@@ -63,9 +58,13 @@
     /* flex-direction: column; */
     /* border: 2px solid black; */
 }
-
-.contact-follow img{
+.contact-follow a{
+    /* border: 2px solid black; */
+    display: inline-block;
     width: 20%;
+}
+.contact-follow-img{
+    width: 100%;
 }
 
 
@@ -80,59 +79,6 @@
     width: 50%;
 }
 
-/* css typing animation add  */
-/* .wrapper{
-    display: flex;
-  }
-  .wrapper .static-txt{
-    color: #fff;
-    font-size: 60px;
-    font-weight: 400;
-  }
-  .wrapper .dynamic-txts{
-    margin-left: 15px;
-    height: 90px;
-    line-height: 90px;
-    overflow: hidden;
-  }
-  .dynamic-txts li{
-    list-style: none;
-    color: #FC6D6D;
-    font-size: 60px;
-    font-weight: 500;
-    position: relative;
-    top: 0;
-    animation: slide 12s steps(4) infinite;
-  }
-  @keyframes slide {
-    100%{
-      top: -360px;
-    }
-  }
-  .dynamic-txts li span{
-    position: relative;
-    margin: 5px 0;
-    line-height: 60px;
-  }
-  .dynamic-txts li span::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: #343F4F;
-    border-left: 2px solid #FC6D6D;
-    animation: typing 3s steps(10) infinite;
-  }
-  @keyframes typing {
-    40%, 60%{
-      left: calc(100% + 30px);
-    }
-    100%{
-      left: 0;
-    }
-  } */
-  /* end of this css typing animation */
 .main-contact p{
     font-size: 16px;
     padding: 35px;
@@ -151,54 +97,51 @@
     border-bottom: 4px solid aqua;
     
 }
-/* .wrapper{
-    display: flex;
-}
-.wrapper .static-text{
-    color: #fff;
-    font-size: 30spx;
-    font-weight: 400;
-}
-.wrapper .dynamic-text{
-    margin-left: 15px;
-    line-height: 30px;
-    height: 20px
-    overflow: hidden;
-}
-.dynamic-text li{
-    list-style: none;
-    color: rgb(230, 50, 14);
-    font-size: 30px;
-    font-weight: 500;
-    top: 0;
-    position: relative;
-    animation: slide 12s steps(3);
-}
-@keyframes slide{
-    100%{
-        top:-360px
+
+
+@media (max-width: 1080px) {
+    .img2 img{
+        
+        width: 10rem;
+        
+    } 
+  
+  }
+  
+  @media (max-width: 950px) {
+    .img2 img{
+        
+        width: 8rem;
+        
+    } 
+  
+  }
+
+  @media (max-width:767px) {
+    .img2 img{
+        
+        width: 12rem;
+        
+    } 
+    .card-contact{
+        margin-bottom: 6rem;
     }
-}
-.dynamic-text li{
-    position: relative;
-}
-.dynamic-text li::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: antiquewhite;
-    border-left: 2px solid #ff4c29;
-    animation: typing 4s steps(20);
-    infinite;
-}@keyframes typing{
-    40%,
-    60%{
-        left: calc(100% + 30px);
-    }
-    100%{
-        left:0;
-    }
-}
- */
+  
+  }
+  
+  @media (max-width:400px) {
+    .img2 img{
+        
+        width: 10rem;
+        
+    } 
+  }
+  
+  @media (max-width:350px) {
+    .img2 img{
+        
+        width: 8rem;
+        
+    } 
+  }
+  

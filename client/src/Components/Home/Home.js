@@ -4,7 +4,6 @@ import Main1 from "../Main/Main1";
 import toast, { Toaster } from "react-hot-toast"
 import { useDispatch, useSelector } from 'react-redux';
 import Organization from '../Organization/Organization';
-import Example from "../Cards/Example"
 import Gallery from "../Gallery/Gallery"
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet'

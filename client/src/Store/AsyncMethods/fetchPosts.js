@@ -13,7 +13,7 @@ function fetchPosts(_id, page) {
                 }
             }
 
-            const response = await axios.get('http://localhost:5000/post/userAllPost/:'+page+'/:'+_id , config)
+            const response = await axios.get('/post/userAllPost/:'+page+'/:'+_id , config)
             console.log(response.data);
             const {data,count,perPage} = response.data
             dispatch({type:"SET_USER_POSTS" , payload : {data,count,perPage}})

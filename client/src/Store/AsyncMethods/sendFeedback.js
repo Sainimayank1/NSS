@@ -14,7 +14,7 @@ function sendFeedback(data) {
         }
         try {
             console.log(data)
-            const response = await axios.post('http://localhost:5000/user/feedback',data ,  config)
+            const response = await axios.post('/user/feedback',data ,  config)
             dispatch({type:"SET_FEEDBACK_RES",payload:response.data.msg})
             dispatch({ type: "CLOSE_LOADER" })
         } catch (error) {

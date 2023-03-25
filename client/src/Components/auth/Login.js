@@ -64,10 +64,11 @@ function Login() {
               <button className='btn-login'  onClick={handleSubmit}>
                 {loading ? "......" : "Login"}
               </button>
-              <Link to='#' className='fp'>Forgot Password</Link>
-              <p className='p'>OR</p>
-              <p className='para1'>New User? <Link to="/register">Register here</Link></p>
             </form>
+            <div className='or'>
+          <p className='p1'>OR</p>
+          <p className='para2'>Already have an account? <Link to="/register">Register here</Link></p>
+          </div>
         </div>
       </div>
     </>

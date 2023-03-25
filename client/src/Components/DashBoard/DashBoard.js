@@ -68,8 +68,7 @@ function Dashboard() {
                                         <span className='grid-user-items-span'>Published: {moment(content.createdAt).fromNow()}</span>
                                     </div>
                                     <div>
-                                        {/* <Link className='dash-link' to={'/updateImage/' + content._id}><BsImage /></Link> */}
-                                        {/* <Link to={'/edit/' + content._id}><AiOutlineEdit className='dash-link' /></Link> */}
+                                        <Link to={'/edit/' + content._id}><AiOutlineEdit className='dash-link' /></Link>
                                         <Link ><AiFillDelete onClick={() => delePost(content._id)} className='dash-link' /></Link>
                                     </div>
                                 </div>) : <div className='dash-user-right-no-post'>No post</div>}

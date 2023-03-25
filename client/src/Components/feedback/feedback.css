@@ -30,7 +30,8 @@
 .feed-back-form textarea {
     padding: 1rem;
     width: calc(100% - 4rem);
-    border: none;
+    border: none ;
+    border-bottom: 2px solid #303983 ;
     outline: none;
 }
 

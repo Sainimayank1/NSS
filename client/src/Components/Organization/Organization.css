@@ -11,13 +11,25 @@
     background-color:  #303983;
     padding-top: 15px;
 }
+.org-a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+.org-a img{
+    height: 100%;
+    object-fit: cover;
+}
 .org-img
 {
       /* border: 2px solid black; */
     display: flex;
     justify-content: space-around;
+    align-items: center;
     height: 180px;
-    margin-top: 3%;
+    margin: 1% 0 1% 0;
 }
 @media screen and (max-width:1100px) {
     .org-img {
@@ -25,8 +37,8 @@
     }
 }
 @media screen and (max-width:667px) {
-    .org-img img{
-        height:60px;
+    .org-a img{
+        height:70px;
     }
 }
 /* @media screen and (max-width:667px) {
