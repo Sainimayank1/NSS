@@ -64,7 +64,7 @@ const Card = () => {
     </div>
     <div className="content">
         <div className='teacher-main'>
-          <span className='tc'>Teacher-Incharge</span>
+          <h4 className='tc'>Teacher In-Charge</h4>
         </div>
         <div className='first-img'>
        <h4 className='fspan'>
