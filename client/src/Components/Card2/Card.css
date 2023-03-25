@@ -53,7 +53,17 @@
     padding-top: .5rem;
     text-align: center;
     font-size: 25px;
+    background-color: #303983;
+    color: white;
+    font-weight: 600;
+
+
   }
+  .tc{
+    color:white;
+    padding-bottom: 8px;
+  }
+  
   .first-img{
     text-align: left;
     padding-top: 3rem;
@@ -75,11 +85,6 @@
     font-size: 20px;
     padding-left: 10px;
     font-weight: 550;
-  }
-  .tc{
-    color: #303983;
-    font-weight: 500;
-    border-bottom:2px solid #303983;
   }
   .t2-img{
       padding-right: 1rem;
