@@ -92,7 +92,7 @@ function Posts() {
                                             <img src={LOGO} alt='logo' className='img-container'></img>
                                         </div>
                                         <div className='grid-name'>
-                                            {content.userName}
+                                            {content.userName} 
                                         </div>
                                         <span>{moment(content.createdAt).fromNow()}</span>
                                     </div>

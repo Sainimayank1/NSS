@@ -7,7 +7,7 @@ import Organization from '../Organization/Organization';
 import Gallery from "../Gallery/Gallery"
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet'
-import Card from '../Card2/Card';
+import Card from "../Card2/Card"
 
 
 function Home() {
