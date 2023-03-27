@@ -10,7 +10,9 @@ import { useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import Loading from '../Loader/Loading'
 import { Link } from 'react-router-dom'
-import logo from './profile-user.png'
+// import logo from './profile-user.png';
+
+
 
               
 
@@ -90,7 +92,8 @@ function Register(prop) {
                 fontsize:'16px'
               },
             }}/>
-            <img src={logo} id="uploadeduserimage" alt='logo' />
+            <img src='./picture/profile-user3.png' id="uploadeduserimage" alt='logo'  /> 
+            
             <span className='login-span'>Register</span>
           {/* <p className='pl'>Please enter your Details</p> */}
           <div className='register-st-th'>
