@@ -16,7 +16,6 @@ const postLogin = (state) =>
         localStorage.setItem('NSSTOKEN',response.data.maintoken);
         dispatch({type:"LOGIN-SUCCESS",payload:response.data.msg})
         dispatch({type :"SET_TOKEN",payload:response.data.maintoken})
-        console.log(response.data.maintoken)
       }
       else
         dispatch({ type: "LOGIN_ERRORS", payload: response.data.errors })

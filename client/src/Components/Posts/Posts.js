@@ -89,7 +89,7 @@ function Posts() {
                                 <div className='grid-main' key={content._id}>
                                     <div className='grid-first-level'>
                                         <div className='grid-logo'>
-                                            <img src={LOGO} alt='logo' className='img-container'></img>
+                                            <img src={user.url==="" ? LOGO : user.url} alt='logo' className='img-container'></img>
                                         </div>
                                         <div className='grid-name'>
                                             {content.userName} 

@@ -5,6 +5,7 @@ const init = {
     updatePasswordError:[],
     updatePostSucces:"",
     updatePostError:[],
+    updateImageSucces:"",
     feedback:"",
 
 }
@@ -37,6 +38,10 @@ const updateReducer = (state = init, action) => {
         return { ...state, updatePostError:action.payload};
     else if (action.type === "RESET_UPDATE_POST_ERROR")
         return {...state, updatePostError:[]}
+    else if (action.type === "SET_UPDATE_IMAGE_SUCCES")
+        return {...state , updateImageSucces:action.payload}
+    else if(action.type === "RESET_UPDATE_IMAGE_SUCCES")
+        return {...state , updateImageSucces:""};
     else
         return state;
 }

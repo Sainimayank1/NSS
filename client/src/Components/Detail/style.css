@@ -56,6 +56,10 @@
     margin-top: 0.5rem;
 }
 
+.img-container{
+    border-radius: 50%;
+}
+
 
 .detail-right img{
     max-height: 30rem;

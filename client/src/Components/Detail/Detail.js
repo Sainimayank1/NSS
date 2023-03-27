@@ -7,7 +7,7 @@ import moment from "moment";
 import Loading from '../Loader/Loading';
 import fetchdetails from "../../Store/AsyncMethods/detailsMethod"
 import "./style.css"
-import LoGO from "./profile-user.png"
+import LOGO from "./profile-user.png"
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import Comments from '../Comment/Comment';
 import axios from "axios"
@@ -99,7 +99,7 @@ function Details() {
               <div className='home-left'>
                 <div className='avatar'>
                   <div className='avatar-right'>
-                    <span className='grid-logo'><img src={LoGO} alt="image" className="img-container"></img></span>
+                    <span className='grid-logo'><img src={user.url==="" ? LOGO : user.url} alt="image" className="img-container"></img></span>
                     <span className='detail-username'>{details.data.userName}</span>
                     <span className='detail-date'>{moment(details.data.createdAt).format("MMM Do YY")}</span>
                   </div>

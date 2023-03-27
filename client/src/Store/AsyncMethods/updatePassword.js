@@ -14,7 +14,6 @@ function updatePassword(data) {
         }
         try {
             const response = await axios.post('/user/updatePassword',data , config)
-            console.log(response)
             dispatch({type:"SET_UPDATEPASSWORDSUCESS",payload:response.data.msg})
             dispatch({ type: "CLOSE_LOADER" })
         } catch (error) {

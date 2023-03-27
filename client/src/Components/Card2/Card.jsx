@@ -81,7 +81,7 @@ const Card = () => {
               <img src='./picture/m1.jpg' alt='logo' className='up-img'></img>
               <div className='regisetered-p'>Total number of online Registration: 150<br></br>
                 Total number of offline registration: 100<br></br>
-                Total Donated:{count}</div>
+                <a href="/">Total Donated:</a>{count}</div>
             </div>
           </div>
         </div>

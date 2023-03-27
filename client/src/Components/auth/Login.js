@@ -54,7 +54,7 @@ function Login() {
               // Define default options
               duration: 5000,
               style: {
-                fontsize: '16px'
+                fontsize: '14px'
               },
             }} />
             <p className='pl'>Please enter your Email and Password</p>

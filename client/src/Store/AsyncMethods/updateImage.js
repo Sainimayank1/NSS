@@ -1,7 +1,7 @@
 import axios from "axios"
 
 
-function updateName(data) {
+function updateImage(data) {
     return async (dispatch,getData) => {
         const { authReducer } = getData();
         const token = authReducer.token
@@ -13,16 +13,18 @@ function updateName(data) {
             }
         }
         try {
-            const response = await axios.post('/user/updateNames',data ,  config)
+            const response = await axios.post('/user/updateImage',data ,  config)
+            console.log(response.data.token)
+            dispatch({type :"SET_TOKEN",payload:response.data.token})
             localStorage.setItem('NSSTOKEN',response.data.token);
-            dispatch({type:"SET_UPDATENAMESUCESS",payload:response.data.msg})
-            dispatch({type:"SET_TOKEN",payload:response.data.token})
+            dispatch({type:"SET_UPDATE_IMAGE_SUCCES",payload:response.data.msg});
             dispatch({ type: "CLOSE_LOADER" })
         } catch (error) {
-            dispatch({type:"SET_UPDATENAMEERROR" , payload:error.response.data.error})
+            console.log(error)
+            dispatch({type:"SET_UPDATE_IMAGE_ERROR",payload:error.error})
             dispatch({ type: "CLOSE_LOADER" })
         }
     }
 }
 
-export default updateName;
+export default updateImage;

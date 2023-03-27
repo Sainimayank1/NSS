@@ -10,8 +10,10 @@ export const registerMethod = (state) => {
       },
     };
 
+
     dispatch({ type: "SET_LOADER" });
     try {
+      console.log(state)
       const response = await axios.post("http://localhost:5000/register",state,config );
       if (!response)
         dispatch({ type: "REGISTER_ERRORS", payload: response.data.errors });

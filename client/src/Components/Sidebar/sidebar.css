@@ -7,6 +7,21 @@
     box-shadow: 10px 10px 20px #14418a;
 }
 
+.setting-container{
+    display: flex;
+    width: 100%;
+    /* border: 2px solid red; */
+    justify-content: space-between;
+}
+
+.setting-container-link
+{
+    border: 2px solid #14418a !important;
+    color:  #14418a !important;
+    cursor: pointer;
+    padding: 0.2rem;
+}
+
 .sidebar:first-child {
     border-top: 2px solid #f5f7fcdf;
     border-top-left-radius: 1rem;
@@ -32,9 +47,12 @@
     font-weight: bold;
 }
 
-a {
+.a{
     text-decoration: none;
     color: black;
+    border: none;
+  outline: none;
+  background: transparent;
 }
 
 .link:hover {
@@ -53,7 +71,7 @@ a {
         font-size: 1.2rem;
     }
 
-    .sidebar_item a
+    .a
     {
         font-size: 1rem !important;
     }
@@ -71,7 +89,7 @@ a {
         font-size: 1rem;
     }
     
-    .sidebar_item a
+    .a
     {
         font-weight: bold;
         font-size: 0.7rem !important;
