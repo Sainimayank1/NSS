@@ -76,7 +76,7 @@
   }
   .tc{
     color:white;
-    padding-bottom: 8px;
+    padding-bottom: 15px;
   }
   
   .first-img{
@@ -103,6 +103,7 @@
   }
   .t1-img{
     border-radius: 40%;
+    padding-right: 1rem;
   }
   .t2-img{
       padding-right: 1rem;

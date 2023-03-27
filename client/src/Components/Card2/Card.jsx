@@ -91,7 +91,7 @@ const Card = () => {
           </div>
           <div className='first-img'>
             <h4 className='fspan'>
-              <img src='./picture/t1.png' alt='photo' className='t1-img' align='right'></img>
+              <img src='./picture/tk.png' alt='photo' className='t1-img' align='right'></img>
               Mr.Tajinder Kumar
             </h4>
             <h3 className='fspan2'>Assistant Professor.</h3>
@@ -99,7 +99,7 @@ const Card = () => {
           </div>
           <div className='first-img'>
             <h4 className='fspan'>
-              <img src='./picture/n2.jpg' alt='photo' className='t2-img' align='right'></img>
+              <img src='./picture/n3.png' alt='photo' className='t2-img' align='right'></img>
               Dr.Niti Sakhuja
             </h4>
             <h3 className='fspan2'>Assistant Professor.</h3>
