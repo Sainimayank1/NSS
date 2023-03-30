@@ -29,7 +29,8 @@ function Details() {
 
   const submitComment = (e) => {
     e.preventDefault();
-    dispatch(postComment({ postId: details.data._id, comment, userName: user.name }))
+    const {url,public_id} = user;
+    dispatch(postComment({ postId: details.data._id, comment, userName: user.name , url , public_id }))
     dispatch(fetchdetails(id));
     setComment("");
   }
@@ -99,7 +100,7 @@ function Details() {
               <div className='home-left'>
                 <div className='avatar'>
                   <div className='avatar-right'>
-                    <span className='grid-logo'><img src={user.url==="" ? LOGO : user.url} alt="image" className="img-container"></img></span>
+                    <span className='grid-logo'><img src={details.data.url===""  ? LOGO : details.data.url} alt="image" className="img-container"></img></span>
                     <span className='detail-username'>{details.data.userName}</span>
                     <span className='detail-date'>{moment(details.data.createdAt).format("MMM Do YY")}</span>
                   </div>

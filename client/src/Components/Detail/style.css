@@ -114,6 +114,12 @@ form input {
 }
 
 @media (max-width : 460px) {
+    .detail-title{
+        font-size: 1.8rem;
+    }
+    .detail-desc{
+        font-size: 1rem;
+    }
     .detail-inp {
         padding: 0.8rem !important;
         font-size: 0.8rem !important;
@@ -125,3 +131,4 @@ form input {
         width: 40%;
     }
 }
+

@@ -10,7 +10,9 @@ import { useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import Loading from '../Loader/Loading'
 import { Link } from 'react-router-dom'
-import logo from './profile-user.png'
+import logo from './profile-user2.png';
+
+
 
 // User Image
 let imgData = {
@@ -150,7 +152,7 @@ function Register(prop) {
           }} />
           {/* <img src={logo} id="upload_widget_user_Img" alt='logo' /> */}
           <CloudinaryUploadUserWidget />
-          <span className='login-span'>Register</span>
+            <span className='login-span'>Register</span>
           {/* <p className='pl'>Please enter your Details</p> */}
           <div className='register-st-th'>
             <div className='register-st-th-sub'>

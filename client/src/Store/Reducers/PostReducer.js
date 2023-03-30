@@ -8,6 +8,8 @@ const initail = {
     createSucces: [],
     details: {
         data: {
+            url:"",
+            public_id:"",
             image: {
                 public_id: '',
                 url: ''

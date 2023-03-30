@@ -2,25 +2,6 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import './Card.css'
 const Card = () => {
-  let isTrue = true;
-  const [count, setCount] = useState(0);
-
-  const findDonated = async () => {
-    try {
-      const resp = await axios.get("http://localhost:5000/donation/TotalCount");
-      if (resp) {
-        setCount(resp.data.count);
-      }
-    }
-    catch (error) {
-      console.log(error)
-    }
-  }
-
-  useEffect(() => {
-    isTrue = false
-    findDonated();
-  }, [isTrue]);
   return (
     <>
       <div className='main-card-section'>
@@ -75,14 +56,7 @@ const Card = () => {
         <div className="content">
           <h4 className="card-contents">UPCOMING-EVENTS</h4>
           <div className='content-second'>
-            <span className='date-event'>29-March-2023</span>
-            <div>
-              <a href="#">Blood Donation Mela In Jmieti</a>
-              <img src='./picture/m1.jpg' alt='logo' className='up-img'></img>
-              <div className='regisetered-p'>Total number of online Registration: 150<br></br>
-                Total number of offline registration: 100<br></br>
-                <a href="/">Total Donated:</a>{count}</div>
-            </div>
+
           </div>
         </div>
         <div className="content">
@@ -91,7 +65,7 @@ const Card = () => {
           </div>
           <div className='first-img'>
             <h4 className='fspan'>
-              <img src='./picture/t1.png' alt='photo' className='t1-img' align='right'></img>
+              <img src='./picture/tk.png' alt='photo' className='t1-img' align='right'></img>
               Mr.Tajinder Kumar
             </h4>
             <h3 className='fspan2'>Assistant Professor.</h3>
@@ -99,7 +73,7 @@ const Card = () => {
           </div>
           <div className='first-img'>
             <h4 className='fspan'>
-              <img src='./picture/n1.png' alt='photo' className='t2-img' align='right'></img>
+              <img src='./picture/n3.png' alt='photo' className='t2-img' align='right'></img>
               Dr.Niti Sakhuja
             </h4>
             <h3 className='fspan2'>Assistant Professor.</h3>

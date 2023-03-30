@@ -29,6 +29,8 @@ const Gallery = () => {
     <div className='main-gallery'>
     <h3 className='h3g'>Gallery section</h3>
     <Carousel responsive={responsive}>
+    <a href=''><img src='./picture/updatedimage1.jpeg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/updatedimage2.jpg' alt='img' className='img-gallery' ></img></a>
     <a href=''><img src='./picture/p1.jpg' alt='img' className='img-gallery' ></img></a>
     <a href=''><img src='./picture/p2.jpg' alt='img' className='img-gallery' ></img></a> 
     <a href=''><img src='./picture/p8.jpg' alt='img' className='img-gallery' ></img></a>

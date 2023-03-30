@@ -155,6 +155,8 @@ function CreatePost(props) {
             formdata.append("slug", slug);
             formdata.append("_id", _id);
             formdata.append("name", name);
+            formdata.append("url",user.url);
+            formdata.append("public_id",user.public_id)
             formdata.append("image_url", imgData.url);
             formdata.append("image_public", imgData.public_id)
             if (Object.keys(vidData).length != 0) {

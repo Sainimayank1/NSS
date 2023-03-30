@@ -17,6 +17,7 @@
 
 .comment-avatar img {
     width: 1.2rem;
+    border-radius: 40%;
 }
 
 .comment-avatar-name {

@@ -1,12 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import moment from "moment";
-import LoGo from "./profile-user.png"
+import LOGO from "./profile-user.png"
 import "./style.css";
 
 function Comments() {
   const { details } = useSelector(state => state.PostReducer);
-  const { loading } = useSelector(state => state.authReducer);
+  const { loading , user } = useSelector(state => state.authReducer);
   const {comment} = details
   return (
     <div className='main-comment'>
@@ -14,7 +14,7 @@ function Comments() {
         comment.map((data) =>
           <div className='comment-smaller'>
             <div className='comment-avatar'>
-              <img src={LoGo}></img>
+              <img src={(details === ""  || data.url==="")  ? LOGO : data.url}></img>
               <span className='comment-avatar-name'>
                 {data.userName}
               </span>

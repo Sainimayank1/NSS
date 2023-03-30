@@ -98,7 +98,6 @@
   width: 80%;
   /* height: 10rem; */
   /* margin-bottom: 6rem; */
-
 }
 .img-contain{
   height:60px;
@@ -127,8 +126,10 @@
   margin-top: 2rem;
   border-radius: 50%;
   object-fit: cover;
-  height: 4rem;
-  width: 4rem;
+  height: 5rem;
+  width: 5.5rem;
+  border: 2px solid #14418a;
+  
 }
 
 #register-form  :hover {
