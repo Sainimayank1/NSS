@@ -2,6 +2,8 @@ import React from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import './Gallery.css';
+import left from './left_head.png'
+import right from './right_head.png'
 
 const Gallery = () => {
   const responsive = {
@@ -27,7 +29,11 @@ const Gallery = () => {
   return (
     <>
     <div className='main-gallery'>
-    <h3 className='h3g'>Gallery section</h3>
+    <div className='awards-upper'>
+                <img src={left}></img>
+                <span className='span-orange'>GALLERY</span><span>SECTION</span>
+                <img src={right}></img>
+            </div>
     <Carousel responsive={responsive}>
     <a href=''><img src='./picture/updatedimage1.jpeg' alt='img' className='img-gallery' ></img></a>
     <a href=''><img src='./picture/updatedimage2.jpg' alt='img' className='img-gallery' ></img></a>

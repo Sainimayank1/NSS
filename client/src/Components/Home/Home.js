@@ -8,6 +8,7 @@ import Gallery from "../Gallery/Gallery"
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet'
 import Card from "../Card2/Card"
+import Awards from '../Awards/Awards';
 
 
 function Home() {
@@ -46,6 +47,7 @@ function Home() {
       <MyCarousel />
       <Main1 />
       <Card />
+      <Awards/>
       <Gallery />
       <Organization />
     </>

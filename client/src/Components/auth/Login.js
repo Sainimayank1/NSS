@@ -61,9 +61,10 @@ function Login() {
             <form id='login-form'>
               <input type="text" onChange={handleChange} name="email" placeholder='Enter Email' value={state.email} required></input>
               <input type="password" onChange={handleChange} name="password" placeholder='Enter Password' value={state.password} required></input>
-              <button className='btn-login'  onClick={handleSubmit}>
+              <button className='btn-login'  onClick={handleSubmit} disabled={loading}>
                 {loading ? "......" : "Login"}
               </button>
+              { loading && <p className='login-p'>Note: Please Check Spam folder in Gmail</p>}
             </form>
             <div className='or'>
           <p className='p1'>OR</p>

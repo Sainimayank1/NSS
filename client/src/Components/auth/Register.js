@@ -173,6 +173,7 @@ function Register(prop) {
               <input type="password" name="password" value={state.password} placeholder='Enter Password' onChange={handleState}></input>
               <input type="password" name="cpassword" value={state.cpassword} placeholder='Re-Enter Password' onChange={handleState}></input>
               <button type="submit" className="button" >{loading ? "......" : 'Register'}</button>
+              {loading && <p className='login-p'>Note: Please Check Spam folder in Gmail</p>}
             </form>
             :
             <form id='register-form' onSubmit={handleClick} method="POST">
@@ -182,7 +183,8 @@ function Register(prop) {
               <input type="text" name="phone" value={state.phone} placeholder='Enter Mobile no' onChange={handleState}></input>
               <input type="password" name="password" value={state.password} placeholder='Enter Password' onChange={handleState}></input>
               <input type="password" name="cpassword" value={state.cpassword} placeholder='Re-Enter Password' onChange={handleState}></input>
-              <button type="submit" className="button" >{loading ? "......" : 'Register'}</button>
+              <button type="submit" className="button" disabled={loading} >{loading ? "......" : 'Register'}</button>
+              { loading && <p className='login-p'>Note: Please Check Spam folder in Gmail</p>}
             </form>
           }
           <div className='or'>
