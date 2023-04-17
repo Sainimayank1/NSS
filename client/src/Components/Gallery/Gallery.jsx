@@ -35,19 +35,19 @@ const Gallery = () => {
                 <img src={right}></img>
             </div>
     <Carousel responsive={responsive}>
-    <a href=''><img src='./picture/updatedimage1.jpeg' alt='img' className='img-gallery' ></img></a>
+    {/* <a href=''><img src='./picture/updatedimage1.jpeg' alt='img' className='img-gallery' ></img></a> */}
     <a href=''><img src='./picture/updatedimage2.jpg' alt='img' className='img-gallery' ></img></a>
-    <a href=''><img src='./picture/p1.jpg' alt='img' className='img-gallery' ></img></a>
-    <a href=''><img src='./picture/p2.jpg' alt='img' className='img-gallery' ></img></a> 
-    <a href=''><img src='./picture/p8.jpg' alt='img' className='img-gallery' ></img></a>
-    <a href=''><img src='./picture/p4.jpg' alt='img' className='img-gallery' ></img></a>
-    <a href=''><img src='./picture/p5.jpg' alt='img' className='img-gallery' ></img></a>
-    <a href=''><img src='./picture/p7.jpg' alt='img' className='img-gallery' ></img></a>
-    <a href=''><img src='./picture/p3.jpg' alt='img' className='img-gallery' ></img></a>
-    <a href=''><img src='./picture/bd1.jpg' alt='img' className='img-gallery' ></img></a>
-    <a href=''><img src='./picture/bd2.jpg' alt='img' className='img-gallery' ></img></a>
-    <a href=''><img src='./picture/bd4.jpg' alt='img' className='img-gallery' ></img></a>
-    <a href=''><img src='./picture/p8.jpg' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p1.JPG' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p2.JPG' alt='img' className='img-gallery' ></img></a> 
+    <a href=''><img src='./picture/p8.JPG' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p4.JPG' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p5.JPG' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p7.JPG' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p3.JPG' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p6.JPG' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p9.JPG' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p0.JPG' alt='img' className='img-gallery' ></img></a>
+    <a href=''><img src='./picture/p11.jpeg' alt='img' className='img-gallery' ></img></a>
   </Carousel>
    </div>
 

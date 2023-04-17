@@ -309,3 +309,26 @@
     }
     
   }
+
+  
+  @media screen  and (max-width:351px){
+    .t1-img{
+      width: 50% !important;
+    }
+    .t2-img{
+      width: 50% !important;
+    }
+    .fspan{
+      font-size: 0.7rem;
+    }
+    .fspan2{
+      font-size: 0.7rem;
+    }
+    .fspan3{
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+    
+  }
+
+  

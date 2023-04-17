@@ -77,7 +77,7 @@ const Card = () => {
               Dr.Niti Sakhuja
             </h4>
             <h3 className='fspan2'>Assistant Professor.</h3>
-            <p className='fspan4'>(Red Cross Society-Incharge)</p>
+            <p className='fspan3'>(Red Cross Society-Incharge)</p>
           </div>
         </div>
       </div>

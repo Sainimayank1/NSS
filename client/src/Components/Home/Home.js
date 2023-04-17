@@ -37,7 +37,7 @@ function Home() {
           // Define default options
           duration: 5000,
           style: {
-            fontsize: '16px'
+            fontsize: '14px'
           },
         }} />
       <Helmet>
