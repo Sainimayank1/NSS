@@ -2,6 +2,9 @@ import mongoose, { Schema } from "mongoose";
 
 const chakraSchema = new mongoose.Schema(
     {
+        img:{
+            type:String
+        },
         userName:{
             type:String,
             required:true
@@ -9,7 +12,7 @@ const chakraSchema = new mongoose.Schema(
         Rank:{
             type:String,
         },
-        fatherNmae:{
+        fatherName:{
             type:String
         },
         resident:{
