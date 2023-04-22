@@ -20,6 +20,7 @@ import UpdateName from "./Components/update/updateName";
 import UpdatePassword from "./Components/update/updatePassword.js";
 import Feedback from "./Components/feedback/feedback.js";
 import Contact from "./Components/contact/Contact";
+import Gallentry from "./Components/Gallentry/Gallentry";
 
 function App() {
   const {user} = useSelector((state) => state.authReducer)
@@ -41,6 +42,12 @@ function App() {
       <Route path="/updatePassword" exact element={user ? <UpdatePassword/> : <Login/>} />
       <Route path="/feedback" exact element={user ? <Feedback/> : <Login/>} />
       <Route path="/contact" exact element={<Contact/>}/>
+      <Route path="/virChakra/:id" exact element={<Gallentry/>} />
+      <Route path="/mahaVir/:id" exact element={<Gallentry/>} />
+      <Route path="/paramvirChakra/:id" exact element={<Gallentry/>} />
+      <Route path="/ashokaChakra/:id" exact element={<Gallentry/>} />
+      <Route path="/kirtiChakra/:id" exact element={<Gallentry/>} />
+      <Route path="/shauryaChakra/:id" exact element={<Gallentry/>} />
       <Route path="/loader" element={<Loading/>} />
       <Route path='*' element={<NotFound/>}/>
     </Routes>

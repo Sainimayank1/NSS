@@ -7,6 +7,7 @@ import PostReducer from './Reducers/PostReducer';
 import fetchReducer from './Reducers/fetchReducer.js';
 import updateReducer from './Reducers/updateReducer.js';
 import profileReducer from './Reducers/profileReducer.js';
+import awardsReducer from "./Reducers/awardsReducer.js"
 
 const rootreducer  = combineReducers(
     {
@@ -15,6 +16,7 @@ const rootreducer  = combineReducers(
         fetchReducer,
         PostReducer,
         updateReducer,
+        awardsReducer
     }
 );
 
