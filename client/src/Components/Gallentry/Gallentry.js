@@ -57,10 +57,8 @@ function Gallentry() {
                 link = "http://localhost:5000/award/kirtiSingle/" + _id
             else if (id == 6)
                 link = "http://localhost:5000/award/shauryaSingle/" + _id
-            // dispatch({ type: "SET_LOADER" })
             try {
                 const response = await axios.get(link);
-                console.log(response)
                 dispatch({ type: "SET_AWARDEE", payload: response.data.data })
             } catch (error) {
                 console.log(error)
